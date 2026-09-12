@@ -134,11 +134,11 @@
       ]
     },
     {
-      "id": "konbini",
-      "name": "コンビニ（店名・場所は未聞き取り）",
+      "id": "lawson",
+      "name": "ローソン（帰り道）",
       "kind": "コンビニ",
-      "usage": "平日の帰りに寄れる唯一の店。活用を検討中",
-      "access": null,
+      "usage": "平日の帰りに寄れる店。足すだけ枠（サラダ・スープ・冷凍・惣菜）",
+      "access": "夫の帰り道（店舗は未特定）",
       "hours": "24時間想定",
       "closed": null,
       "good_at": [
@@ -148,7 +148,30 @@
         "スープ類"
       ],
       "cheap_days": null,
-      "confirmed": false,
+      "confirmed": true,
+      "categories": [
+        "惣菜",
+        "冷凍",
+        "野菜（カット）",
+        "スープ"
+      ]
+    },
+    {
+      "id": "famima",
+      "name": "ファミリーマート（帰り道）",
+      "kind": "コンビニ",
+      "usage": "平日の帰りに寄れる店。足すだけ枠（サラダ・スープ・冷凍・惣菜）",
+      "access": "夫の帰り道（店舗は未特定）",
+      "hours": "24時間想定",
+      "closed": null,
+      "good_at": [
+        "サラダ・カット野菜",
+        "冷凍食品",
+        "惣菜",
+        "スープ類"
+      ],
+      "cheap_days": null,
+      "confirmed": true,
       "categories": [
         "惣菜",
         "冷凍",
