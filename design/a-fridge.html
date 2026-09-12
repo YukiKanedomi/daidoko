@@ -1,0 +1,53 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>だいどこ — A 冷蔵庫のドア</title>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--steel:#eeece7;--steel2:#e3e0d9;--memo:#fff9e6;--memo2:#f3f6ee;--ink:#2b2a28;--mag-r:#d0433c;--mag-b:#2f5d8a;--mag-y:#e0b23a;--tape:rgba(242,217,138,.85)}
+*{box-sizing:border-box}html,body{margin:0}
+body{width:390px;min-height:844px;font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;color:var(--ink);letter-spacing:.02em;line-height:1.7;
+ background:
+  repeating-linear-gradient(90deg,rgba(255,255,255,.35) 0 1px,rgba(0,0,0,.02) 1px 3px),
+  linear-gradient(180deg,var(--steel),var(--steel2));position:relative;overflow:hidden}
+.hand{font-family:"Zen Kurenaido","Zen Kaku Gothic New",sans-serif}
+header{padding:22px 20px 6px;display:flex;align-items:baseline;justify-content:space-between}
+header h1{font-size:15px;font-weight:500;margin:0;letter-spacing:.2em}
+header small{font-size:11px;color:#6d6a63}
+.note{margin:6px 20px 0;font-size:12px;color:#5c5954}
+.board{position:relative;height:640px}
+.memo{position:absolute;background:var(--memo);width:210px;padding:14px 14px 12px;box-shadow:0 1px 0 rgba(255,255,255,.7) inset,2px 4px 8px rgba(0,0,0,.14);
+ background-image:repeating-linear-gradient(180deg,transparent 0 26px,rgba(43,42,40,.08) 26px 27px);background-position:0 30px}
+.memo h2{font-size:18px;margin:0 0 2px;font-weight:400;line-height:1.35}
+.memo .t{font-size:11px;letter-spacing:.12em;color:#7a6a3a;margin-bottom:4px}
+.memo .ing{font-size:12px;color:#5c5954}
+.memo .go{margin-top:8px;font-size:12px;border:1px solid rgba(43,42,40,.45);border-radius:2px;padding:2px 8px;display:inline-block}
+.mag{position:absolute;width:22px;height:22px;border-radius:50%;box-shadow:0 2px 3px rgba(0,0,0,.35),inset 0 -3px 0 rgba(0,0,0,.18),inset 0 2px 0 rgba(255,255,255,.35)}
+.m1{left:20px;top:18px;transform:rotate(-2.5deg)}.m1 .mag{background:var(--mag-r);left:92px;top:-10px}
+.m2{left:160px;top:150px;transform:rotate(1.6deg)}.m2 .mag{background:var(--mag-b);left:20px;top:-9px}
+.m3{left:32px;top:300px;transform:rotate(-1deg);width:230px}.m3 .mag{background:var(--mag-y);left:190px;top:-8px}
+.tape{position:absolute;width:64px;height:18px;background:var(--tape);transform:rotate(-8deg);left:150px;top:-6px;box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.pad{position:absolute;right:16px;top:462px;width:150px;background:var(--memo2);padding:26px 12px 12px;box-shadow:2px 4px 8px rgba(0,0,0,.14);font-size:12px}
+.pad:before{content:"";position:absolute;left:50%;top:-40px;width:1px;height:46px;background:#6d6a63}
+.pad .ring{position:absolute;left:50%;top:-4px;width:10px;height:10px;border:2px solid #6d6a63;border-radius:50%;transform:translateX(-50%);background:var(--steel)}
+.pad h3{margin:0 0 4px;font-size:12px;font-weight:700;letter-spacing:.1em}
+.pad li{list-style:none;padding:3px 0;border-bottom:1px dashed rgba(43,42,40,.25)}
+.pad ul{margin:0;padding:0}.pad .shop{font-size:10px;color:#6d6a63;margin-top:6px}
+.say{position:absolute;left:20px;bottom:0;width:230px;font-size:12px;color:#5c5954}
+.say b{font-weight:500;color:var(--ink)}
+nav{position:absolute;left:0;right:0;bottom:0;height:72px;background:linear-gradient(180deg,#dcd9d2,#cfccc4);border-top:1px solid rgba(255,255,255,.7);display:flex;align-items:center;justify-content:space-around;font-size:12px}
+nav span{padding:6px 10px;border-radius:14px}nav .on{background:rgba(43,42,40,.08);font-weight:700}
+.handle{position:absolute;right:14px;top:120px;width:10px;height:150px;border-radius:5px;background:linear-gradient(90deg,#c9c6bf,#f5f3ee 40%,#b9b6ae);box-shadow:2px 3px 6px rgba(0,0,0,.18)}
+.sample{position:absolute;left:20px;top:820px;font-size:9px;color:#8c8880}
+</style></head><body>
+<header><h1>だいどこ</h1><small>9月12日（土）の晩ごはん</small></header>
+<p class="note hand">きのうはカレーでした。今夜は魚か、軽めを多めに。</p>
+<div class="handle"></div>
+<section class="board">
+ <div class="memo m1"><span class="mag"></span><div class="t">さっと 15分</div><h2 class="hand">豚こまと小松菜の生姜炒め</h2><div class="ing">豚こま・小松菜・生姜</div><span class="go">作り方をひらく</span></div>
+ <div class="memo m2"><span class="mag"></span><div class="t">ふつう 30分</div><h2 class="hand">鮭のホイル焼き きのこバター</h2><div class="ing">鮭・しめじ・バター・レモン</div><span class="go">作り方をひらく</span></div>
+ <div class="memo m3"><span class="mag"></span><span class="tape"></span><div class="t">ちょっと本気 50分</div><h2 class="hand">手ごねハンバーグ</h2><div class="ing">合いびき・玉ねぎ・パン粉・卵</div><span class="go">作り方をひらく</span></div>
+ <div class="pad"><span class="ring"></span><h3>買い出しメモ</h3><ul><li>豚こま 300g</li><li>小松菜 1束</li><li>生姜</li></ul><div class="shop">スーパー（お店は登録待ち）</div></div>
+ <p class="say hand"><b>ひとこと欄</b>「鶏むねが冷蔵庫にあります」 — 次の3案に反映します</p>
+</section>
+<span class="sample">表示はサンプル（店名・献立は仮）</span>
+<nav><span class="on">今夜</span><span>台帳</span><span>買い出し</span><span>相談</span></nav>
+</body></html>

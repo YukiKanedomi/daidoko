@@ -1,0 +1,50 @@
+﻿<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>だいどこ — C スーパーのチラシ</title>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#fffdf5;--red:#e5321e;--yel:#ffd200;--blu:#0a4fb5;--ink:#1c1c1c}
+*{box-sizing:border-box}html,body{margin:0}
+body{width:390px;min-height:844px;font-family:"BIZ UDPGothic","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;color:var(--ink);line-height:1.5;background:var(--paper);position:relative;overflow:hidden;
+ background-image:radial-gradient(rgba(229,50,30,.10) 1.2px,transparent 1.3px);background-size:5px 5px}
+.dela{font-family:"Dela Gothic One","BIZ UDPGothic",sans-serif;font-weight:400}
+.masthead{background:var(--red);color:#fff;padding:14px 16px 10px;display:flex;justify-content:space-between;align-items:flex-end;position:relative}
+.masthead h1{margin:0;font-size:28px;letter-spacing:.08em;text-shadow:2px 2px 0 rgba(0,0,0,.18)}
+.masthead .date{font-size:11px;font-weight:700;background:var(--yel);color:var(--ink);padding:2px 8px}
+.slant{height:14px;background:linear-gradient(180deg,var(--red) 0,var(--red) 40%,transparent 40%)}
+.h2{margin:6px 16px 0;font-size:22px;letter-spacing:.06em;color:var(--blu);text-shadow:1.5px 1.5px 0 var(--yel)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:8px 14px 0}
+.item{border:3px solid var(--ink);background:#fff;padding:10px 10px 10px;position:relative;min-height:150px}
+.item.big{grid-column:1/3;display:flex;gap:12px;align-items:center;min-height:120px;background:var(--yel)}
+.item h3{margin:0;padding-right:44px;font-size:17px;line-height:1.25;letter-spacing:.02em}
+.item .ing{font-size:11px;margin-top:6px}
+.burst{position:absolute;right:-8px;top:-12px;width:64px;height:64px;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;flex-direction:column;line-height:1;
+ clip-path:polygon(50% 0,61% 14%,78% 6%,80% 24%,98% 26%,88% 42%,100% 55%,84% 63%,90% 82%,72% 80%,66% 98%,50% 86%,34% 98%,28% 80%,10% 82%,16% 63%,0 55%,12% 42%,2% 26%,20% 24%,22% 6%,39% 14%)}
+.burst b{font-size:22px}.burst small{font-size:9px;font-weight:700}
+.item.big h3{padding-right:0}.item.big .burst{position:static;flex:0 0 76px;width:76px;height:76px;background:var(--blu)}
+.tag{display:inline-block;background:var(--ink);color:#fff;font-size:10px;font-weight:700;padding:1px 6px;margin-bottom:4px}
+.shop{margin:12px 14px 0;border-top:3px solid var(--blu);padding-top:6px;display:flex;gap:10px;align-items:flex-start}
+.shop h4{margin:0;font-size:14px;color:var(--blu);white-space:nowrap}
+.shop ul{margin:0;padding:0;list-style:none;font-size:12px;display:flex;flex-wrap:wrap;gap:4px 10px}
+.shop li{font-weight:700}.shop li span{font-weight:400;color:#555;font-size:11px}
+.shop .w{font-size:10px;color:#555;margin-left:auto;white-space:nowrap;border:1px solid #999;padding:0 5px;align-self:center}
+.memo{margin:10px 14px 0;font-size:12px;background:#fff;border:2px dashed var(--red);padding:6px 10px}
+.memo b{color:var(--red)}
+nav{position:absolute;left:0;right:0;bottom:0;height:72px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:space-around;font-size:12px;font-weight:700}
+nav .on{color:var(--yel);border-bottom:3px solid var(--yel)}
+.sample{position:absolute;left:14px;top:822px;font-size:9px;color:#777}
+</style></head><body>
+<div class="masthead"><h1 class="dela">だいどこ</h1><span class="date">9/12（土） 晩ごはん号</span></div>
+<div class="slant"></div>
+<h2 class="h2 dela">今夜の3品</h2>
+<div class="grid">
+ <div class="item"><span class="tag">さっと</span><h3>豚こまと小松菜の生姜炒め</h3><div class="ing">豚こま・小松菜・生姜</div><div class="burst"><b class="dela">15</b><small>分</small></div></div>
+ <div class="item"><span class="tag">ふつう</span><h3>鮭のホイル焼き きのこバター</h3><div class="ing">鮭・しめじ・バター・レモン</div><div class="burst"><b class="dela">30</b><small>分</small></div></div>
+ <div class="item big"><div class="burst"><b class="dela">50</b><small>分</small></div><div><span class="tag">ちょっと本気</span><h3>手ごねハンバーグ</h3><div class="ing">合いびき・玉ねぎ・パン粉・卵　—　週末向き</div></div></div>
+</div>
+<div class="memo"><b>きょうのひとこと</b>　きのうはカレー。今夜は魚か軽めを多めに。</div>
+<div class="shop"><h4 class="dela">買い出し</h4><ul><li>豚こま <span>300g</span></li><li>小松菜 <span>1束</span></li><li>生姜 <span>1片</span></li><li>鮭 <span>2切</span></li></ul><span class="w">スーパー 登録待ち</span></div>
+<div class="memo"><b>ひとこと欄</b>　「鶏むねが冷蔵庫にあります」→ 次の号に反映</div>
+<span class="sample">表示はサンプル（店名・献立は仮）</span>
+<nav><span class="on">今夜</span><span>台帳</span><span>買い出し</span><span>相談</span></nav>
+</body></html>
+

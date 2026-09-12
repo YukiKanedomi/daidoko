@@ -1,0 +1,60 @@
+﻿<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>だいどこ — 買い物</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--sur:#f4f4f2;--line:#e6e6e2;--ink:#151515;--sub:#6f6f6b;--mute:#a3a39e;--acc:#e8532e;--acc-soft:#fdeee9}
+*{box-sizing:border-box}html,body{margin:0}
+body{width:390px;min-height:844px;background:var(--bg);color:var(--ink);font-family:Inter,"Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;font-feature-settings:"tnum";line-height:1.5;position:relative;overflow:hidden;-webkit-font-smoothing:antialiased}
+.top{padding:44px 20px 0;display:flex;justify-content:space-between;align-items:flex-end}
+h1{margin:0;font-size:26px;font-weight:700;letter-spacing:-.01em}
+.top .sub{font-size:13px;color:var(--sub)}
+.seg{margin:16px 20px 0;display:flex;background:var(--sur);border-radius:12px;padding:3px}
+.seg span{flex:1;text-align:center;font-size:13px;font-weight:600;padding:7px 0;border-radius:9px;color:var(--sub)}
+.seg .on{background:#fff;color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.store{margin:18px 20px 0;display:flex;align-items:center;gap:10px}
+.store .name{font-size:15px;font-weight:700}.store .meta{font-size:12px;color:var(--sub)}
+.store .pin{margin-left:auto;font-size:12px;color:var(--sub);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
+.group{margin:14px 20px 0}
+.group h3{margin:0 0 4px;font-size:11px;font-weight:600;color:var(--mute);letter-spacing:.08em}
+.item{display:flex;align-items:center;gap:12px;padding:7px 0;border-bottom:1px solid var(--line)}
+.box{width:22px;height:22px;border-radius:7px;border:1.6px solid #c9c9c4;flex:0 0 22px}
+.box.on{background:var(--ink);border-color:var(--ink);position:relative}
+.box.on:after{content:"";position:absolute;left:7px;top:3px;width:5px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.item .n{font-size:15px;font-weight:500}.item.on .n{color:var(--mute);text-decoration:line-through}
+.item .for{font-size:11px;color:var(--mute)}
+.item .q{margin-left:auto;font-size:13px;color:var(--sub)}
+.item.maybe .n{color:var(--mute)}
+.tip{margin:12px 20px 0;background:var(--sur);border-radius:14px;padding:12px 14px;font-size:12px;color:var(--sub);line-height:1.6}
+.tip b{color:var(--ink);font-weight:600}
+.tab{position:absolute;left:0;right:0;bottom:0;height:82px;padding-bottom:18px;border-top:1px solid var(--line);background:#fff;display:flex;justify-content:space-around;align-items:center}
+.tab div{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px;font-weight:600;color:var(--mute);width:64px}
+.tab div.on{color:var(--ink)}
+.tab svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sample{position:absolute;right:20px;top:34px;font-size:10px;color:var(--mute)}
+</style></head><body>
+<span class="sample">サンプル表示</span>
+<div class="top"><h1>買い物</h1><span class="sub">今夜＋明日の分 · 7点</span></div>
+<div class="seg"><span class="on">店ごと</span><span>料理ごと</span><span>買った物</span></div>
+<div class="store"><div><div class="name">スーパー（登録待ち）</div><div class="meta">徒歩8分 · 火曜は野菜が安い日</div></div><span class="pin">地図</span></div>
+<div class="group"><h3>野菜</h3>
+ <div class="item"><span class="box"></span><div><div class="n">小松菜</div><div class="for">生姜炒め</div></div><span class="q">1束</span></div>
+ <div class="item"><span class="box"></span><div><div class="n">きゅうり</div><div class="for">塩もみ</div></div><span class="q">2本</span></div>
+ <div class="item on"><span class="box on"></span><div><div class="n">生姜</div><div class="for">生姜炒め</div></div><span class="q">1片</span></div>
+</div>
+<div class="group"><h3>肉・魚</h3>
+ <div class="item"><span class="box"></span><div><div class="n">豚こま切れ</div><div class="for">生姜炒め</div></div><span class="q">300 g</span></div>
+ <div class="item"><span class="box"></span><div><div class="n">生鮭</div><div class="for">明日 · ホイル焼き</div></div><span class="q">2切</span></div>
+</div>
+<div class="group"><h3>豆腐・乳製品</h3>
+ <div class="item"><span class="box"></span><div><div class="n">絹ごし豆腐</div><div class="for">味噌汁</div></div><span class="q">1丁</span></div>
+ <div class="item maybe"><span class="box"></span><div><div class="n">バター</div><div class="for">明日 · ホイル焼き</div></div><span class="q">家にあるかも</span></div>
+</div>
+<div class="tip"><b>家にありそうな物</b>は薄く表示しています。バターは先週も買っているので、確認してからで大丈夫です。</div>
+<nav class="tab">
+ <div><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9H4z"/></svg>今夜</div>
+ <div><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>こんだて表</div>
+ <div class="on"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg>買い物</div>
+ <div><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>台帳</div>
+</nav>
+</body></html>
+

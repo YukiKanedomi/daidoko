@@ -1,0 +1,50 @@
+﻿<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>だいどこ — B 食堂の品書き</title>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--wall:#efe9dc;--wood:#8b5e3c;--wood2:#6e4629;--cream:#fbf6ea;--ink:#2b2a28;--shu:#b7362b}
+*{box-sizing:border-box}html,body{margin:0}
+body{width:390px;min-height:844px;font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;color:var(--ink);letter-spacing:.02em;line-height:1.7;background:var(--wall);position:relative;overflow:hidden;
+ background-image:radial-gradient(rgba(0,0,0,.035) 1px,transparent 1px);background-size:6px 6px}
+.min{font-family:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif}
+header{padding:20px 20px 8px;display:flex;justify-content:space-between;align-items:baseline}
+header h1{margin:0;font-size:16px;font-weight:500;letter-spacing:.3em}
+header small{font-size:11px;color:#6d6a63}
+.rail{margin:8px 0 0;height:14px;background:linear-gradient(180deg,#a8744d,var(--wood) 60%,var(--wood2));box-shadow:0 3px 4px rgba(0,0,0,.18)}
+.wallrow{display:flex;gap:10px;padding:0 14px;align-items:flex-start}
+.tan{background:var(--cream);writing-mode:vertical-rl;text-orientation:mixed;padding:16px 8px 14px;box-shadow:1px 2px 3px rgba(0,0,0,.15);position:relative;margin-top:-2px;height:390px;font-size:18px;line-height:1.3;letter-spacing:.06em;font-weight:500}
+.tan:before{content:"";position:absolute;top:6px;left:50%;width:5px;height:5px;border-radius:50%;background:#5a5650;transform:translateX(-50%)}
+.tan small{font-size:11px;letter-spacing:.14em;color:#6d6a63;margin-left:8px}
+.tan.tonight{border-top:4px solid var(--shu)}
+.tan.dim{opacity:.55;height:200px;font-size:16px}
+.seal{position:absolute;right:-6px;bottom:6px;width:34px;height:34px;border:2px solid var(--shu);color:var(--shu);border-radius:50%;font-size:11px;line-height:1.1;display:flex;align-items:center;justify-content:center;transform:rotate(-12deg);writing-mode:horizontal-tb}
+.lead{margin:14px 20px 0;font-size:12px;color:#5c5954}
+.lead b{font-weight:500;color:var(--ink)}
+.slip{margin:16px 20px 0;background:#fff;border:1px solid #cfc7b6;padding:10px 12px 12px;position:relative;font-size:12px;
+ background-image:linear-gradient(90deg,transparent 30px,rgba(183,54,43,.35) 30px,rgba(183,54,43,.35) 31px,transparent 31px)}
+.slip h3{margin:0 0 6px;font-size:12px;font-weight:500;letter-spacing:.2em;padding-left:22px}
+.slip table{border-collapse:collapse;width:100%}
+.slip td{padding:3px 0 3px 22px;border-bottom:1px solid #e6dfd0}.slip td.n{text-align:right;padding-left:0;font-variant-numeric:tabular-nums}
+.slip .shop{position:absolute;right:10px;top:8px;font-size:10px;color:#6d6a63;border:1px solid #cfc7b6;padding:1px 6px}
+.hint{margin:12px 20px 0;font-size:12px;color:#5c5954}
+nav{position:absolute;left:0;right:0;bottom:0;height:72px;background:var(--cream);border-top:1px solid #d9d1c1;display:flex;align-items:center;justify-content:space-around;font-size:12px}
+nav span{padding:6px 10px}nav .on{border-bottom:2px solid var(--shu);font-weight:700}
+.sample{position:absolute;left:20px;top:820px;font-size:9px;color:#8c8880}
+</style></head><body>
+<header><h1 class="min">だいどこ</h1><small>九月十二日 土曜</small></header>
+<div class="rail"></div><div style="position:absolute;right:14px;top:378px;width:44px;height:44px;border:2px solid #b7362b;color:#b7362b;border-radius:50%;font-size:12px;line-height:1.1;display:flex;align-items:center;justify-content:center;transform:rotate(-12deg);font-family:Shippori Mincho,serif">今夜<br>三品</div>
+<div class="wallrow">
+ <div class="tan min tonight">豚こまと小松菜の生姜炒め<small>さっと 十五分</small></div>
+ <div class="tan min tonight">鮭のホイル焼き きのこバター<small>ふつう 三十分</small></div>
+ <div class="tan min tonight">手ごねハンバーグ<small>本気 五十分</small></div>
+ <div class="tan min dim">麻婆豆腐<small>定番</small></div>
+ <div class="tan min dim">親子丼<small>定番</small></div>
+</div>
+<p class="lead"><b>おかみより</b>　きのうはカレー。今夜は魚か軽めを多めに並べました。</p>
+<div class="slip"><span class="shop">スーパー・登録待ち</span><h3>お買い上げ伝票</h3><table><tr><td>豚こま</td><td class="n">300 g</td></tr><tr><td>小松菜</td><td class="n">1 束</td></tr><tr><td>生姜</td><td class="n">1 片</td></tr></table></div>
+<p class="hint"><b>ひとこと</b>　「鶏むねが冷蔵庫にあります」— 次の品書きに反映します</p>
+<span class="sample">表示はサンプル（店名・献立は仮）</span>
+<nav><span class="on">今夜</span><span>品書き台帳</span><span>伝票</span><span>相談</span></nav>
+</body></html>
+
+
