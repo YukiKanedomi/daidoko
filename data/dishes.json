@@ -122,7 +122,12 @@
       "frequency": "多い",
       "last_made": null,
       "count": null,
-      "variants_note": "どんなパスタが多いかは未聞き取り"
+      "variants_note": "ソースの種類は未聞き取り（どれをよく買うかで幅を広げられる）",
+      "how": "茹でて市販のパスタソースをかける",
+      "ingredients_pool": [
+        "パスタ",
+        "市販パスタソース"
+      ]
     },
     {
       "id": "salad-simple",
