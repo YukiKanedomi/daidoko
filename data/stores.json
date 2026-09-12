@@ -1,0 +1,80 @@
+{
+  "updated": "2026-09-12",
+  "note": "自宅の所在地は書かない（識別情報）。距離は橋本駅基準。営業時間は各店の公開情報（2026-09-12 検索）で、変わることがある。安い曜日は未調査（null）。",
+  "stores": [
+    {
+      "id": "iy-ario",
+      "name": "イトーヨーカドー アリオ橋本店",
+      "kind": "スーパー",
+      "usage": "土日にまとめ買い。主戦場",
+      "access": "橋本駅南口から徒歩10分",
+      "hours": "10:00-21:00",
+      "closed": null,
+      "good_at": ["冷凍食品", "野菜（地元契約農家の直送あり）", "まとめ買い"],
+      "cheap_days": null,
+      "categories": ["野菜", "肉・魚", "冷凍", "豆腐・乳製品", "調味料", "日用品"]
+    },
+    {
+      "id": "suzuki-meat",
+      "name": "ミートショップ寿々木",
+      "kind": "肉屋",
+      "usage": "近くの肉屋（店名は推定・要確認）",
+      "access": "橋本駅北口から徒歩5分ほど（橋本3丁目）",
+      "hours": "10:00-19:00",
+      "closed": "月曜",
+      "good_at": ["国産の牛・豚・鶏", "惣菜", "焼き鳥"],
+      "cheap_days": null,
+      "confirmed": false,
+      "categories": ["肉"]
+    },
+    {
+      "id": "uokatsu",
+      "name": "さかなや魚勝",
+      "kind": "魚屋",
+      "usage": "近くの魚屋（店名は推定・要確認）",
+      "access": "橋本駅北口から徒歩5分（橋本3丁目）",
+      "hours": "10:00-19:00",
+      "closed": "月曜",
+      "good_at": ["鮮魚"],
+      "cheap_days": null,
+      "confirmed": false,
+      "categories": ["魚"]
+    },
+    {
+      "id": "lopia-mewe",
+      "name": "ロピア ミウィ橋本店",
+      "kind": "スーパー",
+      "usage": "たまに",
+      "access": "橋本駅北口から徒歩3分（ミウィ橋本）",
+      "hours": "10:00-21:00",
+      "closed": null,
+      "good_at": ["肉の大容量", "安さ"],
+      "cheap_days": null,
+      "categories": ["肉", "野菜", "冷凍", "惣菜"]
+    },
+    {
+      "id": "aeon-hashimoto",
+      "name": "イオン橋本店",
+      "kind": "スーパー",
+      "usage": "たまに",
+      "access": "橋本駅南口すぐ",
+      "hours": "1F食品 7:00-23:00",
+      "closed": null,
+      "good_at": ["早朝・夜遅くでも開いている"],
+      "cheap_days": null,
+      "categories": ["野菜", "肉・魚", "冷凍", "豆腐・乳製品", "調味料", "日用品"]
+    },
+    {
+      "id": "mybasket-h3",
+      "name": "まいばすけっと 相模原橋本3丁目店",
+      "kind": "小型スーパー",
+      "usage": "たまに。ちょい足し向き",
+      "access": "橋本駅北口から徒歩5分（橋本3丁目・2025年5月開店）",
+      "hours": "7:00-24:00",
+      "closed": null,
+      "good_at": ["近い", "遅くまで"],
+      "cheap_days": null,
+      "categories": ["野菜", "肉", "冷凍", "豆腐・乳製品", "調味料"]
+    }
+  ]
+}
