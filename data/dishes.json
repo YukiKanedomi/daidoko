@@ -1,0 +1,66 @@
+{
+  "updated": "2026-09-12",
+  "note": "2026-09-12 オーナー聞き取り。回数・最終日は未記録（null）。せいろは『中身の組み合わせ』が献立の単位。",
+  "dishes": [
+    {
+      "id": "seiro",
+      "name": "簡単せいろ蒸し",
+      "kind": "main",
+      "minutes": 15,
+      "tags": ["定番", "平日", "冷凍食材"],
+      "frequency": "週に何度も",
+      "last_made": null,
+      "count": null,
+      "ingredients_pool": [
+        "冷凍ブロッコリー", "豚こま", "じゃがいも", "さつまいも", "人参",
+        "枝豆とコーン", "マンドゥ", "ウインナー", "卵"
+      ],
+      "how": "せいろに具材を並べて蒸すだけ。中身を若干変えてリピート",
+      "variants_note": "組み合わせは生成時に pool から選ぶ。同じ組み合わせが続かないよう plan.json に履歴を残す"
+    },
+    {
+      "id": "nabe",
+      "name": "鍋",
+      "kind": "main",
+      "minutes": 20,
+      "tags": ["定番", "寒い時期", "冷凍食材"],
+      "frequency": "寒くなってきたらよく",
+      "season": ["10", "11", "12", "1", "2", "3"],
+      "last_made": null,
+      "count": null,
+      "ingredients_pool": ["鍋の素", "冷凍した具材"],
+      "how": "鍋の素と冷凍した具材で簡単に",
+      "variants_note": "鍋の素の味の種類は未聞き取り"
+    },
+    {
+      "id": "misoshiru",
+      "name": "味噌汁",
+      "kind": "soup",
+      "minutes": 10,
+      "tags": ["たまに"],
+      "frequency": "たまに",
+      "last_made": null,
+      "count": null
+    },
+    {
+      "id": "egg-soup",
+      "name": "レンチン卵スープ",
+      "kind": "soup",
+      "minutes": 3,
+      "tags": ["手軽", "よく使う"],
+      "frequency": "よく",
+      "last_made": null,
+      "count": null
+    },
+    {
+      "id": "instant-soup",
+      "name": "お湯を注ぐスープ",
+      "kind": "soup",
+      "minutes": 1,
+      "tags": ["手軽", "よく使う"],
+      "frequency": "よく",
+      "last_made": null,
+      "count": null
+    }
+  ]
+}
