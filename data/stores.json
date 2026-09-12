@@ -10,35 +10,56 @@
       "access": "橋本駅南口から徒歩10分",
       "hours": "10:00-21:00",
       "closed": null,
-      "good_at": ["冷凍食品", "野菜（地元契約農家の直送あり）", "まとめ買い"],
+      "good_at": [
+        "冷凍食品",
+        "野菜（地元契約農家の直送あり）",
+        "まとめ買い"
+      ],
       "cheap_days": null,
-      "categories": ["野菜", "肉・魚", "冷凍", "豆腐・乳製品", "調味料", "日用品"]
+      "categories": [
+        "野菜",
+        "肉・魚",
+        "冷凍",
+        "豆腐・乳製品",
+        "調味料",
+        "日用品"
+      ]
     },
     {
       "id": "suzuki-meat",
       "name": "ミートショップ寿々木",
       "kind": "肉屋",
-      "usage": "近くの肉屋（店名は推定・要確認）",
+      "usage": "近くの肉屋（2026-09-12 確認済み）",
       "access": "橋本駅北口から徒歩5分ほど（橋本3丁目）",
       "hours": "10:00-19:00",
       "closed": "月曜",
-      "good_at": ["国産の牛・豚・鶏", "惣菜", "焼き鳥"],
+      "good_at": [
+        "国産の牛・豚・鶏",
+        "惣菜",
+        "焼き鳥"
+      ],
       "cheap_days": null,
-      "confirmed": false,
-      "categories": ["肉"]
+      "confirmed": true,
+      "categories": [
+        "肉"
+      ]
     },
     {
       "id": "uokatsu",
       "name": "さかなや魚勝",
       "kind": "魚屋",
-      "usage": "近くの魚屋（店名は推定・要確認）",
+      "usage": "近くの魚屋（2026-09-12 確認済み）",
       "access": "橋本駅北口から徒歩5分（橋本3丁目）",
       "hours": "10:00-19:00",
       "closed": "月曜",
-      "good_at": ["鮮魚"],
+      "good_at": [
+        "鮮魚"
+      ],
       "cheap_days": null,
-      "confirmed": false,
-      "categories": ["魚"]
+      "confirmed": true,
+      "categories": [
+        "魚"
+      ]
     },
     {
       "id": "lopia-mewe",
@@ -48,9 +69,17 @@
       "access": "橋本駅北口から徒歩3分（ミウィ橋本）",
       "hours": "10:00-21:00",
       "closed": null,
-      "good_at": ["肉の大容量", "安さ"],
+      "good_at": [
+        "肉の大容量",
+        "安さ"
+      ],
       "cheap_days": null,
-      "categories": ["肉", "野菜", "冷凍", "惣菜"]
+      "categories": [
+        "肉",
+        "野菜",
+        "冷凍",
+        "惣菜"
+      ]
     },
     {
       "id": "aeon-hashimoto",
@@ -60,9 +89,18 @@
       "access": "橋本駅南口すぐ",
       "hours": "1F食品 7:00-23:00",
       "closed": null,
-      "good_at": ["早朝・夜遅くでも開いている"],
+      "good_at": [
+        "早朝・夜遅くでも開いている"
+      ],
       "cheap_days": null,
-      "categories": ["野菜", "肉・魚", "冷凍", "豆腐・乳製品", "調味料", "日用品"]
+      "categories": [
+        "野菜",
+        "肉・魚",
+        "冷凍",
+        "豆腐・乳製品",
+        "調味料",
+        "日用品"
+      ]
     },
     {
       "id": "mybasket-h3",
@@ -72,9 +110,18 @@
       "access": "橋本駅北口から徒歩5分（橋本3丁目・2025年5月開店）",
       "hours": "7:00-24:00",
       "closed": null,
-      "good_at": ["近い", "遅くまで"],
+      "good_at": [
+        "近い",
+        "遅くまで"
+      ],
       "cheap_days": null,
-      "categories": ["野菜", "肉", "冷凍", "豆腐・乳製品", "調味料"]
+      "categories": [
+        "野菜",
+        "肉",
+        "冷凍",
+        "豆腐・乳製品",
+        "調味料"
+      ]
     }
   ]
 }

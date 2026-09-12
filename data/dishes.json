@@ -1,19 +1,30 @@
 {
   "updated": "2026-09-12",
-  "note": "2026-09-12 オーナー聞き取り。回数・最終日は未記録（null）。せいろは『中身の組み合わせ』が献立の単位。",
+  "note": "2026-09-12 オーナー聞き取り。回数・最終日は未記録（null）。せいろは『中身の組み合わせ』が献立の単位。 2026-09-12 追記: コソリ・パスタ・サラダ・お好み焼き冷凍ストック。",
   "dishes": [
     {
       "id": "seiro",
       "name": "簡単せいろ蒸し",
       "kind": "main",
       "minutes": 15,
-      "tags": ["定番", "平日", "冷凍食材"],
+      "tags": [
+        "定番",
+        "平日",
+        "冷凍食材"
+      ],
       "frequency": "週に何度も",
       "last_made": null,
       "count": null,
       "ingredients_pool": [
-        "冷凍ブロッコリー", "豚こま", "じゃがいも", "さつまいも", "人参",
-        "枝豆とコーン", "マンドゥ", "ウインナー", "卵"
+        "冷凍ブロッコリー",
+        "豚こま",
+        "じゃがいも",
+        "さつまいも",
+        "人参",
+        "枝豆とコーン",
+        "マンドゥ",
+        "ウインナー",
+        "卵"
       ],
       "how": "せいろに具材を並べて蒸すだけ。中身を若干変えてリピート",
       "variants_note": "組み合わせは生成時に pool から選ぶ。同じ組み合わせが続かないよう plan.json に履歴を残す"
@@ -23,12 +34,26 @@
       "name": "鍋",
       "kind": "main",
       "minutes": 20,
-      "tags": ["定番", "寒い時期", "冷凍食材"],
+      "tags": [
+        "定番",
+        "寒い時期",
+        "冷凍食材"
+      ],
       "frequency": "寒くなってきたらよく",
-      "season": ["10", "11", "12", "1", "2", "3"],
+      "season": [
+        "10",
+        "11",
+        "12",
+        "1",
+        "2",
+        "3"
+      ],
       "last_made": null,
       "count": null,
-      "ingredients_pool": ["鍋の素", "冷凍した具材"],
+      "ingredients_pool": [
+        "鍋の素",
+        "冷凍した具材"
+      ],
       "how": "鍋の素と冷凍した具材で簡単に",
       "variants_note": "鍋の素の味の種類は未聞き取り"
     },
@@ -37,7 +62,9 @@
       "name": "味噌汁",
       "kind": "soup",
       "minutes": 10,
-      "tags": ["たまに"],
+      "tags": [
+        "たまに"
+      ],
       "frequency": "たまに",
       "last_made": null,
       "count": null
@@ -47,7 +74,10 @@
       "name": "レンチン卵スープ",
       "kind": "soup",
       "minutes": 3,
-      "tags": ["手軽", "よく使う"],
+      "tags": [
+        "手軽",
+        "よく使う"
+      ],
       "frequency": "よく",
       "last_made": null,
       "count": null
@@ -57,10 +87,69 @@
       "name": "お湯を注ぐスープ",
       "kind": "soup",
       "minutes": 1,
-      "tags": ["手軽", "よく使う"],
+      "tags": [
+        "手軽",
+        "よく使う"
+      ],
       "frequency": "よく",
       "last_made": null,
       "count": null
+    },
+    {
+      "id": "cosori-frozen",
+      "name": "コソリで冷凍フライ・肉系",
+      "kind": "main",
+      "minutes": 15,
+      "tags": [
+        "手軽",
+        "冷凍食材",
+        "コソリ"
+      ],
+      "frequency": "度々",
+      "last_made": null,
+      "count": null,
+      "how": "冷凍のフライ系や肉系をコソリで温める"
+    },
+    {
+      "id": "pasta-easy",
+      "name": "簡単パスタ",
+      "kind": "main",
+      "minutes": 15,
+      "tags": [
+        "手軽",
+        "平日"
+      ],
+      "frequency": "多い",
+      "last_made": null,
+      "count": null,
+      "variants_note": "どんなパスタが多いかは未聞き取り"
+    },
+    {
+      "id": "salad-simple",
+      "name": "キャベツ／レタスの単体サラダ",
+      "kind": "side",
+      "minutes": 5,
+      "tags": [
+        "手軽"
+      ],
+      "frequency": "ちょいちょい",
+      "last_made": null,
+      "count": null
+    },
+    {
+      "id": "okonomiyaki-stock",
+      "name": "お好み焼き（作って冷凍ストック）",
+      "kind": "main",
+      "minutes": 50,
+      "tags": [
+        "週末仕込み",
+        "冷凍ストック",
+        "良かった"
+      ],
+      "frequency": "試して良かった",
+      "last_made": null,
+      "count": null,
+      "how": "土日にまとめて焼いて冷凍。平日はレンジかコソリで温める"
     }
   ]
 }
