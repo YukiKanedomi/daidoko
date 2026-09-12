@@ -1,0 +1,66 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>だいどこ — 作り方</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--sur:#f4f4f2;--line:#e6e6e2;--ink:#151515;--sub:#6f6f6b;--mute:#a3a39e;--acc:#e8532e;--acc-soft:#fdeee9}
+*{box-sizing:border-box}html,body{margin:0}
+body{width:390px;min-height:844px;background:var(--bg);color:var(--ink);font-family:Inter,"Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;font-feature-settings:"tnum";line-height:1.5;position:relative;overflow:hidden;-webkit-font-smoothing:antialiased}
+.photo{position:relative;height:220px;background:var(--sur)}
+.photo img{display:block;width:100%;height:100%;object-fit:cover}
+.back{position:absolute;left:16px;top:44px;width:36px;height:36px;border-radius:18px;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center}
+.back svg{width:20px;height:20px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.head{padding:14px 20px 0}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;background:var(--sur);color:var(--sub)}
+.chip.acc{background:var(--acc-soft);color:var(--acc)}
+h1{margin:8px 0 0;font-size:22px;font-weight:700;line-height:1.3;letter-spacing:-.01em}
+.head .set{font-size:13px;color:var(--sub);margin-top:2px}
+.head .set b{color:var(--ink);font-weight:500}
+.sec{margin:18px 20px 0}
+.sec h3{margin:0 0 6px;font-size:15px;font-weight:700;display:flex;justify-content:space-between;align-items:baseline}
+.sec h3 span{font-size:12px;font-weight:500;color:var(--sub)}
+.ing{display:grid;grid-template-columns:1fr 1fr;column-gap:16px}
+.ing div{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.ing div span{color:var(--sub);font-size:13px}
+.ing div.have{color:var(--mute)}
+.ing div.have span{color:var(--mute)}
+.step{display:flex;gap:12px;padding:8px 0}
+.step .n{flex:0 0 26px;height:26px;border-radius:13px;background:var(--ink);color:#fff;font-size:13px;font-weight:600;text-align:center;line-height:26px}
+.step p{margin:0;font-size:15px;line-height:1.6;padding-top:1px}
+.step p b{font-weight:600;color:var(--acc)}
+.sub{margin:6px 20px 0}
+.subr{display:flex;align-items:center;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
+.subr .k{font-size:11px;font-weight:600;color:var(--mute);flex:0 0 32px}
+.subr .v{font-size:14px;font-weight:600}
+.subr .m{font-size:12px;color:var(--sub);margin-left:auto}
+.subr .chev{color:var(--mute);font-size:20px}
+.bar{position:absolute;left:0;right:0;bottom:0;padding:12px 20px 30px;background:linear-gradient(rgba(255,255,255,0),#fff 30%)}
+.bar .btn{text-align:center;font-size:15px;font-weight:600;padding:14px 0;border-radius:14px;background:var(--ink);color:#fff}
+.sample{position:absolute;right:20px;top:34px;font-size:10px;color:#fff;text-shadow:0 0 6px rgba(0,0,0,.5)}
+</style></head><body>
+<span class="sample">サンプル表示</span>
+<div class="photo"><img src="photo-pork.png" alt=""><div class="back"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></div></div>
+<div class="head">
+ <div class="chips"><span class="chip acc">15分</span><span class="chip">2人前</span><span class="chip">フライパン1つ</span></div>
+ <h1>豚こまと小松菜の生姜炒め</h1>
+ <div class="set">副菜 <b>きゅうりの塩もみ</b>　汁物 <b>豆腐とわかめの味噌汁</b></div>
+</div>
+<div class="sec"><h3>材料 <span>薄い字は家にありそうな物</span></h3>
+ <div class="ing">
+  <div>豚こま切れ<span>300 g</span></div><div>小松菜<span>1束</span></div>
+  <div>生姜<span>1片</span></div><div class="have">しょうゆ<span>大さじ1.5</span></div>
+  <div class="have">みりん<span>大さじ1</span></div><div class="have">酒<span>大さじ1</span></div>
+  <div class="have">ごま油<span>小さじ2</span></div><div class="have">片栗粉<span>小さじ1</span></div>
+ </div>
+</div>
+<div class="sec"><h3>作り方</h3>
+ <div class="step"><div class="n">1</div><p>小松菜は4cm幅に切る。生姜は千切り。豚こまに片栗粉をまぶしておく。</p></div>
+ <div class="step"><div class="n">2</div><p>フライパンにごま油と生姜を入れて弱火。香りが立ったら豚こまを入れ、<b>中火で色が変わるまで</b>炒める。</p></div>
+ <div class="step"><div class="n">3</div><p>小松菜の茎、葉の順に加え、しょうゆ・みりん・酒を回し入れて<b>1分</b>。しんなりしたら火を止める。</p></div>
+</div>
+<div class="sub">
+ <div class="subr"><span class="k">副菜</span><span class="v">きゅうりの塩もみ</span><span class="m">5分</span><span class="chev">›</span></div>
+ <div class="subr"><span class="k">汁物</span><span class="v">豆腐とわかめの味噌汁</span><span class="m">10分</span><span class="chev">›</span></div>
+</div>
+<div class="bar"><div class="btn">これにする</div></div>
+</body></html>
