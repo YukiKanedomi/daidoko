@@ -150,6 +150,70 @@
       "last_made": null,
       "count": null,
       "how": "土日にまとめて焼いて冷凍。平日はレンジかコソリで温める"
+    },
+    {
+      "id": "meat-ready",
+      "name": "味付き肉を焼くだけ（肉屋）",
+      "kind": "main",
+      "minutes": 10,
+      "tags": [
+        "手軽",
+        "肉屋"
+      ],
+      "frequency": "たまに",
+      "last_made": null,
+      "count": null
+    },
+    {
+      "id": "yakitori-deli",
+      "name": "焼き鳥・惣菜（肉屋）",
+      "kind": "main",
+      "minutes": 0,
+      "tags": [
+        "買って帰る",
+        "肉屋"
+      ],
+      "frequency": "ときどき",
+      "last_made": null,
+      "count": null
+    },
+    {
+      "id": "sashimi",
+      "name": "刺身（魚屋）",
+      "kind": "main",
+      "minutes": 0,
+      "tags": [
+        "買って帰る",
+        "魚屋"
+      ],
+      "frequency": "いろいろ",
+      "last_made": null,
+      "count": null
+    },
+    {
+      "id": "fish-deli",
+      "name": "魚の惣菜（魚屋）",
+      "kind": "main",
+      "minutes": 0,
+      "tags": [
+        "買って帰る",
+        "魚屋"
+      ],
+      "frequency": "いろいろ",
+      "last_made": null,
+      "count": null
+    },
+    {
+      "id": "grilled-fish",
+      "name": "焼き魚",
+      "kind": "main",
+      "minutes": 15,
+      "tags": [
+        "魚屋"
+      ],
+      "frequency": "いろいろ",
+      "last_made": null,
+      "count": null
     }
   ]
 }
