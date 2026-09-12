@@ -1,0 +1,22 @@
+{
+  "updated": "2026-09-13",
+  "note": "週末仕込みの候補。status: 候補 / 気になる / 微妙 / なし / 試した。オーナーの評価で更新し、好みの学習に使う。",
+  "ideas": [
+    {"id":"hamburg","name":"ハンバーグ（焼いて冷凍）","reheat":"レンジ→コソリで表面カリッ","weekend_minutes":60,"servings":"2人×3回","why":"豚こまと並ぶ肉の主役を増やせる。ソースを変えれば飽きにくい","status":"候補"},
+    {"id":"karaage","name":"鶏の唐揚げ（揚げ焼き→冷凍）","reheat":"コソリ10分で揚げたてに近づく","weekend_minutes":50,"servings":"2人×3回","why":"コソリが最も得意な復活。肉屋の鶏ももでも","status":"候補"},
+    {"id":"katsu-raw","name":"とんかつ／チキンカツ（衣を付けて生のまま冷凍）","reheat":"コソリで凍ったまま20分。油を使わない","weekend_minutes":30,"servings":"2人×2回","why":"揚げ物なのに平日は置くだけ。週末の手間も軽い","status":"候補"},
+    {"id":"harumaki","name":"春巻き（包んで生のまま冷凍）","reheat":"コソリで凍ったまま15分","weekend_minutes":45,"servings":"2人×3回","why":"具を変えられる。マンドゥ好きなら好相性","status":"候補"},
+    {"id":"shumai","name":"手作りシュウマイ（包んで冷凍）","reheat":"せいろで凍ったまま12分","weekend_minutes":45,"servings":"2人×3回","why":"せいろの主役が増える。豚こまを刻めば肉屋の豚こまで作れる","status":"候補"},
+    {"id":"tori-dango","name":"鶏団子（丸めて冷凍）","reheat":"せいろで蒸す／鍋にそのまま投入","weekend_minutes":30,"servings":"2人×4回","why":"せいろと鍋の両方で使える万能選手。冬に強い","status":"候補"},
+    {"id":"nikumaki","name":"肉巻き野菜（人参・いんげん・アスパラを豚こまで巻いて冷凍）","reheat":"せいろ12分、またはコソリ","weekend_minutes":40,"servings":"2人×3回","why":"せいろの見た目が変わる。野菜も一緒に取れる","status":"候補"},
+    {"id":"shitaji-tori","name":"下味冷凍の鶏もも（塩麹／照り焼き／カレー味）","reheat":"せいろで蒸す、またはコソリで焼く","weekend_minutes":15,"servings":"2人×3回","why":"週末の手間が最小。味を3種にすれば平日3日変化がつく","status":"候補"},
+    {"id":"shitaji-buta","name":"下味冷凍の豚こま（生姜焼き／味噌／塩だれ）","reheat":"フライパン5分、またはせいろ","weekend_minutes":15,"servings":"2人×3回","why":"いま冷凍小分けしている豚こまに味を付けるだけ。今の習慣の延長","status":"候補"},
+    {"id":"meat-sauce","name":"ミートソース（小分け冷凍）","reheat":"レンジで温めてパスタにかける","weekend_minutes":40,"servings":"2人×4回","why":"市販ソースの日を手作りに格上げ。ご飯にかけてもよい","status":"候補"},
+    {"id":"curry","name":"カレー／ハヤシ（小分け冷凍）","reheat":"レンジ。ご飯は冷凍おにぎりかパックご飯","weekend_minutes":60,"servings":"2人×3回","why":"何もしたくない日の緊急食を1段上げる。じゃがいもは冷凍で食感が落ちるので抜く","status":"候補"},
+    {"id":"tonjiru-gu","name":"豚汁の具（炒めて冷凍）","reheat":"水と味噌を足して10分","weekend_minutes":30,"servings":"2人×4回","why":"たまに作る味噌汁を『具だくさん汁物＝主菜級』にできる。わかめ不要","status":"候補"},
+    {"id":"soboro","name":"鶏そぼろ（冷凍）","reheat":"レンジ。ご飯と卵で丼","weekend_minutes":20,"servings":"2人×3回","why":"卵を常備しているので二色丼が5分で成立","status":"候補"},
+    {"id":"onigiri","name":"冷凍おにぎり／炊き込みご飯","reheat":"レンジ2分","weekend_minutes":30,"servings":"2人×4回","why":"主食側の仕込み。せいろやコソリのおかずと組めば平日が完成する","status":"候補"},
+    {"id":"nabe-set","name":"鍋の具セット（白菜・豚こま・鶏団子・豆腐を1回分ずつ袋に）","reheat":"鍋の素に凍ったまま投入","weekend_minutes":20,"servings":"2人×3回","why":"いまの鍋をさらに手数ゼロに。寒くなってから","status":"候補"},
+    {"id":"okonomiyaki","name":"お好み焼き（焼いて冷凍）","reheat":"レンジ→コソリ","weekend_minutes":50,"servings":"2人×3回","why":"実績あり。変化形: チヂミ、ねぎ焼き","status":"試した"}
+  ]
+}
