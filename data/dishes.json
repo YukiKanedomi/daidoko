@@ -214,6 +214,21 @@
       "frequency": "いろいろ",
       "last_made": null,
       "count": null
+    },
+    {
+      "id": "emergency-ramen",
+      "name": "袋ラーメンなどの緊急食",
+      "kind": "main",
+      "minutes": 5,
+      "tags": [
+        "緊急食",
+        "何もしたくない日",
+        "常備"
+      ],
+      "frequency": "何もしたくない日",
+      "last_made": null,
+      "count": null,
+      "note": "提案の対象ではなく『逃げ道』。切らさないよう買い物リストで常備枠として扱う"
     }
   ]
 }
