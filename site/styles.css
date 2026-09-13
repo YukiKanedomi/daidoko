@@ -127,6 +127,6 @@ h1{margin:2px 0 0;font-size:26px;font-weight:700;letter-spacing:-.01em}
 .it .cnt{text-align:right;flex:0 0 64px;font-size:12px;color:var(--sub)}
 
 .tab{position:fixed;left:0;right:0;bottom:0;height:calc(var(--tab) + env(safe-area-inset-bottom));padding-bottom:calc(18px + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:#fff;display:flex;justify-content:space-around;align-items:center}
-.tab a{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px;font-weight:600;color:var(--mute);width:72px}
+.tab a{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px;font-weight:600;color:var(--mute);width:96px}
 .tab a.on{color:var(--ink)}
 .tab svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}

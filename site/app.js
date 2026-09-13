@@ -79,6 +79,7 @@
       <div class="sec"><h3>ほかの案</h3></div>
       <div class="alts">${alts.map((a) => `<button class="alt" data-swap="${esc(a.id)}" data-date="${day.date}"><img src="${photo(a.photo)}" alt=""><div class="b"><div class="t">${a.minutes ? a.minutes + '分' : '買って帰る'}</div><h4>${esc(a.name)}</h4></div></button>`).join('')}</div>
       <a class="card shopsum" href="#shop"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg><div><div class="k">買い出し ${shopN.left}点</div><div class="v">${esc(D.plan.shopping.for)}</div></div><span class="chev">›</span></a>
+      ${D.plan.health ? `<div class="foot">${esc(D.plan.health)}</div>` : ''}
       ${noteBox(day.date)}`;
   }
 
@@ -107,7 +108,7 @@
     return `
       <div class="date">${fmtDate(day.date)}</div><h1>今週末</h1>
       <div class="lead">来週の平日ぶんを、仕込みと買い出しで用意します。</div>
-      <div class="sec"><h3>仕込み</h3><a href="#book/prep">候補をぜんぶ見る</a></div>
+      <div class="sec"><h3>仕込み</h3></div>
       <div class="hero"><img src="${photo(main.photo)}" alt=""><div class="body">
         <div class="chips"><span class="chip acc">${main.minutes}分</span><span class="chip">冷凍 ${esc(main.servings)}</span><span class="chip">${esc(main.reheat)}</span></div>
         <h2>${esc(main.name)}</h2>
@@ -129,9 +130,19 @@
         <div class="row"><button class="btn ${p[day.date] ? 'done' : ''}" data-pick="${esc(tonight.id)}" data-date="${day.date}">${p[day.date] ? 'これにした' : 'これにする'}</button></div>
       </div></div>
       <div class="alts">${allDishes(day).filter((x) => x.id !== tonight.id).slice(0, 2).map((a) => `<button class="alt" data-swap="${esc(a.id)}" data-date="${day.date}"><img src="${photo(a.photo)}" alt=""><div class="b"><div class="t">${a.minutes ? a.minutes + '分' : '買って帰る'}</div><h4>${esc(a.name)}</h4></div></button>`).join('')}</div>
+      ${newcomerCard()}
       <div class="sec"><h3>来週の平日</h3><a href="#week">こんだて表</a></div>
       <div class="wdays">${nextDays.map((d) => `<a class="wd" href="#tonight/${d.date}"><div class="d">${d.dow}</div><div class="n">${esc(shortName(shown(d).name))}</div><div class="m">${shown(d).minutes}分</div></a>`).join('')}</div>
+      ${D.plan.health ? `<div class="foot">${esc(D.plan.health)}</div>` : ''}
       ${noteBox(day.date)}`;
+  }
+  function newcomerCard() {
+    const n = D.plan.newcomer; if (!n) return '';
+    const on = !!picks()['new:' + n.id];
+    return `<div class="sec"><h3>今週の新顔</h3><span class="sub" style="font-size:12px;color:var(--mute)">1つだけ</span></div>
+      <div class="card"><div class="k">${esc(n.name)}<span style="font-weight:500;color:var(--sub);font-size:12px;margin-left:6px">${esc(n.store)}</span></div>
+      <div class="v">${esc(n.how)}</div><div class="v" style="margin-top:6px;color:var(--ink)">${esc(n.why)}</div>${n.note ? `<div class="v">${esc(n.note)}</div>` : ''}
+      <div class="row"><button class="btn ${on ? 'done' : ''}" data-new="${esc(n.id)}">${on ? '買い物に入れた' : '試してみる'}</button></div></div>`;
   }
   const shortStore = (n) => n.replace('イトーヨーカドー アリオ橋本', 'ヨーカドー').replace('ミートショップ', '').replace('さかなや', '').replace('（家の前）', '');
   const shortName = (n) => n.split(/[ （(]/)[0];
@@ -170,32 +181,10 @@
       ${cur.flyer ? `<div class="flyer">${esc(cur.flyer)}</div>` : ''}
       ${cur.groups.map((g) => `<div class="group"><h3>${esc(g.cat)}</h3>${g.items.map((i) => {
         const on = !!c[ck(cur, i)];
-        return `<button class="item ${on ? 'on' : ''} ${i.maybe ? 'maybe' : ''}" data-check="${esc(ck(cur, i))}"><span class="box"></span><div><div class="n">${esc(i.n)}</div><div class="for">${esc(i.for)}</div></div><span class="q">${esc(i.maybe && !i.q ? '家にあるかも' : i.q)}</span></button>`;
+        const dim = i.maybe || (g.cat.startsWith('新顔') && D.plan.newcomer && !picks()['new:' + D.plan.newcomer.id]);
+        return `<button class="item ${on ? 'on' : ''} ${dim ? 'maybe' : ''}" data-check="${esc(ck(cur, i))}"><span class="box"></span><div><div class="n">${esc(i.n)}</div><div class="for">${esc(i.for)}</div></div><span class="q">${esc(i.maybe && !i.q ? '家にあるかも' : i.q)}</span></button>`;
       }).join('')}</div>`).join('')}
       <div class="tip"><b>薄い字は家にありそうな物</b>。確認してからで大丈夫です。全部で ${n.total} 点、残り ${n.left} 点。チェックはこのスマホに残ります。</div>`;
-  }
-
-  // ---- 台帳 --------------------------------------------------------------
-  function viewBook(tabId) {
-    const tabs = [['dishes', '定番'], ['prep', '仕込み'], ['products', '市販品'], ['stores', 'お店']];
-    const cur = tabs.find((t) => t[0] === tabId) ? tabId : 'dishes';
-    const f = D.family;
-    const fam = `<div class="fam">
-      <div class="r"><span class="k">避ける</span><span class="v no">${esc((f.avoid || []).map((a) => a.item).join('、'))}</span></div>
-      <div class="r"><span class="k">平日</span><span class="v">${esc(f.policy.weekday)}</span></div>
-      <div class="r"><span class="k">週末</span><span class="v">${esc(f.policy.weekend || '')}</span></div>
-      <div class="r"><span class="k">器具</span><span class="v">${esc((f.equipment || []).join('、'))}</span></div></div>`;
-    let body = '';
-    if (cur === 'dishes') body = D.dishes.dishes.map((x) => `<div class="it"><div class="b"><h4>${esc(x.name)}</h4><div class="m">${esc([x.kind === 'soup' ? '汁物' : x.kind === 'side' ? '副菜' : x.kind === 'staple' ? '主食' : '主菜', x.minutes ? x.minutes + '分' : null, ...(x.tags || [])].filter(Boolean).join(' · '))}</div></div><div class="cnt">${esc(x.frequency || '')}</div></div>`).join('');
-    if (cur === 'prep') body = D.prep.ideas.filter((x) => !['なし', '冷凍食品で代替'].includes(x.status)).map((x) => `<div class="it"><div class="b"><h4>${esc(x.name)}</h4><div class="m">${esc(`週末 ${x.weekend_minutes}分 · ${x.servings} · ${x.reheat}`)}</div></div><div class="cnt">${esc(x.status)}</div></div>`).join('');
-    if (cur === 'products') body = D.products.products.map((x) => `<div class="it"><div class="b"><h4>${esc(x.name)}</h4><div class="m">${esc(`${x.kind} · ${x.how}`)}</div></div><div class="cnt">${esc(x.status)}</div></div>`).join('');
-    if (cur === 'stores') body = D.stores.stores.map((x) => `<div class="it"><div class="b"><h4>${esc(x.name)}</h4><div class="m">${esc([x.access, x.hours, x.closed ? x.closed + '休' : null, x.cheap_days].filter(Boolean).join(' · '))}</div></div><div class="cnt">${esc(x.kind)}</div></div>`).join('');
-    return `
-      <div class="date">家族・定番・店</div><h1>台帳</h1>
-      <div class="seg">${tabs.map((t) => `<button class="${t[0] === cur ? 'on' : ''}" data-book="${t[0]}">${t[1]}</button>`).join('')}</div>
-      ${cur === 'dishes' ? fam : ''}
-      <div class="list" style="margin-top:8px">${body}</div>
-      <div class="foot">台帳の更新はチャットで。「これにする」とひとことは「まとめてコピー」でチャットに貼ると反映されます。</div>`;
   }
 
   // ---- ルーター ----------------------------------------------------------
@@ -205,16 +194,15 @@
     let html = '';
     if (view === 'week') html = viewWeek();
     else if (view === 'shop') html = viewShop(arg);
-    else if (view === 'book') html = viewBook(arg);
     else html = viewTonight(arg || TODAY);
     $app.innerHTML = html;
-    $tab.querySelectorAll('a').forEach((a) => a.classList.toggle('on', a.dataset.view === (['week', 'shop', 'book'].includes(view) ? view : 'tonight')));
+    $tab.querySelectorAll('a').forEach((a) => a.classList.toggle('on', a.dataset.view === (['week', 'shop'].includes(view) ? view : 'tonight')));
     window.scrollTo(0, 0);
   }
 
   // ---- 操作 --------------------------------------------------------------
   $app.addEventListener('click', (e) => {
-    const t = e.target.closest('[data-pick],[data-swap],[data-toggle],[data-check],[data-store],[data-book],[data-prep],[data-prep-no],[data-copy]');
+    const t = e.target.closest('[data-pick],[data-swap],[data-toggle],[data-check],[data-store],[data-prep],[data-prep-no],[data-copy],[data-new]');
     if (!t) return;
     const p = picks();
     if (t.dataset.pick) { p[t.dataset.date] = t.dataset.pick; store.set('picks', p); toast('今夜はこれに'); route(); }
@@ -222,9 +210,9 @@
     else if (t.dataset.toggle) { const s = document.getElementById('steps'); s.hidden = !s.hidden; }
     else if (t.dataset.check) { const c = checks(); c[t.dataset.check] = !c[t.dataset.check]; store.set('checks', c); t.classList.toggle('on'); }
     else if (t.dataset.store) { location.hash = '#shop/' + t.dataset.store; }
-    else if (t.dataset.book) { location.hash = '#book/' + t.dataset.book; }
     else if (t.dataset.prep) { p['prep:' + t.dataset.prep] = !p['prep:' + t.dataset.prep]; store.set('picks', p); toast(p['prep:' + t.dataset.prep] ? '仕込みに入れました' : '外しました'); route(); }
     else if (t.dataset.prepNo) { delete p['prep:' + t.dataset.prepNo]; store.set('picks', p); toast('今回はなしに'); route(); }
+    else if (t.dataset.new) { p['new:' + t.dataset.new] = !p['new:' + t.dataset.new]; store.set('picks', p); toast(p['new:' + t.dataset.new] ? '買い物リストに入れました' : '外しました'); route(); }
     else if (t.dataset.copy) { copyText(summary()); }
   });
   $app.addEventListener('input', (e) => {
@@ -242,6 +230,7 @@
     });
     const prep = D.plan.weekend.prep.filter((x) => p['prep:' + x.id]).map((x) => x.name);
     if (prep.length) lines.push('仕込み やる: ' + prep.join('、'));
+    if (D.plan.newcomer && p['new:' + D.plan.newcomer.id]) lines.push('新顔 試す: ' + D.plan.newcomer.name);
     const c = checks(); const bought = [];
     D.plan.shopping.stores.forEach((s) => s.groups.forEach((g) => g.items.forEach((i) => { if (c[ck(s, i)]) bought.push(i.n); })));
     if (bought.length) lines.push('買った: ' + bought.join('、'));
@@ -250,7 +239,7 @@
 
   // ---- 起動 --------------------------------------------------------------
   async function load(name) { const r = await fetch(`data/${name}.json`, { cache: 'no-cache' }); if (!r.ok) throw new Error(name); return r.json(); }
-  Promise.all(['plan', 'family', 'dishes', 'stores', 'prep-ideas', 'easy-products'].map(load))
-    .then(([plan, family, dishes, stores, prep, products]) => { Object.assign(D, { plan, family, dishes, stores, prep, products }); route(); })
+  Promise.all(['plan'].map(load))
+    .then(([plan]) => { Object.assign(D, { plan }); route(); })
     .catch((e) => { $app.innerHTML = `<div class="loading">データを読めませんでした（${esc(e.message)}）。しばらくしてから開き直してください。</div>`; });
 })();
