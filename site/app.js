@@ -33,16 +33,18 @@
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const photo = (p) => p ? `photos/${p}` : '';
   let toastT;
-  function toast(msg) {
+  function toast(msg, chara) {
     let el = document.querySelector('.toast');
     if (!el) { el = document.createElement('div'); el.className = 'toast'; document.body.appendChild(el); }
-    el.textContent = msg; el.classList.add('on'); clearTimeout(toastT); toastT = setTimeout(() => el.classList.remove('on'), 1600);
+    el.innerHTML = (chara ? `<img src="chara/${chara}.png" alt="">` : '') + `<span>${esc(msg)}</span>`;
+    el.classList.add('on'); clearTimeout(toastT); toastT = setTimeout(() => el.classList.remove('on'), chara ? 2200 : 1600);
   }
   async function copyText(t) {
     try { await navigator.clipboard.writeText(t); toast('コピーしました。チャットに貼ってください'); }
     catch (e) { window.prompt('コピーしてチャットに貼ってください', t); }
   }
 
+  const head = (sub, title, chara) => `<div class="top"><div><div class="date">${esc(sub)}</div><h1>${esc(title)}</h1></div>${chara ? `<img class="chara" src="chara/${chara}.png" alt="">` : ''}</div>`;
   function dayOf(date) { return D.plan.days.find((d) => d.date === date); }
   // 候補カードは名前と写真だけなので、同じ料理が主案になっている日から副菜・汁物・作り方を引き当てる
   function fullDish(x) {
@@ -57,7 +59,7 @@
   // ---- 今夜（平日） ------------------------------------------------------
   function viewTonight(date) {
     const day = dayOf(date);
-    if (!day) return `<div class="date">${fmtDate(date)}</div><h1>今夜のこんだて</h1><div class="foot">この日の案はまだありません。次の生成で出ます。</div>`;
+    if (!day) return `${head(fmtDate(date), '今夜のこんだて')}<div class="empty"><img src="chara/sleep.png" alt=""><p>この日の案はまだありません。<br>次の生成で出ます。</p></div>`;
     if (day.weekend) return viewWeekend(day);
     const main = shown(day);
     const done = !!picks()[day.date];
@@ -67,7 +69,7 @@
     const steps = (main.steps || []).map((s, i) => `<li><b>${i + 1}</b><span>${esc(s)}</span></li>`).join('');
     const shopN = countShopping();
     return `
-      <div class="date">${fmtDate(date)}</div><h1>今夜のこんだて</h1>
+      ${head(fmtDate(date), '今夜のこんだて', 'peek')}
       ${weekStrip(date)}
       <div class="hero"><img src="${photo(main.photo)}" alt=""><div class="body">
         <div class="chips">${chips}</div>
@@ -106,7 +108,7 @@
     const nextDays = D.plan.days.filter((d) => !d.weekend);
     const tonight = shown(day);
     return `
-      <div class="date">${fmtDate(day.date)}</div><h1>今週末</h1>
+      ${head(fmtDate(day.date), '今週末', 'apron')}
       <div class="lead">来週の平日ぶんを、仕込みと買い出しで用意します。</div>
       <div class="sec"><h3>仕込み</h3></div>
       <div class="hero"><img src="${photo(main.photo)}" alt=""><div class="body">
@@ -152,7 +154,7 @@
   function viewWeek() {
     const p = picks();
     return `
-      <div class="date">${esc(D.plan.week)}</div><h1>こんだて表</h1>
+      ${head(D.plan.week, 'こんだて表', 'steamer')}
       <div class="list">${D.plan.days.map((d) => {
         const m = shown(d);
         const past = d.date < TODAY;
@@ -176,7 +178,7 @@
     const c = checks();
     const n = countShopping();
     return `
-      <div class="date">${esc(D.plan.shopping.for)}</div><h1>買い物</h1>
+      ${head(D.plan.shopping.for, '買い物', 'basket')}
       <div class="seg">${stores.map((s) => `<button class="${s.id === cur.id ? 'on' : ''}" data-store="${esc(s.id)}">${esc(shortStore(s.name))}</button>`).join('')}</div>
       <div class="store"><div><div class="name">${esc(cur.name)}</div><div class="meta">${esc(cur.when)}</div></div></div>
       ${cur.flyer ? `<div class="flyer">${esc(cur.flyer)}</div>` : ''}
@@ -206,12 +208,12 @@
     const t = e.target.closest('[data-pick],[data-swap],[data-toggle],[data-check],[data-store],[data-prep],[data-prep-no],[data-copy],[data-new]');
     if (!t) return;
     const p = picks();
-    if (t.dataset.pick) { p[t.dataset.date] = t.dataset.pick; store.set('picks', p); toast('今夜はこれに'); route(); }
+    if (t.dataset.pick) { p[t.dataset.date] = t.dataset.pick; store.set('picks', p); toast('今夜はこれに', 'cheer'); route(); }
     else if (t.dataset.swap) { p[t.dataset.date] = t.dataset.swap; store.set('picks', p); route(); }
     else if (t.dataset.toggle) { const s = document.getElementById('steps'); s.hidden = !s.hidden; }
     else if (t.dataset.check) { const c = checks(); c[t.dataset.check] = !c[t.dataset.check]; store.set('checks', c); t.classList.toggle('on'); }
     else if (t.dataset.store) { location.hash = '#shop/' + t.dataset.store; }
-    else if (t.dataset.prep) { p['prep:' + t.dataset.prep] = !p['prep:' + t.dataset.prep]; store.set('picks', p); toast(p['prep:' + t.dataset.prep] ? '仕込みに入れました' : '外しました'); route(); }
+    else if (t.dataset.prep) { p['prep:' + t.dataset.prep] = !p['prep:' + t.dataset.prep]; store.set('picks', p); toast(p['prep:' + t.dataset.prep] ? '仕込みに入れました' : '外しました', p['prep:' + t.dataset.prep] ? 'cheer' : null); route(); }
     else if (t.dataset.prepNo) { delete p['prep:' + t.dataset.prepNo]; store.set('picks', p); toast('今回はなしに'); route(); }
     else if (t.dataset.new) { p['new:' + t.dataset.new] = !p['new:' + t.dataset.new]; store.set('picks', p); toast(p['new:' + t.dataset.new] ? '買い物リストに入れました' : '外しました'); route(); }
     else if (t.dataset.copy) { copyText(summary()); }
