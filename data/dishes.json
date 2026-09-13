@@ -234,6 +234,33 @@
       "last_made": null,
       "count": null,
       "note": "提案の対象ではなく『逃げ道』。切らさないよう買い物リストで常備枠として扱う"
+    },
+    {
+      "id": "cream-pasta",
+      "name": "クリームソースパスタ（手作り）",
+      "kind": "main",
+      "minutes": 30,
+      "tags": [
+        "たまに",
+        "週末向き",
+        "良かった"
+      ],
+      "frequency": "たまに",
+      "last_made": null,
+      "count": null,
+      "note": "作ったときは良かった。冷凍せずその日に食べる"
+    },
+    {
+      "id": "rice-frozen",
+      "name": "ご飯の冷凍ストック",
+      "kind": "staple",
+      "minutes": 0,
+      "tags": [
+        "習慣"
+      ],
+      "frequency": "いつも",
+      "last_made": null,
+      "count": null
     }
   ]
 }
