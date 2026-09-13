@@ -73,7 +73,7 @@
     },
     {
       "id": "shitaji-tori",
-      "name": "下味冷凍の鶏もも（塩麹／照り焼き／カレー味）",
+      "name": "下味冷凍の鶏もも（塩麹／照り焼き／味噌マヨ）",
       "reheat": "せいろで蒸す、またはコソリで焼く",
       "weekend_minutes": 15,
       "servings": "2人×3回",
@@ -159,6 +159,66 @@
       "servings": "2人×3回",
       "why": "実績あり。変化形: チヂミ、ねぎ焼き",
       "status": "試した"
+    },
+    {
+      "id": "teriyaki-stock",
+      "name": "鶏の照り焼き（焼いて冷凍）",
+      "reheat": "レンジ→コソリで皮を戻す",
+      "weekend_minutes": 30,
+      "servings": "2人×3回",
+      "why": "ハンバーグと同じ『焼いて冷凍』型。丼にもせいろの横にも",
+      "status": "候補",
+      "round": 2
+    },
+    {
+      "id": "buta-daikon",
+      "name": "豚バラ大根／豚の角煮（煮て冷凍）",
+      "reheat": "レンジ",
+      "weekend_minutes": 90,
+      "servings": "2人×3回",
+      "why": "週末に時間をかけられる日の煮込み。煮物は冷凍で味が入る",
+      "status": "候補",
+      "round": 2
+    },
+    {
+      "id": "gapao",
+      "name": "ガパオ風ひき肉（炒めて冷凍）",
+      "reheat": "レンジ。ご飯と目玉焼き",
+      "weekend_minutes": 20,
+      "servings": "2人×3回",
+      "why": "そぼろの味違い。卵と組む型が増える",
+      "status": "候補",
+      "round": 2
+    },
+    {
+      "id": "mapo-base",
+      "name": "麻婆の肉みそ（炒めて冷凍）",
+      "reheat": "レンジで温め、豆腐を足して5分",
+      "weekend_minutes": 25,
+      "servings": "2人×3回",
+      "why": "豆腐は日持ちするので平日でも成立。辛さは控えめに調整",
+      "status": "候補",
+      "round": 2
+    },
+    {
+      "id": "minestrone-gu",
+      "name": "具だくさんトマトスープの具（炒めて冷凍）",
+      "reheat": "水とコンソメで10分",
+      "weekend_minutes": 30,
+      "servings": "2人×4回",
+      "why": "豚汁の具の洋風版。パスタの日の汁物にも",
+      "status": "候補",
+      "round": 2
+    },
+    {
+      "id": "weekend-fresh",
+      "name": "週末に作ってその日に食べる手作り（クリームパスタ／グラタン／ロールキャベツ など）",
+      "reheat": "冷凍しない",
+      "weekend_minutes": 60,
+      "servings": "2人×1回",
+      "why": "『冷凍しないからこそ』の楽しみ枠。仕込みとは別に土日の献立に1品入れる",
+      "status": "候補",
+      "round": 2
     }
   ],
   "evaluated": "2026-09-13 オーナー評価（7 肉巻き野菜は未評価）",
