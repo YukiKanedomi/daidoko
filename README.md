@@ -9,3 +9,7 @@
 - `data/` 台帳（家族の好み・定番・店・生成結果）
 - `site/` 公開物（GitHub Pages）。ローカル確認は `site/` と `data/` を同じフォルダに集めて簡易サーバで開く（`?today=2026-09-15` で日付を偽装できる）
 - `.github/workflows/deploy.yml` が `site/` と `data/*.json` を dist に集めて Pages へ配信
+
+## 定時ジョブ
+
+- `daidoko-flyers`（金曜 20:00）: `scripts/flyers.ps1`。チラシを読んで `data/flyers.json` を更新・公開。停止は `Unregister-ScheduledTask -TaskName 'daidoko-flyers' -Confirm:$false`

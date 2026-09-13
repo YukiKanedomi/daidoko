@@ -1,1 +1,3 @@
 design/**/run*.log
+work/
+scripts/*.log

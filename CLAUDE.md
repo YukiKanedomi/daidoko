@@ -59,4 +59,5 @@
 - `research/` — App Store 公開データから集めた人気アプリの実画面（`apps.json`、`sheet-*.png`）
 - 有力な方向（2026-09-12 オーナー）: **週末の仕込みと買い出しが本体**で、平日はその消化。「今夜1案」は残しつつ、重心を土日（仕込み候補＋店ごとの買い出し）に寄せる案を作戦として検討中。
 - 2026-09-13: オーナー「組んでみるのとアプリも作り始めよう。あとで大きく作り変えるかも、試行錯誤で」→ `site/` に静的アプリを実装（index.html / app.js / styles.css、ハッシュルーティング、状態は localStorage、`?today=YYYY-MM-DD` で日付を偽装して確認）。`data/plan.json` は初回手組み。写真は `site/photos/*.jpg`（800px）。描画確認は Python の Playwright（scratchpad の shoot.py 方式、headless Chrome 直叩きは fetch 完了前に撮れて不安定）
+- **定時ジョブ daidoko-flyers**（2026-09-13 新設・金曜 20:00）: `scripts/flyers.ps1` → `scripts/fetch_flyers.py`（トクバイからヨーカドー・ロピア・イオンの今週末チラシを `work/flyers/latest/` に4分割保存）→ `claude -p`（sonnet、`scripts/flyers-prompt.txt`）が画像を読んで `data/flyers.json` を書き push。アプリは flyers.json があれば買い物画面の店ごとに「チラシ」枠と項目の「特売」印を出す（無ければ何も出ない）。ログ `scripts/flyers.log`。停止 `Unregister-ScheduledTask -TaskName 'daidoko-flyers' -Confirm:$false`
 - 定時ジョブ（献立生成）は未着手。当面は plan.json をチャットで更新する

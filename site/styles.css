@@ -186,3 +186,12 @@ h1{margin:2px 0 0;font-size:26px;font-weight:700;letter-spacing:-.01em}
 .item .for .days{display:inline-flex;gap:3px;margin-left:8px;vertical-align:middle}
 .item .for .days i{font-style:normal;font-size:10px;font-weight:700;color:var(--acc);background:var(--acc-soft);border-radius:999px;padding:0 6px;line-height:16px}
 .steps li .sg-combo b{flex:none;height:auto;line-height:1.4;background:none;color:var(--ink);border-radius:0;text-align:left;font-size:13px;width:auto}
+.fl{margin:10px 0 0;border:1px solid var(--line);border-radius:14px;padding:10px 12px}
+.fl-h{font-size:12px;font-weight:700;display:flex;justify-content:space-between}
+.fl-h span{font-weight:500;color:var(--sub)}
+.fl-row{display:flex;gap:8px;align-items:baseline;padding:4px 0;border-top:1px solid var(--line);font-size:13px}
+.fl-n{flex:1;min-width:0}
+.fl-p{font-weight:600;color:var(--acc);white-space:nowrap}
+.fl-d{font-size:11px;color:var(--sub);white-space:nowrap}
+.fl-f{margin-top:6px;font-size:11px;color:var(--mute)}
+.item .n .sale{display:inline-block;margin-left:8px;font-size:10px;font-weight:700;color:var(--acc);background:var(--acc-soft);border-radius:999px;padding:1px 7px;vertical-align:2px}

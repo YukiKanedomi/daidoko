@@ -212,6 +212,18 @@
     }).join('')}</div>`;
   }
 
+  // チラシ（定時ジョブが data/flyers.json に書く。無ければ何も出さない）
+  function flyerStore(id) { return D.flyers && D.flyers.stores ? D.flyers.stores.find((s) => s.id === id) : null; }
+  function flyerBox(id) {
+    const s = flyerStore(id); if (!s || !s.items || !s.items.length) return '';
+    return `<div class="fl"><div class="fl-h">チラシ <span>${esc(s.period || '')}</span></div>${s.items.map((i) => `<div class="fl-row"><span class="fl-n">${esc(i.n)}</span><span class="fl-p">${esc(i.price || '')}</span>${i.day ? `<span class="fl-d">${esc(i.day)}</span>` : ''}</div>`).join('')}<div class="fl-f">${esc(D.flyers.note || 'チラシによる。店頭で確認を')}</div></div>`;
+  }
+  function onSale(storeId, item) {
+    const s = flyerStore(storeId); if (!s || !s.items) return null;
+    const key = item.n.replace(/（.*?）/g, '').replace(/^冷凍/, '').trim().slice(0, 3);
+    return s.items.find((i) => i.n.includes(key)) || null;
+  }
+
   // ---- 買い物 ------------------------------------------------------------
   function countShopping() {
     const c = checks(); let total = 0, left = 0;
@@ -238,11 +250,12 @@
       <div class="seg">${stores.map((s) => `<button class="${s.id === cur.id ? 'on' : ''}" data-store="${esc(s.id)}">${esc(shortStore(s.name))}</button>`).join('')}</div>
       <div class="store">${cur.icon ? `<img class="sico" src="shops/${esc(cur.icon)}.png" alt="">` : ''}<div><div class="name">${esc(cur.name)}</div><div class="meta">${esc(cur.when)}</div></div></div>
       ${cur.flyer ? `<div class="flyer">${esc(cur.flyer)}</div>` : ''}
+      ${flyerBox(cur.id)}
       ${cur.groups.map((g) => `<div class="group"><h3>${esc(g.cat)}</h3>${g.items.map((i) => {
         const on = !!c[ck(cur, i)];
         const dim = i.maybe || (g.cat.startsWith('新顔') && D.plan.newcomer && !picks()['new:' + D.plan.newcomer.id]);
-        const ud = usedDays(i);
-        return `<button class="item ${on ? 'on' : ''} ${dim ? 'maybe' : ''}" data-check="${esc(ck(cur, i))}"><span class="box"></span><div><div class="n">${esc(i.n)}</div><div class="for">${esc(i.for)}${ud.length ? `<span class="days">${ud.map((d) => `<i>${esc(d)}</i>`).join('')}</span>` : ''}</div></div><span class="q">${esc(i.maybe && !i.q ? '家にあるかも' : i.q)}</span></button>`;
+        const ud = usedDays(i); const sale = onSale(cur.id, i);
+        return `<button class="item ${on ? 'on' : ''} ${dim ? 'maybe' : ''}" data-check="${esc(ck(cur, i))}"><span class="box"></span><div><div class="n">${esc(i.n)}${sale ? `<span class="sale">特売 ${esc(sale.price || '')}</span>` : ''}</div><div class="for">${esc(i.for)}${ud.length ? `<span class="days">${ud.map((d) => `<i>${esc(d)}</i>`).join('')}</span>` : ''}</div></div><span class="q">${esc(i.maybe && !i.q ? '家にあるかも' : i.q)}</span></button>`;
       }).join('')}</div>`).join('')}
       <div class="tip"><b>薄い字は家にありそうな物</b>。確認してからで大丈夫です。全部で ${n.total} 点、残り ${n.left} 点。チェックはこのスマホに残ります。</div>`;
   }
@@ -304,7 +317,7 @@
 
   // ---- 起動 --------------------------------------------------------------
   async function load(name) { const r = await fetch(`data/${name}.json`, { cache: 'no-cache' }); if (!r.ok) throw new Error(name); return r.json(); }
-  Promise.all(['plan', 'seiro'].map(load))
-    .then(([plan, seiro]) => { Object.assign(D, { plan, seiro }); route(); })
+  Promise.all(['plan', 'seiro'].map(load).concat([load('flyers').catch(() => null)]))
+    .then(([plan, seiro, flyers]) => { Object.assign(D, { plan, seiro, flyers }); route(); })
     .catch((e) => { $app.innerHTML = `<div class="loading">データを読めませんでした（${esc(e.message)}）。しばらくしてから開き直してください。</div>`; });
 })();
