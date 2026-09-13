@@ -43,7 +43,14 @@
           "fish": false,
           "fried": false,
           "soup": false
-        }
+        },
+        "seiro_items": [
+          "butakoma",
+          "jagaimo",
+          "broccoli",
+          "tamago",
+          "mandu"
+        ]
       },
       "alts": [
         {
@@ -157,7 +164,14 @@
           "id": "seiro-a",
           "name": "せいろ 豚こま・じゃがいも・ブロッコリー・卵・餃子",
           "minutes": 15,
-          "photo": "seiro.jpg"
+          "photo": "seiro.jpg",
+          "seiro_items": [
+            "butakoma",
+            "jagaimo",
+            "broccoli",
+            "tamago",
+            "mandu"
+          ]
         },
         {
           "id": "pasta",
@@ -199,7 +213,14 @@
           "fish": false,
           "fried": false,
           "soup": false
-        }
+        },
+        "seiro_items": [
+          "wiener",
+          "satsumaimo",
+          "ninjin",
+          "edako",
+          "mandu"
+        ]
       },
       "alts": [
         {
@@ -299,7 +320,14 @@
         "side_recipe": {
           "site": "白ごはん.com 簡単！やみつきキャベツ",
           "url": "https://www.sirogohan.com/recipe/kyabeyami/"
-        }
+        },
+        "seiro_items": [
+          "butakoma",
+          "jagaimo",
+          "broccoli",
+          "tamago",
+          "mandu"
+        ]
       },
       "alts": [
         {
@@ -353,7 +381,14 @@
           "id": "seiro-a",
           "name": "せいろ 豚こま・じゃがいも・ブロッコリー・卵・餃子",
           "minutes": 15,
-          "photo": "seiro.jpg"
+          "photo": "seiro.jpg",
+          "seiro_items": [
+            "butakoma",
+            "jagaimo",
+            "broccoli",
+            "tamago",
+            "mandu"
+          ]
         }
       ]
     },
@@ -477,7 +512,14 @@
           "id": "seiro-a",
           "name": "せいろ 豚こま・じゃがいも・ブロッコリー・卵・餃子",
           "minutes": 15,
-          "photo": "seiro.jpg"
+          "photo": "seiro.jpg",
+          "seiro_items": [
+            "butakoma",
+            "jagaimo",
+            "broccoli",
+            "tamago",
+            "mandu"
+          ]
         },
         {
           "id": "nabe",

@@ -51,6 +51,26 @@
     const list = (x.recipes || (x.recipe_url ? [{ role: '基本', site: x.recipe_site || 'レシピ', url: x.recipe_url }] : [])).slice(0, 3);
     return list.map((r) => `<a class="${cls}" href="${esc(r.url)}" target="_blank" rel="noopener"><b>${esc(r.role)}</b>${esc(r.site)} ›</a>`).join('');
   }
+  // せいろガイド: 主案の seiro_items から「先に入れる／後から足す」の表とたれを組む
+  function seiroGuide(main) {
+    if (!D.seiro || !main.seiro_items) return '';
+    const ing = D.seiro.ingredients; const by = (id) => ing.find((i) => i.id === id);
+    const list = main.seiro_items.map(by).filter(Boolean);
+    const first = list.filter((i) => i.stage === '先').sort((x, y) => y.minutes - x.minutes);
+    const later = list.filter((i) => i.stage === '後').sort((x, y) => y.minutes - x.minutes);
+    const total = Math.max(...list.map((i) => i.minutes));
+    const row = (i) => `<div class="sg-row"><span class="sg-n">${esc(i.name)}</span><span class="sg-c">${esc(i.cut)}</span><span class="sg-m">${i.minutes}分</span></div>`;
+    const sauces = D.seiro.sauces.filter((s) => (D.seiro.combos.find((c) => c.items.join() === main.seiro_items.join()) || { sauce: ['ponzu', 'goma-shio'] }).sauce.includes(s.id));
+    const others = D.seiro.combos.filter((c) => c.items.join() !== main.seiro_items.join()).slice(0, 12);
+    return `<div class="sg">
+      <div class="sg-h">せいろの順番 <span>全部で約${total}分（目安）</span></div>
+      <div class="sg-stage">先に入れる</div>${first.map(row).join('') || '<div class="sg-row"><span class="sg-c">なし</span></div>'}
+      <div class="sg-stage">残り${Math.max(...later.map((i) => i.minutes), 0)}分で足す</div>${later.map(row).join('')}
+      <div class="sg-stage">たれ</div><div class="sg-sauce">${sauces.map((s) => `<span class="chip">${esc(s.name)}</span>`).join('')}</div>
+      <button class="sg-more" data-toggle-combos="1">ほかの組み合わせを見る</button>
+      <div id="combos" hidden>${others.map((c) => `<div class="sg-combo"><b>${esc(c.name)}</b><span>${esc(c.items.map((id) => (by(id) || {}).name).filter(Boolean).join('・'))} · 約${c.minutes}分</span><i>${esc(c.tip)}</i></div>`).join('')}</div>
+    </div>`;
+  }
   const head = (sub, title, chara) => `<div class="top"><div><div class="date">${esc(sub)}</div><h1>${esc(title)}</h1></div>${chara ? `<img class="chara" src="chara/${chara}.png" alt="">` : ''}</div>`;
   function dayOf(date) { return D.plan.days.find((d) => d.date === date); }
   // 候補カードは名前と写真だけなので、同じ料理が主案になっている日から副菜・汁物・作り方を引き当てる
@@ -88,7 +108,7 @@
         <div class="set">${set}</div>
         ${main.tip ? `<div class="tipline"><b>豆知識</b>${esc(main.tip)}</div>` : ''}
         <div class="row"><button class="btn ${done ? 'done' : ''}" data-pick="${esc(main.id)}" data-date="${day.date}">${done ? 'これにした' : 'これにする'}</button><button class="btn ghost" data-toggle="steps">作り方</button></div>
-        <ol class="steps" id="steps" hidden>${steps}${(main.recipes || main.recipe_url) ? `<li class="link"><div class="rlist">${recipeLinks(main, 'rlink')}</div></li>` : ''}${main.side_recipe ? `<li class="link"><div class="rlist"><a class="rlink" href="${esc(main.side_recipe.url)}" target="_blank" rel="noopener"><b>副菜</b>${esc(main.side_recipe.site)} ›</a></div></li>` : ''}</ol>
+        <ol class="steps" id="steps" hidden>${main.seiro_items ? `<li class="link" style="display:block">${seiroGuide(main)}</li>` : ''}${steps}${(main.recipes || main.recipe_url) ? `<li class="link"><div class="rlist">${recipeLinks(main, 'rlink')}</div></li>` : ''}${main.side_recipe ? `<li class="link"><div class="rlist"><a class="rlink" href="${esc(main.side_recipe.url)}" target="_blank" rel="noopener"><b>副菜</b>${esc(main.side_recipe.site)} ›</a></div></li>` : ''}</ol>
       </div></div>
       <div class="sec"><h3>ほかの案</h3><button data-more="1">もっと見る</button></div>
       <div class="alts">${alts.map((a) => `<button class="alt" data-swap="${esc(a.id)}" data-date="${day.date}"><img src="${photo(a.photo)}" alt=""><div class="b"><div class="t">${a.minutes ? a.minutes + '分' : '買って帰る'}</div><h4>${esc(a.name)}</h4></div></button>`).join('')}</div>
@@ -199,6 +219,15 @@
     return { total, left };
   }
   const ck = (s, i) => `${D.plan.week}|${s.id}|${i.n}`;
+  // 食材名から、今週その食材を使う日を引く（料理名・副菜・汁物・手順・仕込みの文字列に当てる）
+  const ALIAS = { '冷凍餃子': '餃子', '冷凍うどん': 'うどん', '冷凍ブロッコリー': 'ブロッコリー', '麻婆豆腐の素': '麻婆', 'パスタソース': 'パスタ', '鶏ひき肉': 'そぼろ', '鶏むね肉': 'サラダチキン', '鮭の切り身': '鮭', 'こんにゃく': '豚汁', '大根': '大根|豚汁', '人参': '人参|豚汁|せいろ', '長ねぎ': 'ねぎ|豚汁', '豆腐': '豆腐|麻婆|冷奴|味噌汁', '卵': '卵|かき玉|せいろ|そぼろ', '豚こま': '豚こま|せいろ|麻婆|塩豚', 'カット野菜': 'サラダ|キャベツ', '刺身盛り': '刺身', '豚肩ロース 塊': 'ローストポーク', '注ぐだけスープ': '注ぐだけ', 'レンチン卵スープ': '卵スープ', '白だし': '浅漬け|うどん', '味噌': '味噌汁|豚汁', 'ドレッシング さっぱり系': 'サラダ' };
+  function usedDays(item) {
+    const key = item.n.replace(/（.*?）/g, '').trim();
+    const pat = new RegExp(ALIAS[key] || key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+    const days = D.plan.days.filter((d) => { if (isSkip(d)) return false; const m = shown(d); return pat.test([m.name, m.side, m.soup, ...(m.steps || [])].filter(Boolean).join(' ')); }).map((d) => d.dow);
+    const prep = (D.plan.weekend.prep || []).filter((x) => pat.test(x.name + ' ' + (x.why || ''))).map((x) => '仕込み');
+    return [...new Set(days), ...(prep.length ? ['仕込み'] : [])];
+  }
   function viewShop(storeId) {
     const stores = D.plan.shopping.stores;
     const cur = stores.find((s) => s.id === storeId) || stores[0];
@@ -212,7 +241,8 @@
       ${cur.groups.map((g) => `<div class="group"><h3>${esc(g.cat)}</h3>${g.items.map((i) => {
         const on = !!c[ck(cur, i)];
         const dim = i.maybe || (g.cat.startsWith('新顔') && D.plan.newcomer && !picks()['new:' + D.plan.newcomer.id]);
-        return `<button class="item ${on ? 'on' : ''} ${dim ? 'maybe' : ''}" data-check="${esc(ck(cur, i))}"><span class="box"></span><div><div class="n">${esc(i.n)}</div><div class="for">${esc(i.for)}</div></div><span class="q">${esc(i.maybe && !i.q ? '家にあるかも' : i.q)}</span></button>`;
+        const ud = usedDays(i);
+        return `<button class="item ${on ? 'on' : ''} ${dim ? 'maybe' : ''}" data-check="${esc(ck(cur, i))}"><span class="box"></span><div><div class="n">${esc(i.n)}</div><div class="for">${esc(i.for)}${ud.length ? `<span class="days">${ud.map((d) => `<i>${esc(d)}</i>`).join('')}</span>` : ''}</div></div><span class="q">${esc(i.maybe && !i.q ? '家にあるかも' : i.q)}</span></button>`;
       }).join('')}</div>`).join('')}
       <div class="tip"><b>薄い字は家にありそうな物</b>。確認してからで大丈夫です。全部で ${n.total} 点、残り ${n.left} 点。チェックはこのスマホに残ります。</div>`;
   }
@@ -232,12 +262,13 @@
 
   // ---- 操作 --------------------------------------------------------------
   $app.addEventListener('click', (e) => {
-    const t = e.target.closest('[data-pick],[data-swap],[data-toggle],[data-check],[data-store],[data-prep],[data-prep-no],[data-copy],[data-new],[data-more],[data-skip],[data-unskip]');
+    const t = e.target.closest('[data-pick],[data-swap],[data-toggle],[data-check],[data-store],[data-prep],[data-prep-no],[data-copy],[data-new],[data-more],[data-skip],[data-unskip],[data-toggle-combos]');
     if (!t) return;
     const p = picks();
     if (t.dataset.pick) { p[t.dataset.date] = t.dataset.pick; store.set('picks', p); toast('今夜はこれに', 'cheer'); route(); }
     else if (t.dataset.swap) { p[t.dataset.date] = t.dataset.swap; store.set('picks', p); route(); }
     else if (t.dataset.toggle) { const s = document.getElementById('steps'); s.hidden = !s.hidden; }
+    else if (t.dataset.toggleCombos) { const m = document.getElementById('combos'); m.hidden = !m.hidden; t.textContent = m.hidden ? 'ほかの組み合わせを見る' : '閉じる'; }
     else if (t.dataset.more) { const m = document.getElementById('more'); m.hidden = !m.hidden; t.textContent = m.hidden ? 'もっと見る' : '閉じる'; }
     else if (t.dataset.skip) { p[t.dataset.skip] = 'skip'; store.set('picks', p); toast('この日は作らない日に'); route(); }
     else if (t.dataset.unskip) { delete p[t.dataset.unskip]; store.set('picks', p); route(); }
@@ -273,7 +304,7 @@
 
   // ---- 起動 --------------------------------------------------------------
   async function load(name) { const r = await fetch(`data/${name}.json`, { cache: 'no-cache' }); if (!r.ok) throw new Error(name); return r.json(); }
-  Promise.all(['plan'].map(load))
-    .then(([plan]) => { Object.assign(D, { plan }); route(); })
+  Promise.all(['plan', 'seiro'].map(load))
+    .then(([plan, seiro]) => { Object.assign(D, { plan, seiro }); route(); })
     .catch((e) => { $app.innerHTML = `<div class="loading">データを読めませんでした（${esc(e.message)}）。しばらくしてから開き直してください。</div>`; });
 })();

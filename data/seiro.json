@@ -1,0 +1,53 @@
+{
+  "updated": "2026-09-13",
+  "note": "せいろガイド。蒸し時間は家庭用せいろ（湯が沸いた状態から、中火〜強火）の目安で、食材の大きさで前後する。『先』は最初から入れる物、『後』は途中で足す物。冷凍はそのまま入れてよい。きのこ・わかめ・トマトは入れない。",
+  "stages": {"先": "最初から入れる（火が通りにくい物）", "後": "残り5〜8分で足す（火が通りやすい物）"},
+  "ingredients": [
+    {"id": "jagaimo", "name": "じゃがいも", "cut": "くし切り（8等分）", "minutes": 13, "stage": "先", "freezer": false, "note": "竹串がすっと通れば OK。皮ごとで栄養が残りやすい"},
+    {"id": "satsumaimo", "name": "さつまいも", "cut": "1cm の輪切り", "minutes": 13, "stage": "先", "freezer": true, "note": "冷凍のままなら＋2分。甘みが出る"},
+    {"id": "ninjin", "name": "人参", "cut": "スティック（1cm 角）", "minutes": 11, "stage": "先", "freezer": true, "note": "薄切りなら『後』でよい"},
+    {"id": "kabocha", "name": "かぼちゃ", "cut": "1cm 厚", "minutes": 12, "stage": "先", "freezer": true, "note": "冷凍カットが便利"},
+    {"id": "tamago", "name": "卵（殻ごと）", "cut": "そのまま", "minutes": 11, "stage": "先", "freezer": false, "note": "11分で半熟寄り、14分で固ゆで。蒸し上がりに水にとる"},
+    {"id": "mandu", "name": "マンドゥ・餃子（冷凍）", "cut": "そのまま", "minutes": 11, "stage": "先", "freezer": true, "note": "くっつくのでクッキングシートかキャベツを敷く"},
+    {"id": "shumai", "name": "シュウマイ（冷凍）", "cut": "そのまま", "minutes": 10, "stage": "先", "freezer": true, "note": "同上"},
+    {"id": "torimomo", "name": "鶏もも", "cut": "一口大", "minutes": 13, "stage": "先", "freezer": false, "note": "塩か塩麹をもみ込んでおくと味が入る"},
+    {"id": "torimune", "name": "鶏むね（薄切り）", "cut": "そぎ切り 1cm", "minutes": 8, "stage": "後", "freezer": false, "note": "蒸しすぎると固くなるので後入れ"},
+    {"id": "sake", "name": "鮭の切り身", "cut": "そのまま", "minutes": 11, "stage": "先", "freezer": false, "note": "下味冷凍なら解凍してから"},
+    {"id": "shiobuta", "name": "塩豚（豚こまに塩）", "cut": "そのまま", "minutes": 8, "stage": "後", "freezer": true, "note": "冷凍なら『先』で12分"},
+    {"id": "butakoma", "name": "豚こま", "cut": "広げて重ねない", "minutes": 7, "stage": "後", "freezer": true, "note": "冷凍のままなら『先』で12分。重なると火が通りにくい"},
+    {"id": "wiener", "name": "ウインナー", "cut": "切り込み1本", "minutes": 5, "stage": "後", "freezer": true, "note": ""},
+    {"id": "broccoli", "name": "ブロッコリー（冷凍）", "cut": "そのまま", "minutes": 6, "stage": "後", "freezer": true, "note": "ビタミンCが湯に流れ出ないのが蒸しの利点"},
+    {"id": "edako", "name": "枝豆とコーン（冷凍）", "cut": "そのまま", "minutes": 4, "stage": "後", "freezer": true, "note": "小皿に入れて乗せると散らばらない"},
+    {"id": "hakusai", "name": "白菜", "cut": "ざく切り", "minutes": 6, "stage": "後", "freezer": true, "note": "敷き野菜にもなる"},
+    {"id": "cabbage", "name": "キャベツ", "cut": "ざく切り", "minutes": 5, "stage": "後", "freezer": false, "note": "餃子の下に敷くとくっつき防止と一石二鳥"},
+    {"id": "moyashi", "name": "もやし", "cut": "そのまま", "minutes": 3, "stage": "後", "freezer": false, "note": "最後の3分"},
+    {"id": "tofu", "name": "豆腐", "cut": "4等分", "minutes": 5, "stage": "後", "freezer": false, "note": "温奴。ポン酢で"},
+    {"id": "tamanegi", "name": "玉ねぎ", "cut": "くし切り", "minutes": 8, "stage": "先", "freezer": false, "note": "甘くなる"},
+    {"id": "negi", "name": "長ねぎ", "cut": "4cm", "minutes": 5, "stage": "後", "freezer": true, "note": ""},
+    {"id": "piman", "name": "ピーマン", "cut": "半分", "minutes": 5, "stage": "後", "freezer": false, "note": ""},
+    {"id": "aburaage", "name": "油揚げ", "cut": "短冊", "minutes": 3, "stage": "後", "freezer": true, "note": "たんぱく質を足す係"}
+  ],
+  "sauces": [
+    {"id": "ponzu", "name": "ポン酢（＋すりごま）", "for": "野菜・豆腐・豚こま", "note": "妻の好み。さっぱり"},
+    {"id": "goma-shio", "name": "ごま油＋塩", "for": "じゃがいも・さつまいも・ブロッコリー", "note": "βカロテンの吸収に油が効く"},
+    {"id": "mandu-tare", "name": "マンドゥのたれ（しょうゆ＋酢＋ラー油）", "for": "マンドゥ・餃子・シュウマイ", "note": "ラー油は夫の分だけ多め"},
+    {"id": "umakara", "name": "サラダの旨辛たれ", "for": "豚こま・鶏むね・キャベツ", "note": "手持ちのボトル"},
+    {"id": "miso-mayo", "name": "味噌マヨ（味噌1:マヨ2）", "for": "野菜全般・鶏", "note": "濃いめが欲しい日"},
+    {"id": "choregi", "name": "チョレギドレッシング", "for": "豚こま・白菜・もやし", "note": "手持ちのボトル"},
+    {"id": "shio-koji", "name": "塩麹（下味として）", "for": "鶏もも・鶏むね・豚こま", "note": "前日にもみ込む"}
+  ],
+  "combos": [
+    {"id": "c1", "name": "基本セット", "items": ["butakoma", "jagaimo", "broccoli", "tamago", "mandu"], "sauce": ["ponzu", "mandu-tare"], "minutes": 15, "tip": "うちの定番。じゃがいも・卵・マンドゥを先に、豚こま・ブロッコリーを後に"},
+    {"id": "c2", "name": "甘い野菜セット", "items": ["wiener", "satsumaimo", "ninjin", "edako", "mandu"], "sauce": ["goma-shio", "mandu-tare"], "minutes": 15, "tip": "さつまいも・人参・マンドゥを先に。ウインナー・えだこは後"},
+    {"id": "c3", "name": "白菜と豚こまのミルフィーユ風", "items": ["hakusai", "butakoma", "tofu"], "sauce": ["ponzu", "choregi"], "minutes": 10, "tip": "白菜と豚こまを交互に重ねて全部『後』扱いで10分。鍋の素いらずの軽い鍋"},
+    {"id": "c4", "name": "鶏ももと根菜", "items": ["torimomo", "jagaimo", "ninjin", "broccoli"], "sauce": ["shio-koji", "miso-mayo"], "minutes": 15, "tip": "鶏ももは前日に塩麹。根菜と一緒に先入れ"},
+    {"id": "c5", "name": "鮭とキャベツ", "items": ["sake", "cabbage", "moyashi", "tamago"], "sauce": ["ponzu"], "minutes": 12, "tip": "魚の日をせいろで。鮭と卵を先に、キャベツ・もやしは最後の5分"},
+    {"id": "c6", "name": "シュウマイと点心の日", "items": ["shumai", "mandu", "cabbage", "broccoli"], "sauce": ["mandu-tare", "umakara"], "minutes": 12, "tip": "カルディの冷凍点心を使う日。キャベツを敷いてその上に"},
+    {"id": "c7", "name": "塩豚と野菜", "items": ["shiobuta", "kabocha", "piman", "tamanegi"], "sauce": ["goma-shio", "ponzu"], "minutes": 14, "tip": "塩豚の塩気だけで食べられる。かぼちゃ・玉ねぎを先に"},
+    {"id": "c8", "name": "鶏むねと豆腐のさっぱり", "items": ["torimune", "tofu", "hakusai", "negi"], "sauce": ["ponzu", "choregi"], "minutes": 10, "tip": "全部『後』扱いで10分。高たんぱく・低脂質の日"},
+    {"id": "c9", "name": "ウインナーとじゃがいも", "items": ["wiener", "jagaimo", "broccoli", "tamago"], "sauce": ["miso-mayo", "goma-shio"], "minutes": 14, "tip": "子どもも喜ぶ組み合わせ。じゃがいも・卵を先に"},
+    {"id": "c10", "name": "冷凍だけセット（買い物なし）", "items": ["butakoma", "satsumaimo", "broccoli", "edako", "mandu"], "sauce": ["mandu-tare", "ponzu"], "minutes": 15, "tip": "全部冷凍ストックから。豚こまも冷凍のまま先入れで12分"},
+    {"id": "c11", "name": "油揚げと野菜の軽い日", "items": ["aburaage", "cabbage", "moyashi", "ninjin"], "sauce": ["ponzu", "umakara"], "minutes": 11, "tip": "肉なしでもたんぱく質。人参だけ先に"},
+    {"id": "c12", "name": "鶏ももと甘い野菜", "items": ["torimomo", "satsumaimo", "kabocha", "edako"], "sauce": ["shio-koji", "miso-mayo"], "minutes": 15, "tip": "週末向き。鶏ももは塩麹で前日に"}
+  ]
+}
