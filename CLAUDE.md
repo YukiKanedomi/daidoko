@@ -1,5 +1,7 @@
 # だいどこ — 我が家のごはんサポート
 
+公開 URL: **https://yukikanedomi.github.io/daidoko/**（GitHub Pages・リポジトリ `YukiKanedomi/daidoko`・2026-09-13 公開）。push すると Actions が `site/`＋`data/*.json` を配信する。
+
 夫婦2人で使う、晩ごはんの「ゆるいお手伝いさん」。2026-09-12 開設（Yorozuya での相談から独立）。
 
 ## 芯（これを崩さない）
