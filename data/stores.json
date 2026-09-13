@@ -23,7 +23,8 @@
         "豆腐・乳製品",
         "調味料",
         "日用品"
-      ]
+      ],
+      "flyer_source": "https://tokubai.co.jp/イトーヨーカドー/8900"
     },
     {
       "id": "suzuki-meat",
@@ -47,7 +48,9 @@
         "豚こま（よく買って冷凍小分け）",
         "味付きで焼くだけの肉（たまに）",
         "惣菜・焼き鳥（買って帰ることも）"
-      ]
+      ],
+      "flyer_source": null,
+      "flyer_note": "デジタルチラシなし（寿々木は Instagram あり）"
     },
     {
       "id": "uokatsu",
@@ -69,7 +72,9 @@
         "刺身",
         "惣菜",
         "焼き魚用の切り身"
-      ]
+      ],
+      "flyer_source": null,
+      "flyer_note": "デジタルチラシなし（寿々木は Instagram あり）"
     },
     {
       "id": "lopia-mewe",
@@ -89,7 +94,8 @@
         "野菜",
         "冷凍",
         "惣菜"
-      ]
+      ],
+      "flyer_source": "https://tokubai.co.jp/ロピア/29831"
     },
     {
       "id": "aeon-hashimoto",
@@ -110,7 +116,8 @@
         "豆腐・乳製品",
         "調味料",
         "日用品"
-      ]
+      ],
+      "flyer_source": "https://tokubai.co.jp/イオン/7418"
     },
     {
       "id": "mybasket-h3",
@@ -179,5 +186,6 @@
         "スープ"
       ]
     }
-  ]
+  ],
+  "flyer_howto": "トクバイの店舗ページ → /leaflets/<id> の HTML 内 view_state JSON に high_resolution_image_url（image.tokubai.co.jp/images/bargain_office_leaflets/o=true/<n>.jpg）と alt（『2026年9月12日〜13日までのチラシ』）がある。w=1800 等のサイズ指定で取得し、4分割して Claude が読む。2026-09-13 検証: ヨーカドー 9/12〜13 号を取得・判読できた"
 }
