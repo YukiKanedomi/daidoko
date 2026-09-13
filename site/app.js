@@ -46,6 +46,11 @@
 
   // 主菜に合わせてヘッダーの住人を替える（せいろ=4人組、卵の日=卵、それ以外=マンドゥ2人）
   const charaFor = (m) => ((m.tags || []).includes('せいろ') ? 'friends' : /卵|かき玉/.test(m.name) ? 'egg' : 'peek');
+  // レシピリンク: recipes[] を役割ラベルつきで最大3本。旧 recipe_url にも対応
+  function recipeLinks(x, cls) {
+    const list = (x.recipes || (x.recipe_url ? [{ role: '基本', site: x.recipe_site || 'レシピ', url: x.recipe_url }] : [])).slice(0, 3);
+    return list.map((r) => `<a class="${cls}" href="${esc(r.url)}" target="_blank" rel="noopener"><b>${esc(r.role)}</b>${esc(r.site)} ›</a>`).join('');
+  }
   const head = (sub, title, chara) => `<div class="top"><div><div class="date">${esc(sub)}</div><h1>${esc(title)}</h1></div>${chara ? `<img class="chara" src="chara/${chara}.png" alt="">` : ''}</div>`;
   function dayOf(date) { return D.plan.days.find((d) => d.date === date); }
   // 候補カードは名前と写真だけなので、同じ料理が主案になっている日から副菜・汁物・作り方を引き当てる
@@ -83,7 +88,7 @@
         <div class="set">${set}</div>
         ${main.tip ? `<div class="tipline"><b>豆知識</b>${esc(main.tip)}</div>` : ''}
         <div class="row"><button class="btn ${done ? 'done' : ''}" data-pick="${esc(main.id)}" data-date="${day.date}">${done ? 'これにした' : 'これにする'}</button><button class="btn ghost" data-toggle="steps">作り方</button></div>
-        <ol class="steps" id="steps" hidden>${steps}${main.recipe_url ? `<li class="link"><a href="${esc(main.recipe_url)}" target="_blank" rel="noopener">ちゃんとしたレシピ: ${esc(main.recipe_site || 'レシピサイト')} ›</a></li>` : ''}</ol>
+        <ol class="steps" id="steps" hidden>${steps}${(main.recipes || main.recipe_url) ? `<li class="link"><div class="rlist">${recipeLinks(main, 'rlink')}</div></li>` : ''}${main.side_recipe ? `<li class="link"><div class="rlist"><a class="rlink" href="${esc(main.side_recipe.url)}" target="_blank" rel="noopener"><b>副菜</b>${esc(main.side_recipe.site)} ›</a></div></li>` : ''}</ol>
       </div></div>
       <div class="sec"><h3>ほかの案</h3><button data-more="1">もっと見る</button></div>
       <div class="alts">${alts.map((a) => `<button class="alt" data-swap="${esc(a.id)}" data-date="${day.date}"><img src="${photo(a.photo)}" alt=""><div class="b"><div class="t">${a.minutes ? a.minutes + '分' : '買って帰る'}</div><h4>${esc(a.name)}</h4></div></button>`).join('')}</div>
@@ -112,7 +117,7 @@
     const w = D.plan.weekend;
     const prep = w.prep;
     const p = picks();
-    const main = prep[0], alts = prep.slice(1, 3);
+    const main = prep[0], alts = prep.slice(1, 4);
     const nextDays = D.plan.days.filter((d) => !d.weekend);
     const tonight = shown(day);
     return `
@@ -124,15 +129,16 @@
         <h2>${esc(main.name)}</h2>
         <div class="set">${esc(main.why)}</div>
         ${main.tip ? `<div class="tipline"><b>豆知識</b>${esc(main.tip)}</div>` : ''}
-        ${main.recipe_url ? `<div class="set" style="margin-top:4px"><a class="lnk" href="${esc(main.recipe_url)}" target="_blank" rel="noopener">レシピ: ${esc(main.recipe_site || 'レシピサイト')} ›</a></div>` : ''}
+        ${(main.recipes || main.recipe_url) ? `<div class="rlist" style="margin-top:6px">${recipeLinks(main, 'rlink')}</div>` : ''}
         <div class="row"><button class="btn ${p['prep:' + main.id] ? 'done' : ''}" data-prep="${esc(main.id)}">${p['prep:' + main.id] ? 'やる' : 'やる'}</button><button class="btn ghost" data-prep-no="${esc(main.id)}">今回はなし</button></div>
       </div></div>
-      <div class="alts">${alts.map((a) => `<div class="alt"><button class="altbtn" data-prep="${esc(a.id)}"><img src="${photo(a.photo)}" alt=""><div class="b"><div class="t">${a.minutes}分 · ${esc(a.servings)}${p['prep:' + a.id] ? ' · やる' : ''}</div><h4>${esc(a.name)}</h4></div></button>${a.recipe_url ? `<a class="lnk small" href="${esc(a.recipe_url)}" target="_blank" rel="noopener">レシピ ›</a>` : ''}</div>`).join('')}</div>
+      <div class="alts">${alts.map((a) => `<div class="alt"><button class="altbtn" data-prep="${esc(a.id)}"><img src="${photo(a.photo)}" alt=""><div class="b"><div class="t">${a.minutes}分 · ${esc(a.servings)}${p['prep:' + a.id] ? ' · やる' : ''}</div><h4>${esc(a.name)}</h4></div></button>${(a.recipes && a.recipes[0]) ? `<a class="lnk small" href="${esc(a.recipes[0].url)}" target="_blank" rel="noopener">レシピ ›</a>` : (a.recipe_url ? `<a class="lnk small" href="${esc(a.recipe_url)}" target="_blank" rel="noopener">レシピ ›</a>` : '')}</div>`).join('')}</div>
       <div class="sec"><h3>買い出し</h3><a href="#shop">リストを開く</a></div>
       <div class="stores">${D.plan.shopping.stores.map((s) => {
         const items = s.groups.flatMap((g) => g.items);
-        const names = items.filter((i) => !i.maybe).map((i) => i.n).join('・');
-        return `<a class="st" href="#shop/${esc(s.id)}"><div class="ico">${esc(s.name.slice(0, 1))}</div><div><div class="k">${esc(shortStore(s.name))}<span>${items.length}点</span></div><div class="v">${esc(names)}${s.flyer ? `<b>${esc(s.flyer)}</b>` : ''}</div></div><span class="chev">›</span></a>`;
+        const must = items.filter((i) => !i.maybe).map((i) => i.n.replace(/（.*?）/g, ''));
+        const names = must.slice(0, 7).join('・') + (must.length > 7 ? ` ほか${must.length - 7}点` : '');
+        return `<a class="st" href="#shop/${esc(s.id)}"><div class="ico">${s.icon ? `<img src="shops/${esc(s.icon)}.png" alt="">` : esc(s.name.slice(0, 1))}</div><div><div class="k">${esc(shortStore(s.name))}<span>${items.length}点</span></div><div class="v">${esc(names)}${s.flyer ? `<b>${esc(s.flyer)}</b>` : ''}</div></div><span class="chev">›</span></a>`;
       }).join('')}</div>
       <div class="sec"><h3>今夜</h3></div>
       <div class="hero"><img src="${photo(tonight.photo)}" alt=""><div class="body">
@@ -201,7 +207,7 @@
     return `
       ${head(D.plan.shopping.for, '買い物', 'basket')}
       <div class="seg">${stores.map((s) => `<button class="${s.id === cur.id ? 'on' : ''}" data-store="${esc(s.id)}">${esc(shortStore(s.name))}</button>`).join('')}</div>
-      <div class="store"><div><div class="name">${esc(cur.name)}</div><div class="meta">${esc(cur.when)}</div></div></div>
+      <div class="store">${cur.icon ? `<img class="sico" src="shops/${esc(cur.icon)}.png" alt="">` : ''}<div><div class="name">${esc(cur.name)}</div><div class="meta">${esc(cur.when)}</div></div></div>
       ${cur.flyer ? `<div class="flyer">${esc(cur.flyer)}</div>` : ''}
       ${cur.groups.map((g) => `<div class="group"><h3>${esc(g.cat)}</h3>${g.items.map((i) => {
         const on = !!c[ck(cur, i)];

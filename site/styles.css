@@ -39,7 +39,8 @@ h1{margin:2px 0 0;font-size:26px;font-weight:700;letter-spacing:-.01em}
 .steps li{display:flex;gap:10px;padding:6px 0;font-size:14px;line-height:1.55}
 .steps li b{flex:0 0 22px;height:22px;border-radius:11px;background:var(--ink);color:#fff;font-size:12px;font-weight:600;text-align:center;line-height:22px}
 
-.alts{display:flex;gap:10px;margin-top:10px}
+.alts{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
+.alts>.alt{flex:0 0 calc(50% - 5px);max-width:calc(50% - 5px)}
 .alt{flex:1;border-radius:16px;overflow:hidden;background:var(--sur);text-align:left}
 .alt img{display:block;width:100%;aspect-ratio:2/1;object-fit:cover}
 .alt .b{padding:7px 11px 9px}
@@ -65,7 +66,8 @@ h1{margin:2px 0 0;font-size:26px;font-weight:700;letter-spacing:-.01em}
 .stores{border:1px solid var(--line);border-radius:16px;overflow:hidden}
 .st{display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:1px solid var(--line);width:100%;text-align:left}
 .st:last-child{border-bottom:0}
-.st .ico{flex:0 0 34px;height:34px;border-radius:10px;background:var(--sur);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--sub)}
+.st .ico{flex:0 0 44px;height:44px;border-radius:12px;background:var(--sur);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--sub)}
+.st .ico img{width:36px;height:36px;object-fit:contain}
 .st .k{font-size:14px;font-weight:600}
 .st .k span{font-weight:500;color:var(--sub);font-size:12px;margin-left:6px}
 .st .v{font-size:12px;color:var(--sub);margin-top:1px;line-height:1.45}
@@ -161,3 +163,7 @@ h1{margin:2px 0 0;font-size:26px;font-weight:700;letter-spacing:-.01em}
 .mrow.skip img{object-fit:contain;padding:4px}
 .mrow h4{margin:0;font-size:14px;font-weight:600;line-height:1.3}
 .mrow .m{font-size:12px;color:var(--sub)}
+.rlist{display:flex;flex-direction:column;gap:6px}
+.rlink{font-size:13px;color:var(--ink);font-weight:500}
+.rlink b{display:inline-block;font-size:10px;font-weight:700;color:var(--acc);background:var(--acc-soft);border-radius:999px;padding:1px 7px;margin-right:6px;vertical-align:1px}
+.store .sico{width:44px;height:44px;object-fit:contain;flex:0 0 44px}

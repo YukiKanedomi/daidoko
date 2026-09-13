@@ -1,7 +1,9 @@
 {
-  "generated": "2026-09-13",
+  "generated": "2026-09-13T20:30+09:00",
   "week": "2026-09-13 〜 2026-09-20",
-  "note": "初回は手組み（2026-09-13）。平日は家にある物だけで組む。週末は仕込みと買い出し。",
+  "note": "2026-09-13 夜に組み直し（2回目）。平日は家にある物だけ。副菜はサラダ（ドレッシング替え）と5分野菜を交互に。土日は仕込み4つ（うち魚と低温調理を1つずつ）と買い出し。",
+  "health": "今週: 野菜は毎食1つ（サラダはドレッシングを日替わり、ほかに5分の野菜副菜）、魚は土日で2回、揚げ物なし、汁物は土日と木曜に手作り",
+  "tip_policy": "豆知識は栄養の説明であって強制ではない。効能は『〜に関わる』『〜とされる』の簡易な言い回し。1行",
   "days": [
     {
       "date": "2026-09-13",
@@ -12,7 +14,7 @@
         "name": "せいろ 豚こま・じゃがいも・ブロッコリー・卵・餃子",
         "minutes": 15,
         "photo": "seiro.jpg",
-        "side": "カット野菜",
+        "side": "サラダ（チョレギ）",
         "soup": "注ぐだけスープ",
         "tags": [
           "せいろ",
@@ -23,15 +25,25 @@
           "豚こま・餃子・ブロッコリー・卵を足して10分",
           "ポン酢かごま油＋塩で"
         ],
-        "recipe_url": "https://delishkitchen.tv/recipes/383986795412455776",
-        "recipe_site": "DELISH KITCHEN 豚肉と彩り野菜のせいろ蒸し",
+        "tip": "ブロッコリーはビタミンC（コラーゲン作りに関わる）と葉酸が多く、蒸すと水に流れ出にくい。卵と豚こまでたんぱく質もそろう",
+        "recipes": [
+          {
+            "role": "基本",
+            "site": "DELISH KITCHEN 豚肉と彩り野菜のせいろ蒸し",
+            "url": "https://delishkitchen.tv/recipes/383986795412455776"
+          },
+          {
+            "role": "変化",
+            "site": "クラシル 塩豚せいろ蒸し",
+            "url": "https://www.kurashiru.com/recipe_cards/bd60bf60-3ba1-4d90-b722-603a41f53600"
+          }
+        ],
         "h": {
           "veg": true,
           "fish": false,
           "fried": false,
           "soup": false
-        },
-        "tip": "ブロッコリーはビタミンC（肌や血管の材料になるコラーゲン作りに関わる）と葉酸が多く、蒸すと水に流れ出にくい。卵と豚こまでたんぱく質もそろう"
+        }
       },
       "alts": [
         {
@@ -39,28 +51,45 @@
           "name": "冷凍餃子 焼くだけ",
           "minutes": 10,
           "photo": "gyoza.jpg",
+          "side": "もやしナムル",
+          "soup": "注ぐだけスープ",
+          "steps": [
+            "袋の表示どおりに焼く",
+            "もやしはレンジ2分でナムルに"
+          ],
+          "tip": "皮の炭水化物と餡のたんぱく質・野菜が一皿に。ナムルで野菜を足す",
           "h": {
-            "veg": false,
+            "veg": true,
             "fish": false,
             "fried": false,
             "soup": false
-          },
-          "tip": "皮の炭水化物と餡のたんぱく質・野菜が一皿に。キャベツのサラダを添えると食物繊維が増える"
+          }
         },
         {
           "id": "udon-egg",
           "name": "冷凍うどん かき玉",
           "minutes": 5,
           "photo": "udon.jpg",
-          "recipe_url": "https://www.kurashiru.com/recipes/1f38b83c-bc13-4c43-b4db-2996d3bf9c58",
-          "recipe_site": "クラシル めんつゆで ふんわりかき玉うどん",
+          "side": "サラダ（旨辛たれ）",
+          "soup": null,
+          "steps": [
+            "うどんをレンジ3分",
+            "つゆを温めて溶き卵を回し入れる"
+          ],
+          "tip": "卵は必須アミノ酸をバランスよく含む。うどんだけだと炭水化物に偏るのでサラダを添える",
+          "recipes": [
+            {
+              "role": "基本",
+              "site": "クラシル めんつゆで ふんわりかき玉うどん",
+              "url": "https://www.kurashiru.com/recipes/1f38b83c-bc13-4c43-b4db-2996d3bf9c58"
+            }
+          ],
           "h": {
-            "veg": false,
+            "veg": true,
             "fish": false,
             "fried": false,
             "soup": false
-          },
-          "tip": "卵は必須アミノ酸をバランスよく含み、筋肉や皮膚の材料になる。うどんだけだと炭水化物に偏るので、卵と冷奴で補う形"
+          }
         }
       ]
     },
@@ -68,71 +97,11 @@
       "date": "2026-09-14",
       "dow": "月",
       "main": {
-        "id": "seiro-a",
-        "name": "せいろ 豚こま・じゃがいも・ブロッコリー・卵・餃子",
-        "minutes": 15,
-        "photo": "seiro.jpg",
-        "side": "カット野菜",
-        "soup": "注ぐだけスープ",
-        "tags": [
-          "せいろ",
-          "家にある物で"
-        ],
-        "steps": [
-          "じゃがいもは先に入れて5分",
-          "豚こま・餃子・ブロッコリー・卵を足して10分",
-          "ポン酢かごま油＋塩で"
-        ],
-        "recipe_url": "https://delishkitchen.tv/recipes/383986795412455776",
-        "recipe_site": "DELISH KITCHEN 豚肉と彩り野菜のせいろ蒸し",
-        "h": {
-          "veg": true,
-          "fish": false,
-          "fried": false,
-          "soup": false
-        },
-        "tip": "ブロッコリーはビタミンC（肌や血管の材料になるコラーゲン作りに関わる）と葉酸が多く、蒸すと水に流れ出にくい。卵と豚こまでたんぱく質もそろう"
-      },
-      "alts": [
-        {
-          "id": "udon-egg",
-          "name": "冷凍うどん かき玉",
-          "minutes": 5,
-          "photo": "udon.jpg",
-          "recipe_url": "https://www.kurashiru.com/recipes/1f38b83c-bc13-4c43-b4db-2996d3bf9c58",
-          "recipe_site": "クラシル めんつゆで ふんわりかき玉うどん",
-          "h": {
-            "veg": false,
-            "fish": false,
-            "fried": false,
-            "soup": false
-          },
-          "tip": "卵は必須アミノ酸をバランスよく含み、筋肉や皮膚の材料になる。うどんだけだと炭水化物に偏るので、卵と冷奴で補う形"
-        },
-        {
-          "id": "mapo",
-          "name": "麻婆豆腐（素＋豚こま）",
-          "minutes": 10,
-          "photo": "mapo.jpg",
-          "h": {
-            "veg": true,
-            "fish": false,
-            "fried": false,
-            "soup": false
-          },
-          "tip": "豆腐は植物性たんぱく質とカルシウム（骨の材料）。豚肉のビタミンB1は糖質をエネルギーに変えるのに関わり、疲れやすい時期に意識したい栄養素"
-        }
-      ]
-    },
-    {
-      "date": "2026-09-15",
-      "dow": "火",
-      "main": {
         "id": "mapo",
         "name": "麻婆豆腐（素＋豆腐＋豚こま）",
         "minutes": 10,
         "photo": "mapo.jpg",
-        "side": "カット野菜",
+        "side": "もやしナムル（レンジ5分）",
         "soup": "レンチン卵スープ",
         "tags": [
           "素で一品",
@@ -141,44 +110,81 @@
         "steps": [
           "豚こまを炒める",
           "素と豆腐を入れて3分",
-          "ご飯は冷凍ストックをレンジ"
+          "もやしはレンジ2分、ごま油と塩で和える"
+        ],
+        "side_recipe": {
+          "site": "クラシル レンジで5分 もやしのナムル",
+          "url": "https://www.kurashiru.com/recipes/200b2beb-4767-4981-93ae-3dfd9a579a59"
+        },
+        "tip": "豆腐は植物性たんぱく質とカルシウム（骨の材料）。豚肉のビタミンB1は糖質をエネルギーに変えるのに関わる。もやしで食物繊維も",
+        "h": {
+          "veg": true,
+          "fish": false,
+          "fried": false,
+          "soup": false
+        }
+      },
+      "alts": [
+        {
+          "id": "seiro-a",
+          "name": "せいろ 豚こま・じゃがいも・ブロッコリー・卵・餃子",
+          "minutes": 15,
+          "photo": "seiro.jpg"
+        },
+        {
+          "id": "pasta",
+          "name": "パスタ（市販ソース）",
+          "minutes": 15,
+          "photo": "pasta.jpg"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-15",
+      "dow": "火",
+      "main": {
+        "id": "seiro-b",
+        "name": "せいろ ウインナー・さつまいも・人参・えだこ・マンドゥ",
+        "minutes": 15,
+        "photo": "seiro2.jpg",
+        "side": "サラダ（焼きとうもろこし）",
+        "soup": "注ぐだけスープ",
+        "tags": [
+          "せいろ",
+          "日曜と中身を変える"
+        ],
+        "steps": [
+          "さつまいも・人参は先に入れて6分",
+          "ウインナー・マンドゥ・えだこを足して8分",
+          "マンドゥはたれ、野菜はごま油＋塩で"
+        ],
+        "tip": "さつまいもの食物繊維は腸の調子に関わる。人参のβカロテンは体内でビタミンAになり目や皮膚に関わり、油と一緒だと吸収されやすい",
+        "recipes": [
+          {
+            "role": "基本",
+            "site": "DELISH KITCHEN 豚肉と彩り野菜のせいろ蒸し",
+            "url": "https://delishkitchen.tv/recipes/383986795412455776"
+          }
         ],
         "h": {
           "veg": true,
           "fish": false,
           "fried": false,
           "soup": false
-        },
-        "tip": "豆腐は植物性たんぱく質とカルシウム（骨の材料）。豚肉のビタミンB1は糖質をエネルギーに変えるのに関わり、疲れやすい時期に意識したい栄養素"
+        }
       },
       "alts": [
         {
-          "id": "seiro-b",
-          "name": "せいろ ウインナー・さつまいも・人参・えだこ・マンドゥ",
-          "minutes": 15,
-          "photo": "seiro2.jpg",
-          "recipe_url": "https://delishkitchen.tv/recipes/383986795412455776",
-          "recipe_site": "DELISH KITCHEN 豚肉と彩り野菜のせいろ蒸し",
-          "h": {
-            "veg": true,
-            "fish": false,
-            "fried": false,
-            "soup": false
-          },
-          "tip": "さつまいもの食物繊維は腸の調子に関わる。人参のβカロテンは体内でビタミンAになり目や皮膚の健康に関わるので、たれにごま油を足すと吸収されやすい"
+          "id": "udon-egg",
+          "name": "冷凍うどん かき玉",
+          "minutes": 5,
+          "photo": "udon.jpg"
         },
         {
-          "id": "pasta",
-          "name": "パスタ（市販ソース）",
-          "minutes": 15,
-          "photo": "pasta.jpg",
-          "h": {
-            "veg": false,
-            "fish": false,
-            "fried": false,
-            "soup": false
-          },
-          "tip": "市販ソースの日は野菜が少なくなりがち。サラダ1皿で食物繊維（腸の調子）とビタミンを足す"
+          "id": "gyoza",
+          "name": "冷凍餃子 焼くだけ",
+          "minutes": 10,
+          "photo": "gyoza.jpg"
         }
       ]
     },
@@ -190,7 +196,7 @@
         "name": "冷凍うどん かき玉",
         "minutes": 5,
         "photo": "udon.jpg",
-        "side": "冷奴",
+        "side": "冷凍ブロッコリーのごま和え",
         "soup": null,
         "tags": [
           "何もしたくない日向き"
@@ -198,17 +204,26 @@
         "steps": [
           "うどんをレンジ3分",
           "つゆを温めて溶き卵を回し入れる",
-          "豆腐は切るだけ"
+          "ブロッコリーはレンジで戻して、すりごま・しょうゆ・砂糖で和える"
         ],
-        "recipe_url": "https://www.kurashiru.com/recipes/1f38b83c-bc13-4c43-b4db-2996d3bf9c58",
-        "recipe_site": "クラシル めんつゆで ふんわりかき玉うどん",
+        "side_recipe": {
+          "site": "クラシル ブロッコリーの胡麻和え",
+          "url": "https://www.kurashiru.com/recipe_cards/47a185b6-d55f-4262-84f3-417b1c4ee781"
+        },
+        "tip": "卵は必須アミノ酸をバランスよく含み、筋肉や皮膚の材料になる。うどんだけだと炭水化物に偏るので、ブロッコリーで食物繊維とビタミンCを足す",
+        "recipes": [
+          {
+            "role": "基本",
+            "site": "クラシル めんつゆで ふんわりかき玉うどん",
+            "url": "https://www.kurashiru.com/recipes/1f38b83c-bc13-4c43-b4db-2996d3bf9c58"
+          }
+        ],
         "h": {
           "veg": true,
           "fish": false,
           "fried": false,
           "soup": false
-        },
-        "tip": "卵は必須アミノ酸をバランスよく含み、筋肉や皮膚の材料になる。うどんだけだと炭水化物に偏るので、卵と冷奴で補う形"
+        }
       },
       "alts": [
         {
@@ -216,26 +231,38 @@
           "name": "コソリで冷凍唐揚げ",
           "minutes": 15,
           "photo": "karaage.jpg",
+          "side": "サラダ（チョレギ）",
+          "soup": "注ぐだけスープ",
+          "steps": [
+            "凍ったままコソリ10分",
+            "サラダは袋から出してドレッシング"
+          ],
+          "tip": "鶏ももはたんぱく質と鉄。コソリなら油を使わないぶん脂質が抑えられる",
           "h": {
-            "veg": false,
+            "veg": true,
             "fish": false,
             "fried": true,
             "soup": false
-          },
-          "tip": "鶏ももはたんぱく質と鉄。コソリなら油を使わないぶん脂質が抑えられる"
+          }
         },
         {
           "id": "nabe",
           "name": "鍋（素＋冷凍の具）",
           "minutes": 20,
           "photo": "nabe.jpg",
+          "side": null,
+          "soup": null,
+          "steps": [
+            "鍋の素を温める",
+            "冷凍の具セットを凍ったまま入れて15分"
+          ],
+          "tip": "白菜・豆腐・豚こま・鶏団子で野菜とたんぱく質が一度に。締めを控えると食べ過ぎにくい",
           "h": {
-            "veg": false,
+            "veg": true,
             "fish": false,
             "fried": false,
-            "soup": false
-          },
-          "tip": "白菜・豆腐・豚こま・鶏団子で野菜とたんぱく質が一度に。温かい汁物は体を温め、締めを控えると食べ過ぎにくい"
+            "soup": true
+          }
         }
       ]
     },
@@ -243,57 +270,45 @@
       "date": "2026-09-17",
       "dow": "木",
       "main": {
-        "id": "seiro-b",
-        "name": "せいろ ウインナー・さつまいも・人参・えだこ・マンドゥ",
+        "id": "gyoza-set",
+        "name": "冷凍餃子 焼くだけ＋豆腐の味噌汁",
         "minutes": 15,
-        "photo": "seiro2.jpg",
-        "side": null,
-        "soup": "レンチン卵スープ",
+        "photo": "gyoza.jpg",
+        "side": "やみつきキャベツ（カット野菜で）",
+        "soup": "味噌汁（豆腐・ねぎ）",
         "tags": [
-          "せいろ",
-          "月曜と中身を変える"
+          "市販で一品",
+          "汁物は手作り"
         ],
         "steps": [
-          "さつまいも・人参は先に入れて6分",
-          "ウインナー・マンドゥ・えだこを足して8分",
-          "マンドゥはたれ、野菜は塩で"
+          "餃子は袋の表示どおりに焼く",
+          "味噌汁: 湯に豆腐と冷凍ねぎ、火を止めて味噌を溶く",
+          "キャベツはごま油・塩・ごまで和える"
         ],
-        "recipe_url": "https://delishkitchen.tv/recipes/383986795412455776",
-        "recipe_site": "DELISH KITCHEN 豚肉と彩り野菜のせいろ蒸し",
+        "side_recipe": {
+          "site": "白ごはん.com 簡単！やみつきキャベツ",
+          "url": "https://www.sirogohan.com/recipe/kyabeyami/"
+        },
+        "tip": "餃子の日は野菜が少なくなりがち。キャベツの生食はビタミンCが残りやすい。味噌汁は具を多めにすると汁が減って塩分も控えめ",
         "h": {
           "veg": true,
           "fish": false,
           "fried": false,
-          "soup": false
-        },
-        "tip": "さつまいもの食物繊維は腸の調子に関わる。人参のβカロテンは体内でビタミンAになり目や皮膚の健康に関わるので、たれにごま油を足すと吸収されやすい"
+          "soup": true
+        }
       },
       "alts": [
         {
           "id": "mapo",
-          "name": "麻婆豆腐（素＋豚こま）",
+          "name": "麻婆豆腐（素＋豆腐＋豚こま）",
           "minutes": 10,
-          "photo": "mapo.jpg",
-          "h": {
-            "veg": true,
-            "fish": false,
-            "fried": false,
-            "soup": false
-          },
-          "tip": "豆腐は植物性たんぱく質とカルシウム（骨の材料）。豚肉のビタミンB1は糖質をエネルギーに変えるのに関わり、疲れやすい時期に意識したい栄養素"
+          "photo": "mapo.jpg"
         },
         {
-          "id": "gyoza",
-          "name": "冷凍餃子 焼くだけ",
-          "minutes": 10,
-          "photo": "gyoza.jpg",
-          "h": {
-            "veg": false,
-            "fish": false,
-            "fried": false,
-            "soup": false
-          },
-          "tip": "皮の炭水化物と餡のたんぱく質・野菜が一皿に。キャベツのサラダを添えると食物繊維が増える"
+          "id": "seiro-b",
+          "name": "せいろ ウインナー・さつまいも・人参・えだこ・マンドゥ",
+          "minutes": 15,
+          "photo": "seiro2.jpg"
         }
       ]
     },
@@ -305,7 +320,7 @@
         "name": "パスタ（市販ソース）",
         "minutes": 15,
         "photo": "pasta.jpg",
-        "side": "カット野菜",
+        "side": "サラダ（旨辛たれ）",
         "soup": "注ぐだけスープ",
         "tags": [
           "金曜は軽く"
@@ -313,42 +328,28 @@
         "steps": [
           "パスタを茹でる",
           "ソースをかける",
-          "野菜は袋から出すだけ"
+          "サラダは袋から出してたれ"
         ],
+        "tip": "市販ソースの日は野菜が少なくなりがち。サラダ1皿で食物繊維（腸の調子に関わる）とビタミンを足す",
         "h": {
           "veg": true,
           "fish": false,
           "fried": false,
           "soup": false
-        },
-        "tip": "市販ソースの日は野菜が少なくなりがち。サラダ1皿で食物繊維（腸の調子）とビタミンを足す"
+        }
       },
       "alts": [
         {
           "id": "nabe",
           "name": "鍋（素＋冷凍の具）",
           "minutes": 20,
-          "photo": "nabe.jpg",
-          "h": {
-            "veg": false,
-            "fish": false,
-            "fried": false,
-            "soup": false
-          },
-          "tip": "白菜・豆腐・豚こま・鶏団子で野菜とたんぱく質が一度に。温かい汁物は体を温め、締めを控えると食べ過ぎにくい"
+          "photo": "nabe.jpg"
         },
         {
-          "id": "gyoza",
-          "name": "冷凍餃子 焼くだけ",
-          "minutes": 10,
-          "photo": "gyoza.jpg",
-          "h": {
-            "veg": false,
-            "fish": false,
-            "fried": false,
-            "soup": false
-          },
-          "tip": "皮の炭水化物と餡のたんぱく質・野菜が一皿に。キャベツのサラダを添えると食物繊維が増える"
+          "id": "seiro-a",
+          "name": "せいろ 豚こま・じゃがいも・ブロッコリー・卵・餃子",
+          "minutes": 15,
+          "photo": "seiro.jpg"
         }
       ]
     },
@@ -361,51 +362,74 @@
         "name": "魚勝の刺身盛り",
         "minutes": 0,
         "photo": "sashimi.jpg",
-        "side": "冷奴",
+        "side": "きゅうりの塩もみ（ポン酢）",
         "soup": "味噌汁（豆腐・ねぎ）",
         "tags": [
           "買って帰る",
           "魚勝"
         ],
         "steps": [
-          "魚勝の Instagram で今日の品を見る",
-          "刺身盛り 1,580円〜 または本鮪切り落とし",
-          "ご飯は炊く"
+          "魚勝の Instagram で今日の品を見る（刺身盛り 1,580円〜）",
+          "きゅうりは塩もみして水気を絞り、ポン酢とごま",
+          "ご飯は炊いて、余りは冷凍ストックへ"
         ],
+        "side_recipe": {
+          "site": "白ごはん.com きゅうりの塩もみのやり方",
+          "url": "https://www.sirogohan.com/recipe/siomomi/"
+        },
+        "tip": "まぐろの赤身は高たんぱくで鉄（貧血の予防に関わる）が多め。青魚のDHA・EPAは血液や脳の健康に関わるとされる",
         "h": {
           "veg": true,
           "fish": true,
           "fried": false,
           "soup": true
-        },
-        "tip": "まぐろの赤身は高たんぱくで鉄（貧血の予防に関わる）が多め。青魚のDHA・EPAは血液や脳の健康に関わるとされる"
+        }
       },
       "alts": [
+        {
+          "id": "roast-pork",
+          "name": "ボニークでローストポーク（寿々木の塊肉）",
+          "minutes": 20,
+          "photo": "pork.jpg",
+          "side": "サラダ（青じそ）",
+          "soup": "注ぐだけスープ",
+          "steps": [
+            "塊肉に塩をして袋に入れ、63℃で放置",
+            "薄く切って並べる。残りは冷凍"
+          ],
+          "tip": "豚肩ロースはたんぱく質とビタミンB1。低温調理はしっとり仕上がり、塩分も控えめで済む",
+          "recipes": [
+            {
+              "role": "基本",
+              "site": "BONIQ 公式 ローストポーク 3種ソース添え（63℃）",
+              "url": "https://boniq.jp/recipe/?post_type=recipe&p=24"
+            }
+          ],
+          "h": {
+            "veg": true,
+            "fish": false,
+            "fried": false,
+            "soup": false
+          }
+        },
         {
           "id": "cream-pasta",
           "name": "手作りクリームパスタ",
           "minutes": 30,
           "photo": "pasta.jpg",
+          "side": "サラダ（青じそ）",
+          "soup": null,
+          "steps": [
+            "ベーコンと玉ねぎを炒め、牛乳と粉チーズで煮る",
+            "茹でたパスタを絡めて黒こしょう"
+          ],
+          "tip": "牛乳・チーズでカルシウム（骨の材料）。野菜が少なくなりがちなのでサラダを添える",
           "h": {
-            "veg": false,
+            "veg": true,
             "fish": false,
             "fried": false,
             "soup": false
-          },
-          "tip": "牛乳・チーズでカルシウム（骨の材料）。野菜が少なくなりがちなのでサラダを添える"
-        },
-        {
-          "id": "nabe",
-          "name": "鍋（素＋冷凍の具）",
-          "minutes": 20,
-          "photo": "nabe.jpg",
-          "h": {
-            "veg": false,
-            "fish": false,
-            "fried": false,
-            "soup": false
-          },
-          "tip": "白菜・豆腐・豚こま・鶏団子で野菜とたんぱく質が一度に。温かい汁物は体を温め、締めを控えると食べ過ぎにくい"
+          }
         }
       ]
     },
@@ -415,57 +439,47 @@
       "weekend": true,
       "main": {
         "id": "tonjiru-set",
-        "name": "豚汁定食（仕込みの初回）",
+        "name": "豚汁定食（仕込みの初回）＋ 焼き鮭",
         "minutes": 30,
         "photo": "tonjiru.jpg",
-        "side": "焼き魚（魚勝の切り身）",
+        "side": "焼き鮭（魚勝の切り身）",
         "soup": null,
         "tags": [
-          "仕込みついで"
+          "仕込みついで",
+          "魚2回目"
         ],
         "steps": [
           "豚汁の具を多めに炒めて、4回分は冷凍へ",
           "今日の分だけ味噌を溶く",
-          "魚はコソリかグリルで"
+          "鮭はコソリかグリルで。残りの切り身はごまみりんの下味冷凍に"
         ],
-        "recipe_url": "https://www.sirogohan.com/recipe/tonjiru/",
-        "recipe_site": "白ごはん.com 基本の豚汁",
+        "tip": "豚肉のビタミンB1（糖質代謝に関わる）に、大根・人参・こんにゃくの食物繊維。鮭はたんぱく質とビタミンD（カルシウムの吸収に関わる）",
+        "recipes": [
+          {
+            "role": "基本",
+            "site": "白ごはん.com 基本の豚汁",
+            "url": "https://www.sirogohan.com/recipe/tonjiru/"
+          }
+        ],
         "h": {
           "veg": true,
           "fish": true,
           "fried": false,
           "soup": true
-        },
-        "tip": "豚肉のビタミンB1（疲労と関わる糖質代謝を助ける）に、大根・人参・こんにゃくの食物繊維。具だくさんにすると汁が減って塩分も控えめに"
+        }
       },
       "alts": [
         {
           "id": "seiro-a",
           "name": "せいろ 豚こま・じゃがいも・ブロッコリー・卵・餃子",
           "minutes": 15,
-          "photo": "seiro.jpg",
-          "recipe_url": "https://delishkitchen.tv/recipes/383986795412455776",
-          "recipe_site": "DELISH KITCHEN 豚肉と彩り野菜のせいろ蒸し",
-          "h": {
-            "veg": true,
-            "fish": false,
-            "fried": false,
-            "soup": false
-          },
-          "tip": "ブロッコリーはビタミンC（肌や血管の材料になるコラーゲン作りに関わる）と葉酸が多く、蒸すと水に流れ出にくい。卵と豚こまでたんぱく質もそろう"
+          "photo": "seiro.jpg"
         },
         {
-          "id": "gyoza",
-          "name": "冷凍餃子 焼くだけ",
-          "minutes": 10,
-          "photo": "gyoza.jpg",
-          "h": {
-            "veg": false,
-            "fish": false,
-            "fried": false,
-            "soup": false
-          },
-          "tip": "皮の炭水化物と餡のたんぱく質・野菜が一皿に。キャベツのサラダを添えると食物繊維が増える"
+          "id": "nabe",
+          "name": "鍋（素＋冷凍の具）",
+          "minutes": 20,
+          "photo": "nabe.jpg"
         }
       ]
     }
@@ -481,9 +495,19 @@
         "reheat": "平日はレンジ",
         "photo": "soboro.jpg",
         "why": "来週の火・木に二色丼。白菜と鍋の具にも",
-        "recipe_url": "https://www.sirogohan.com/recipe/torisoboro/",
-        "recipe_site": "白ごはん.com 鶏そぼろ",
-        "tip": "鶏ひき肉は高たんぱく・低脂質で、筋肉や肌の材料になる。卵と合わせると必須アミノ酸がそろう"
+        "tip": "鶏ひき肉は高たんぱく・低脂質で、筋肉や肌の材料になる。卵と合わせると必須アミノ酸がそろう",
+        "recipes": [
+          {
+            "role": "基本",
+            "site": "白ごはん.com 鶏そぼろ",
+            "url": "https://www.sirogohan.com/recipe/torisoboro/"
+          },
+          {
+            "role": "丼にする",
+            "site": "白ごはん.com 三色そぼろ丼",
+            "url": "https://www.sirogohan.com/recipe/soborodon/"
+          }
+        ]
       },
       {
         "id": "tonjiru-gu",
@@ -493,23 +517,69 @@
         "reheat": "水と味噌で10分",
         "photo": "tonjiru.jpg",
         "why": "味噌汁を主菜級に。日曜の夕食で初回を食べる",
-        "recipe_url": "https://www.sirogohan.com/recipe/tonjiru/",
-        "recipe_site": "白ごはん.com 基本の豚汁",
-        "tip": "大根・人参・こんにゃくの食物繊維は腸の調子に関わる。豚肉のビタミンB1は水に溶けやすいので、汁ごと食べる豚汁と相性がいい"
+        "tip": "大根・人参・こんにゃくの食物繊維は腸の調子に関わる。豚肉のビタミンB1は水に溶けやすいので汁ごと食べる豚汁と相性がいい",
+        "recipes": [
+          {
+            "role": "基本",
+            "site": "白ごはん.com 基本の豚汁",
+            "url": "https://www.sirogohan.com/recipe/tonjiru/"
+          }
+        ]
       },
       {
-        "id": "shitaji-buta",
-        "name": "下味冷凍の豚こま 3味",
-        "minutes": 15,
-        "servings": "3回分",
-        "reheat": "フライパン5分／せいろ",
-        "photo": "pork.jpg",
-        "why": "寿々木の豚こまを小分けするついでに、生姜・味噌・塩だれ",
-        "recipe_url": "https://www.kurashiru.com/recipes/caca5b5e-309a-4611-b7b5-a122037857c9",
-        "recipe_site": "クラシル 下味冷凍 豚の生姜焼き",
-        "tip": "豚こまのビタミンB1は糖質をエネルギーに変えるのに関わる。生姜の風味で塩分を抑えやすい"
+        "id": "sake-shitaji",
+        "name": "鮭の下味冷凍（ごまみりん）",
+        "minutes": 10,
+        "servings": "2回分",
+        "reheat": "解凍してコソリ10分",
+        "photo": "yakizake.jpg",
+        "why": "魚を週2回にする一番楽な道。魚勝の切り身を買った日に仕込む",
+        "tip": "鮭はたんぱく質とビタミンD（カルシウムの吸収に関わる）。ごまで風味を足すと塩分を抑えやすい",
+        "recipes": [
+          {
+            "role": "基本",
+            "site": "クラシル 下味冷凍 鮭のごまみりん漬け焼き",
+            "url": "https://www.kurashiru.com/recipes/147a613a-3536-490e-98bd-be1c5a5bd71a"
+          },
+          {
+            "role": "変化",
+            "site": "クラシル 下味冷凍 鮭のハニーマスタード焼き",
+            "url": "https://www.kurashiru.com/recipes/7d208505-ef16-41bb-be56-a39a573cd2f9"
+          }
+        ]
+      },
+      {
+        "id": "boniq-salad-chicken",
+        "name": "ボニークでサラダチキン（むね肉）",
+        "minutes": 10,
+        "servings": "2枚＝4回分",
+        "reheat": "切るだけ。サラダ・うどんに",
+        "photo": "saladchicken.jpg",
+        "why": "袋に入れて放置。平日のサラダにたんぱく質を足す係",
+        "tip": "むね肉は高たんぱく・低脂質。低温調理でしっとり仕上がり、市販品より塩分を調整できる",
+        "recipes": [
+          {
+            "role": "基本",
+            "site": "BONIQ 公式 サラダチキン レモン風味（62℃）",
+            "url": "https://boniq.jp/recipe/?post_type=recipe&p=25449"
+          },
+          {
+            "role": "変化",
+            "site": "BONIQ 公式 ハーブ香るサラダチキン",
+            "url": "https://boniq.jp/recipe/?post_type=recipe&p=722"
+          }
+        ]
       }
     ]
+  },
+  "newcomer": {
+    "id": "cookdo-hoikoro",
+    "name": "Cook Do 回鍋肉用",
+    "store": "ヨーカドー",
+    "how": "豚こま＋キャベツを炒めて素をからめる。10分",
+    "why": "せいろ・麻婆に続く『素で一品』の3つ目。常備の豚こまとキャベツで作れます",
+    "note": "棚にあるかは未確認",
+    "url": "https://www.ajinomoto.co.jp/products/detail/?ProductName=cookdo_8"
   },
   "shopping": {
     "for": "土曜の買い出し。来週の平日ぶん",
@@ -517,6 +587,7 @@
       {
         "id": "iy-ario",
         "name": "イトーヨーカドー アリオ橋本",
+        "icon": "super",
         "when": "土曜",
         "flyer": null,
         "groups": [
@@ -524,14 +595,24 @@
             "cat": "野菜",
             "items": [
               {
-                "n": "カット野菜",
+                "n": "カット野菜（千切りキャベツ・サラダミックス）",
                 "q": "3袋",
-                "for": "平日の添え"
+                "for": "平日のサラダ・やみつきキャベツ"
+              },
+              {
+                "n": "きゅうり",
+                "q": "2本",
+                "for": "土曜の塩もみ"
+              },
+              {
+                "n": "もやし",
+                "q": "1袋",
+                "for": "月曜のナムル"
               },
               {
                 "n": "大根",
                 "q": "1/2本",
-                "for": "豚汁の具"
+                "for": "豚汁の具（余りは大根サラダ）"
               },
               {
                 "n": "人参",
@@ -541,7 +622,7 @@
               {
                 "n": "長ねぎ",
                 "q": "1本",
-                "for": "豚汁・うどん"
+                "for": "豚汁・味噌汁（刻んで冷凍）"
               }
             ]
           },
@@ -552,6 +633,11 @@
                 "n": "鶏ひき肉",
                 "q": "400g",
                 "for": "鶏そぼろ"
+              },
+              {
+                "n": "鶏むね肉",
+                "q": "2枚",
+                "for": "ボニークのサラダチキン"
               },
               {
                 "n": "卵",
@@ -566,7 +652,7 @@
               {
                 "n": "豆腐",
                 "q": "3丁",
-                "for": "麻婆・冷奴・味噌汁"
+                "for": "麻婆・味噌汁・冷奴"
               },
               {
                 "n": "こんにゃく",
@@ -581,7 +667,7 @@
               {
                 "n": "冷凍餃子",
                 "q": "1袋",
-                "for": "せいろ・焼くだけ"
+                "for": "木曜・せいろ"
               },
               {
                 "n": "冷凍うどん",
@@ -591,7 +677,7 @@
               {
                 "n": "冷凍ブロッコリー",
                 "q": "1袋",
-                "for": "せいろ",
+                "for": "せいろ・ごま和え",
                 "maybe": true
               }
             ]
@@ -602,7 +688,7 @@
               {
                 "n": "麻婆豆腐の素",
                 "q": "1箱",
-                "for": "火曜"
+                "for": "月曜"
               },
               {
                 "n": "パスタソース",
@@ -610,9 +696,20 @@
                 "for": "金曜・予備"
               },
               {
+                "n": "ドレッシング さっぱり系（青じそ or ゆずぽん酢）",
+                "q": "1本",
+                "for": "今週のローテーションに1本追加"
+              },
+              {
+                "n": "白だし",
+                "q": "",
+                "for": "浅漬け・うどん",
+                "maybe": true
+              },
+              {
                 "n": "味噌",
                 "q": "",
-                "for": "豚汁",
+                "for": "豚汁・味噌汁",
                 "maybe": true
               },
               {
@@ -638,6 +735,7 @@
       {
         "id": "suzuki-meat",
         "name": "ミートショップ寿々木",
+        "icon": "meat",
         "when": "土曜（月曜休）",
         "flyer": "毎月29日は肉の特売日",
         "groups": [
@@ -647,7 +745,13 @@
               {
                 "n": "豚こま",
                 "q": "600g",
-                "for": "冷凍小分け＋下味冷凍 3味"
+                "for": "冷凍小分け＋塩豚"
+              },
+              {
+                "n": "豚肩ロース 塊",
+                "q": "500g",
+                "for": "ボニークでローストポーク（土曜の夕食にするなら）",
+                "maybe": true
               },
               {
                 "n": "焼き鳥",
@@ -662,6 +766,7 @@
       {
         "id": "uokatsu",
         "name": "さかなや魚勝",
+        "icon": "fish",
         "when": "土曜（月曜休・平日は13:30-14:30休憩）",
         "flyer": "Instagram 9/12: 本鮪切り落とし 650円、刺身盛り 1,580円〜。9/22 うなぎ蒲焼 予約 3,300円（締切 9/17）",
         "groups": [
@@ -674,9 +779,9 @@
                 "for": "土曜の夕食"
               },
               {
-                "n": "焼き魚用の切り身",
-                "q": "2切",
-                "for": "日曜の豚汁定食"
+                "n": "鮭の切り身",
+                "q": "4切",
+                "for": "日曜の焼き鮭2切＋下味冷凍2切"
               }
             ]
           }
@@ -685,6 +790,7 @@
       {
         "id": "donki-sing",
         "name": "ドンキ（家の前）",
+        "icon": "donki",
         "when": "切れたら平日でも",
         "flyer": null,
         "groups": [
@@ -709,17 +815,5 @@
       }
     ]
   },
-  "hitokoto": [],
-  "newcomer": {
-    "id": "cookdo-hoikoro",
-    "name": "Cook Do 回鍋肉用",
-    "store": "ヨーカドー",
-    "how": "豚こま＋キャベツを炒めて素をからめる。10分",
-    "why": "せいろ・麻婆に続く『素で一品』の3つ目。常備の豚こまとキャベツで作れます",
-    "note": "棚にあるかは未確認",
-    "url": "https://www.ajinomoto.co.jp/products/detail/?ProductName=cookdo_8"
-  },
-  "health": "今週: 野菜は毎食1つ（サラダ・ブロッコリー）、魚は土日で2回、揚げ物なし、豚汁の具を仕込んで汁物を手作りに",
-  "soboro_don_url": "https://www.sirogohan.com/recipe/soborodon/",
-  "tip_policy": "豆知識は栄養の説明であって強制ではない。効能は『〜に関わる』『〜とされる』の簡易な言い回しで添える（断定はしない）。1行"
+  "hitokoto": []
 }
