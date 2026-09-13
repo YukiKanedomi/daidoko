@@ -152,3 +152,5 @@ h1{margin:2px 0 0;font-size:26px;font-weight:700;letter-spacing:-.01em}
 .hs-dots i.on{background:var(--acc)}
 .hs-dots i.x{background:var(--ink)}
 .hs-n{flex:0 0 32px;text-align:right;font-size:12px;color:var(--sub);font-feature-settings:"tnum"}
+.tipline{margin:8px 0 0;font-size:12px;color:var(--sub);line-height:1.55;padding:8px 10px;background:#fff;border-radius:10px}
+.tipline b{display:inline-block;font-size:10px;font-weight:700;color:var(--acc);background:var(--acc-soft);border-radius:999px;padding:1px 7px;margin-right:6px;vertical-align:1px}

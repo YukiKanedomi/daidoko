@@ -77,6 +77,7 @@
         <div class="chips">${chips}</div>
         <h2>${esc(main.name)}</h2>
         <div class="set">${set}</div>
+        ${main.tip ? `<div class="tipline"><b>豆知識</b>${esc(main.tip)}</div>` : ''}
         <div class="row"><button class="btn ${done ? 'done' : ''}" data-pick="${esc(main.id)}" data-date="${day.date}">${done ? 'これにした' : 'これにする'}</button><button class="btn ghost" data-toggle="steps">作り方</button></div>
         <ol class="steps" id="steps" hidden>${steps}${main.recipe_url ? `<li class="link"><a href="${esc(main.recipe_url)}" target="_blank" rel="noopener">ちゃんとしたレシピ: ${esc(main.recipe_site || 'レシピサイト')} ›</a></li>` : ''}</ol>
       </div></div>
@@ -117,6 +118,7 @@
         <div class="chips"><span class="chip acc">${main.minutes}分</span><span class="chip">冷凍 ${esc(main.servings)}</span><span class="chip">${esc(main.reheat)}</span></div>
         <h2>${esc(main.name)}</h2>
         <div class="set">${esc(main.why)}</div>
+        ${main.tip ? `<div class="tipline"><b>豆知識</b>${esc(main.tip)}</div>` : ''}
         ${main.recipe_url ? `<div class="set" style="margin-top:4px"><a class="lnk" href="${esc(main.recipe_url)}" target="_blank" rel="noopener">レシピ: ${esc(main.recipe_site || 'レシピサイト')} ›</a></div>` : ''}
         <div class="row"><button class="btn ${p['prep:' + main.id] ? 'done' : ''}" data-prep="${esc(main.id)}">${p['prep:' + main.id] ? 'やる' : 'やる'}</button><button class="btn ghost" data-prep-no="${esc(main.id)}">今回はなし</button></div>
       </div></div>

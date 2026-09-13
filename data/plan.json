@@ -30,7 +30,8 @@
           "fish": false,
           "fried": false,
           "soup": false
-        }
+        },
+        "tip": "ブロッコリーはビタミンCと葉酸が多く、ゆでるより蒸す方が水に流れ出にくい。卵と豚こまでたんぱく質もそろう"
       },
       "alts": [
         {
@@ -43,7 +44,8 @@
             "fish": false,
             "fried": false,
             "soup": false
-          }
+          },
+          "tip": "皮の炭水化物と餡のたんぱく質・野菜が一皿に。キャベツのサラダを添えると野菜量が増える"
         },
         {
           "id": "udon-egg",
@@ -57,7 +59,8 @@
             "fish": false,
             "fried": false,
             "soup": false
-          }
+          },
+          "tip": "卵は必須アミノ酸をバランスよく含む良質なたんぱく質。うどんだけだと炭水化物に偏るので、卵と冷奴で補う形"
         }
       ]
     },
@@ -87,7 +90,8 @@
           "fish": false,
           "fried": false,
           "soup": false
-        }
+        },
+        "tip": "ブロッコリーはビタミンCと葉酸が多く、ゆでるより蒸す方が水に流れ出にくい。卵と豚こまでたんぱく質もそろう"
       },
       "alts": [
         {
@@ -102,7 +106,8 @@
             "fish": false,
             "fried": false,
             "soup": false
-          }
+          },
+          "tip": "卵は必須アミノ酸をバランスよく含む良質なたんぱく質。うどんだけだと炭水化物に偏るので、卵と冷奴で補う形"
         },
         {
           "id": "mapo",
@@ -114,7 +119,8 @@
             "fish": false,
             "fried": false,
             "soup": false
-          }
+          },
+          "tip": "豆腐は植物性たんぱく質とカルシウム、豚肉はビタミンB1（糖質をエネルギーに変えるのを助ける）"
         }
       ]
     },
@@ -142,7 +148,8 @@
           "fish": false,
           "fried": false,
           "soup": false
-        }
+        },
+        "tip": "豆腐は植物性たんぱく質とカルシウム、豚肉はビタミンB1（糖質をエネルギーに変えるのを助ける）"
       },
       "alts": [
         {
@@ -157,7 +164,8 @@
             "fish": false,
             "fried": false,
             "soup": false
-          }
+          },
+          "tip": "さつまいものビタミンCはでんぷんに守られて加熱に強い。人参のβカロテンは油と一緒だと吸収されやすいので、たれにごま油を"
         },
         {
           "id": "pasta",
@@ -169,7 +177,8 @@
             "fish": false,
             "fried": false,
             "soup": false
-          }
+          },
+          "tip": "市販ソースの日は野菜が少なくなりがち。サラダ1皿で食物繊維とビタミンを足す"
         }
       ]
     },
@@ -198,7 +207,8 @@
           "fish": false,
           "fried": false,
           "soup": false
-        }
+        },
+        "tip": "卵は必須アミノ酸をバランスよく含む良質なたんぱく質。うどんだけだと炭水化物に偏るので、卵と冷奴で補う形"
       },
       "alts": [
         {
@@ -211,7 +221,8 @@
             "fish": false,
             "fried": true,
             "soup": false
-          }
+          },
+          "tip": "鶏ももはたんぱく質と鉄。コソリなら油を使わないぶん脂質が抑えられる"
         },
         {
           "id": "nabe",
@@ -223,7 +234,8 @@
             "fish": false,
             "fried": false,
             "soup": false
-          }
+          },
+          "tip": "白菜・豆腐・豚こま・鶏団子で野菜とたんぱく質が一度に。締めを控えると食べ過ぎにくい"
         }
       ]
     },
@@ -253,7 +265,8 @@
           "fish": false,
           "fried": false,
           "soup": false
-        }
+        },
+        "tip": "さつまいものビタミンCはでんぷんに守られて加熱に強い。人参のβカロテンは油と一緒だと吸収されやすいので、たれにごま油を"
       },
       "alts": [
         {
@@ -266,7 +279,8 @@
             "fish": false,
             "fried": false,
             "soup": false
-          }
+          },
+          "tip": "豆腐は植物性たんぱく質とカルシウム、豚肉はビタミンB1（糖質をエネルギーに変えるのを助ける）"
         },
         {
           "id": "gyoza",
@@ -278,7 +292,8 @@
             "fish": false,
             "fried": false,
             "soup": false
-          }
+          },
+          "tip": "皮の炭水化物と餡のたんぱく質・野菜が一皿に。キャベツのサラダを添えると野菜量が増える"
         }
       ]
     },
@@ -305,7 +320,8 @@
           "fish": false,
           "fried": false,
           "soup": false
-        }
+        },
+        "tip": "市販ソースの日は野菜が少なくなりがち。サラダ1皿で食物繊維とビタミンを足す"
       },
       "alts": [
         {
@@ -318,7 +334,8 @@
             "fish": false,
             "fried": false,
             "soup": false
-          }
+          },
+          "tip": "白菜・豆腐・豚こま・鶏団子で野菜とたんぱく質が一度に。締めを控えると食べ過ぎにくい"
         },
         {
           "id": "gyoza",
@@ -330,7 +347,8 @@
             "fish": false,
             "fried": false,
             "soup": false
-          }
+          },
+          "tip": "皮の炭水化物と餡のたんぱく質・野菜が一皿に。キャベツのサラダを添えると野菜量が増える"
         }
       ]
     },
@@ -359,7 +377,8 @@
           "fish": true,
           "fried": false,
           "soup": true
-        }
+        },
+        "tip": "まぐろの赤身は高たんぱくで鉄が多め。青魚（あじ・いわし・さば）はDHA・EPAが豊富"
       },
       "alts": [
         {
@@ -372,7 +391,8 @@
             "fish": false,
             "fried": false,
             "soup": false
-          }
+          },
+          "tip": "牛乳・チーズでカルシウム。野菜が少なくなりがちなのでサラダを添える"
         },
         {
           "id": "nabe",
@@ -384,7 +404,8 @@
             "fish": false,
             "fried": false,
             "soup": false
-          }
+          },
+          "tip": "白菜・豆腐・豚こま・鶏団子で野菜とたんぱく質が一度に。締めを控えると食べ過ぎにくい"
         }
       ]
     },
@@ -414,7 +435,8 @@
           "fish": true,
           "fried": false,
           "soup": true
-        }
+        },
+        "tip": "豚肉のビタミンB1に、大根・人参・こんにゃくの食物繊維。具だくさんにすると汁の量が減って塩分も控えめに"
       },
       "alts": [
         {
@@ -429,7 +451,8 @@
             "fish": false,
             "fried": false,
             "soup": false
-          }
+          },
+          "tip": "ブロッコリーはビタミンCと葉酸が多く、ゆでるより蒸す方が水に流れ出にくい。卵と豚こまでたんぱく質もそろう"
         },
         {
           "id": "gyoza",
@@ -441,7 +464,8 @@
             "fish": false,
             "fried": false,
             "soup": false
-          }
+          },
+          "tip": "皮の炭水化物と餡のたんぱく質・野菜が一皿に。キャベツのサラダを添えると野菜量が増える"
         }
       ]
     }
@@ -458,7 +482,8 @@
         "photo": "soboro.jpg",
         "why": "来週の火・木に二色丼。白菜と鍋の具にも",
         "recipe_url": "https://www.sirogohan.com/recipe/torisoboro/",
-        "recipe_site": "白ごはん.com 鶏そぼろ"
+        "recipe_site": "白ごはん.com 鶏そぼろ",
+        "tip": "鶏ひき肉は高たんぱく・低脂質（むね肉ならさらに脂質が少ない）。卵と合わせると必須アミノ酸がそろう"
       },
       {
         "id": "tonjiru-gu",
@@ -469,7 +494,8 @@
         "photo": "tonjiru.jpg",
         "why": "味噌汁を主菜級に。日曜の夕食で初回を食べる",
         "recipe_url": "https://www.sirogohan.com/recipe/tonjiru/",
-        "recipe_site": "白ごはん.com 基本の豚汁"
+        "recipe_site": "白ごはん.com 基本の豚汁",
+        "tip": "大根・人参・こんにゃくで食物繊維。豚肉のビタミンB1は水に溶けやすいので汁ごと食べる豚汁と相性がいい"
       },
       {
         "id": "shitaji-buta",
@@ -480,7 +506,8 @@
         "photo": "pork.jpg",
         "why": "寿々木の豚こまを小分けするついでに、生姜・味噌・塩だれ",
         "recipe_url": "https://www.kurashiru.com/recipes/caca5b5e-309a-4611-b7b5-a122037857c9",
-        "recipe_site": "クラシル 下味冷凍 豚の生姜焼き"
+        "recipe_site": "クラシル 下味冷凍 豚の生姜焼き",
+        "tip": "豚こまはビタミンB1が豊富。生姜と一緒だと風味で塩分を抑えやすい"
       }
     ]
   },
@@ -693,5 +720,6 @@
     "url": "https://www.ajinomoto.co.jp/products/detail/?ProductName=cookdo_8"
   },
   "health": "今週: 野菜は毎食1つ（サラダ・ブロッコリー）、魚は土日で2回、揚げ物なし、豚汁の具を仕込んで汁物を手作りに",
-  "soboro_don_url": "https://www.sirogohan.com/recipe/soborodon/"
+  "soboro_don_url": "https://www.sirogohan.com/recipe/soborodon/",
+  "tip_policy": "豆知識は栄養の説明であって強制ではない。事実に忠実な範囲で1行。医学的な効能の断定はしない"
 }
