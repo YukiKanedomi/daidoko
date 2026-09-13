@@ -55,14 +55,18 @@
     return src ? Object.assign({}, src, { photo: x.photo || src.photo }) : x;
   }
   function allDishes(day) { return [day.main, ...(day.alts || [])].map(fullDish); }
-  function chosen(day) { const id = picks()[day.date]; return allDishes(day).find((x) => x.id === id) || null; }
+  // 週の中の全料理（重複なし）。「もっと見る」の入れ替え候補
+  function allWeekDishes() { const seen = {}; return D.plan.days.flatMap(allDishes).filter((x) => !seen[x.id] && (seen[x.id] = true)); }
+  function chosen(day) { const id = picks()[day.date]; return allDishes(day).concat(allWeekDishes()).find((x) => x.id === id) || null; }
   function shown(day) { return chosen(day) || day.main; }
+  const isSkip = (day) => picks()[day.date] === 'skip';
 
   // ---- 今夜（平日） ------------------------------------------------------
   function viewTonight(date) {
     const day = dayOf(date);
     if (!day) return `${head(fmtDate(date), '今夜のこんだて')}<div class="empty"><img src="chara/sleep.png" alt=""><p>この日の案はまだありません。<br>次の生成で出ます。</p></div>`;
     if (day.weekend) return viewWeekend(day);
+    if (picks()[day.date] === 'skip') return `${head(fmtDate(date), '今夜のこんだて')}${weekStrip(date)}<div class="empty"><img src="chara/sleep.png" alt=""><p>この日は作らない日にしました。<br>外食でも、緊急食でも。</p><button class="btn ghost" style="margin:12px auto 0;display:block" data-unskip="${day.date}">案に戻す</button></div>${noteBox(day.date)}`;
     const main = shown(day);
     const done = !!picks()[day.date];
     const alts = allDishes(day).filter((x) => x.id !== main.id).slice(0, 2);
@@ -81,8 +85,9 @@
         <div class="row"><button class="btn ${done ? 'done' : ''}" data-pick="${esc(main.id)}" data-date="${day.date}">${done ? 'これにした' : 'これにする'}</button><button class="btn ghost" data-toggle="steps">作り方</button></div>
         <ol class="steps" id="steps" hidden>${steps}${main.recipe_url ? `<li class="link"><a href="${esc(main.recipe_url)}" target="_blank" rel="noopener">ちゃんとしたレシピ: ${esc(main.recipe_site || 'レシピサイト')} ›</a></li>` : ''}</ol>
       </div></div>
-      <div class="sec"><h3>ほかの案</h3></div>
+      <div class="sec"><h3>ほかの案</h3><button data-more="1">もっと見る</button></div>
       <div class="alts">${alts.map((a) => `<button class="alt" data-swap="${esc(a.id)}" data-date="${day.date}"><img src="${photo(a.photo)}" alt=""><div class="b"><div class="t">${a.minutes ? a.minutes + '分' : '買って帰る'}</div><h4>${esc(a.name)}</h4></div></button>`).join('')}</div>
+      <div class="more" id="more" hidden>${allWeekDishes().filter((x) => x.id !== main.id).map((x) => `<button class="mrow" data-swap="${esc(x.id)}" data-date="${day.date}"><img src="${photo(x.photo)}" alt=""><div class="b"><h4>${esc(x.name)}</h4><div class="m">${x.minutes ? x.minutes + '分' : '買って帰る'}</div></div></button>`).join('')}<button class="mrow skip" data-skip="${day.date}"><img src="chara/sleep.png" alt=""><div class="b"><h4>この日は作らない</h4><div class="m">外食・緊急食など。何も出さない</div></div></button></div>
       <a class="card shopsum" href="#shop"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg><div><div class="k">買い出し ${shopN.left}点</div><div class="v">${esc(D.plan.shopping.for)}</div></div><span class="chev">›</span></a>
       ${D.plan.health ? `<div class="foot health"><img src="chara/broccoli.png" alt=""><span>${esc(D.plan.health)}</span></div>` : ''}
       ${noteBox(day.date)}`;
@@ -139,7 +144,7 @@
       <div class="alts">${allDishes(day).filter((x) => x.id !== tonight.id).slice(0, 2).map((a) => `<button class="alt" data-swap="${esc(a.id)}" data-date="${day.date}"><img src="${photo(a.photo)}" alt=""><div class="b"><div class="t">${a.minutes ? a.minutes + '分' : '買って帰る'}</div><h4>${esc(a.name)}</h4></div></button>`).join('')}</div>
       ${newcomerCard()}
       <div class="sec"><h3>来週の平日</h3><a href="#week">こんだて表</a></div>
-      <div class="wdays">${nextDays.map((d) => `<a class="wd" href="#tonight/${d.date}"><div class="d">${d.dow}</div><div class="n">${esc(shortName(shown(d).name))}</div><div class="m">${shown(d).minutes}分</div></a>`).join('')}</div>
+      <div class="wdays">${nextDays.map((d) => `<a class="wd" href="#tonight/${d.date}"><div class="d">${d.dow}</div><div class="n">${isSkip(d) ? '作らない' : esc(shortName(shown(d).name))}</div><div class="m">${isSkip(d) ? '' : shown(d).minutes + '分'}</div></a>`).join('')}</div>
       ${D.plan.health ? `<div class="foot health"><img src="chara/broccoli.png" alt=""><span>${esc(D.plan.health)}</span></div>` : ''}
       ${noteBox(day.date)}`;
   }
@@ -162,6 +167,7 @@
       ${healthStrip()}
       <div class="list">${D.plan.days.map((d) => {
         const m = shown(d);
+        if (isSkip(d)) return `<a class="dayrow ${d.date === TODAY ? 'today' : ''}" href="#tonight/${d.date}"><div class="cal"><div class="w">${d.dow}</div><div class="n">${Number(d.date.slice(8))}</div></div><img src="chara/sleep.png" alt="" style="object-fit:contain;padding:8px"><div class="b"><div class="t" style="color:var(--mute)">作らない日</div><h4 style="color:var(--mute)">外食・緊急食など</h4><div class="set">案は「${esc(d.main.name)}」でした</div></div><span class="chev">›</span></a>`;
         const past = d.date < TODAY;
         const t = p[d.date] ? '<div class="t done">これにした</div>' : (past ? '<div class="t done" style="color:var(--mute)">記録なし</div>' : `<div class="t">${d.date === TODAY ? '今夜 · ' : ''}${m.minutes ? m.minutes + '分' : '買って帰る'}</div>`);
         const set = [m.side, m.soup].filter(Boolean).join(' · ');
@@ -175,8 +181,8 @@
     const rows = [['veg', '野菜'], ['fish', '魚'], ['soup', '汁物 手作り'], ['fried', '揚げ物']];
     const days = D.plan.days;
     return `<div class="hs">${rows.map(([k, label]) => {
-      const n = days.filter((d) => (shown(d).h || {})[k]).length;
-      return `<div class="hs-row"><span class="hs-k">${label}</span><span class="hs-dots">${days.map((d) => `<i class="${(shown(d).h || {})[k] ? (k === 'fried' ? 'x' : 'on') : ''}" title="${d.dow}"></i>`).join('')}</span><span class="hs-n">${n}${k === 'veg' || k === 'soup' ? '日' : '回'}</span></div>`;
+      const n = days.filter((d) => !isSkip(d) && (shown(d).h || {})[k]).length;
+      return `<div class="hs-row"><span class="hs-k">${label}</span><span class="hs-dots">${days.map((d) => `<i class="${!isSkip(d) && (shown(d).h || {})[k] ? (k === 'fried' ? 'x' : 'on') : ''}" title="${d.dow}"></i>`).join('')}</span><span class="hs-n">${n}${k === 'veg' || k === 'soup' ? '日' : '回'}</span></div>`;
     }).join('')}</div>`;
   }
 
@@ -220,12 +226,15 @@
 
   // ---- 操作 --------------------------------------------------------------
   $app.addEventListener('click', (e) => {
-    const t = e.target.closest('[data-pick],[data-swap],[data-toggle],[data-check],[data-store],[data-prep],[data-prep-no],[data-copy],[data-new]');
+    const t = e.target.closest('[data-pick],[data-swap],[data-toggle],[data-check],[data-store],[data-prep],[data-prep-no],[data-copy],[data-new],[data-more],[data-skip],[data-unskip]');
     if (!t) return;
     const p = picks();
     if (t.dataset.pick) { p[t.dataset.date] = t.dataset.pick; store.set('picks', p); toast('今夜はこれに', 'cheer'); route(); }
     else if (t.dataset.swap) { p[t.dataset.date] = t.dataset.swap; store.set('picks', p); route(); }
     else if (t.dataset.toggle) { const s = document.getElementById('steps'); s.hidden = !s.hidden; }
+    else if (t.dataset.more) { const m = document.getElementById('more'); m.hidden = !m.hidden; t.textContent = m.hidden ? 'もっと見る' : '閉じる'; }
+    else if (t.dataset.skip) { p[t.dataset.skip] = 'skip'; store.set('picks', p); toast('この日は作らない日に'); route(); }
+    else if (t.dataset.unskip) { delete p[t.dataset.unskip]; store.set('picks', p); route(); }
     else if (t.dataset.check) { const c = checks(); c[t.dataset.check] = !c[t.dataset.check]; store.set('checks', c); t.classList.toggle('on'); }
     else if (t.dataset.store) { location.hash = '#shop/' + t.dataset.store; }
     else if (t.dataset.prep) { p['prep:' + t.dataset.prep] = !p['prep:' + t.dataset.prep]; store.set('picks', p); toast(p['prep:' + t.dataset.prep] ? '仕込みに入れました' : '外しました', p['prep:' + t.dataset.prep] ? 'cheer' : null); route(); }
@@ -243,7 +252,8 @@
     const lines = ['だいどこ ' + D.plan.week];
     D.plan.days.forEach((d) => {
       const c = chosen(d);
-      if (c) lines.push(`${md(d.date)}(${d.dow}) これにした: ${c.name}`);
+      if (isSkip(d)) lines.push(`${md(d.date)}(${d.dow}) 作らない日`);
+      else if (c) lines.push(`${md(d.date)}(${d.dow}) これにした: ${c.name}`);
       if (n[d.date]) lines.push(`${md(d.date)}(${d.dow}) ひとこと: ${n[d.date]}`);
     });
     const prep = D.plan.weekend.prep.filter((x) => p['prep:' + x.id]).map((x) => x.name);
