@@ -1,6 +1,6 @@
 {
   "updated": "2026-09-13",
-  "note": "週末仕込みの候補。status は参考（あり／気になる／なし 等）で、『なし』以外は自由に提案してよい。評価に縛られない（2026-09-13 オーナー方針）",
+  "note": "週末仕込みの候補。status は参考（あり／気になる／なし 等）で、『なし』以外は自由に提案してよい。評価に縛られない（2026-09-13 オーナー方針） round 3（2026-09-13）はレシピを役割つきで複数添付（基本／冷凍用／時短／変化）。checked は HTTP ステータス（Nadia は 403 でもボット対策の可能性）",
   "ideas": [
     {
       "id": "hamburg",
@@ -225,6 +225,216 @@
       "status": "あり",
       "round": 2,
       "owner_note": "おっけーかも（2026-09-13）"
+    },
+    {
+      "id": "ajitama",
+      "name": "味玉（半熟煮卵、冷蔵で作り置き）",
+      "reheat": "そのまま。せいろの卵や丼のトッピングに",
+      "weekend_minutes": 15,
+      "servings": "6個",
+      "why": "卵を常備しているので手間ゼロに近い。うどん・そぼろ丼・せいろに乗せるだけで一品増える",
+      "recipes": [
+        {
+          "role": "基本",
+          "site": "白ごはん.com 半熟煮卵",
+          "url": "https://www.sirogohan.com/recipe/nitamago/",
+          "checked": 200
+        },
+        {
+          "role": "変化",
+          "site": "白ごはん.com 酢じょうゆ味玉",
+          "url": "https://www.sirogohan.com/recipe/ajitama/",
+          "checked": 200
+        }
+      ],
+      "status": "候補",
+      "round": 3
+    },
+    {
+      "id": "shiobuta",
+      "name": "塩豚（豚こまに塩をもみ込んで冷凍）→ せいろ",
+      "reheat": "せいろで凍ったまま12分",
+      "weekend_minutes": 10,
+      "servings": "3回分",
+      "why": "下味冷凍の中で最も手数が少ない。塩だけで肉の味が変わる",
+      "recipes": [
+        {
+          "role": "基本",
+          "site": "クラシル 塩豚せいろ蒸し",
+          "url": "https://www.kurashiru.com/recipe_cards/bd60bf60-3ba1-4d90-b722-603a41f53600",
+          "checked": 200
+        }
+      ],
+      "status": "候補",
+      "round": 3
+    },
+    {
+      "id": "tori-chashu",
+      "name": "レンジ鶏チャーシュー（冷凍可）",
+      "reheat": "レンジ。ご飯・うどん・サラダの上に",
+      "weekend_minutes": 15,
+      "servings": "3回分",
+      "why": "むね肉が高たんぱく・低脂質。レンジだけで済み、平日の『足すだけたんぱく質』になる",
+      "recipes": [
+        {
+          "role": "基本",
+          "site": "クラシル レンジで簡単 鶏チャーシュー",
+          "url": "https://www.kurashiru.com/recipes/cba22d18-5951-46bc-8867-76bf60875691",
+          "checked": 200
+        },
+        {
+          "role": "冷凍用",
+          "site": "Nadia 鶏の味噌チャーシュー（冷凍・作り置き）",
+          "url": "https://oceans-nadia.com/user/10816/recipe/383083",
+          "checked": 200
+        }
+      ],
+      "status": "候補",
+      "round": 3
+    },
+    {
+      "id": "sake-shitaji",
+      "name": "鮭の下味冷凍（ごまみりん）→ コソリで焼く",
+      "reheat": "解凍してコソリ10分",
+      "weekend_minutes": 10,
+      "servings": "2回分",
+      "why": "魚を週2回にする一番楽な道。魚勝の切り身を買った日に仕込む",
+      "recipes": [
+        {
+          "role": "基本",
+          "site": "クラシル 下味冷凍 鮭のごまみりん漬け焼き",
+          "url": "https://www.kurashiru.com/recipes/147a613a-3536-490e-98bd-be1c5a5bd71a",
+          "checked": 200
+        },
+        {
+          "role": "変化",
+          "site": "クラシル 下味冷凍 鮭のハニーマスタード焼き",
+          "url": "https://www.kurashiru.com/recipes/7d208505-ef16-41bb-be56-a39a573cd2f9",
+          "checked": 200
+        }
+      ],
+      "status": "候補",
+      "round": 3
+    },
+    {
+      "id": "ninjin-shirishiri",
+      "name": "にんじんしりしり（冷凍可）",
+      "reheat": "レンジ1分",
+      "weekend_minutes": 15,
+      "servings": "4回分",
+      "why": "人参1本と卵で野菜の副菜が4回分。βカロテンは油と一緒で吸収されやすい",
+      "recipes": [
+        {
+          "role": "基本",
+          "site": "白ごはん.com にんじんしりしり",
+          "url": "https://www.sirogohan.com/recipe/ninsiri/",
+          "checked": 200
+        },
+        {
+          "role": "時短",
+          "site": "クラシル 作り置きに簡単 にんじんしりしり",
+          "url": "https://www.kurashiru.com/recipe_cards/c713605b-1657-4f6b-892a-eb482914577c",
+          "checked": 200
+        }
+      ],
+      "status": "候補",
+      "round": 3
+    },
+    {
+      "id": "hourensou-namul",
+      "name": "ほうれん草のナムル（冷凍ほうれん草で）",
+      "reheat": "冷蔵で3日。そのまま",
+      "weekend_minutes": 5,
+      "servings": "3回分",
+      "why": "包丁いらず。ごま油と塩で『サラダ以外の野菜』が1つ増える",
+      "recipes": [
+        {
+          "role": "基本",
+          "site": "クラシル ほうれん草のナムル",
+          "url": "https://www.kurashiru.com/recipes/5bf9e91a-c771-43cd-8780-21748e322bc9",
+          "checked": 200
+        },
+        {
+          "role": "時短",
+          "site": "DELISH KITCHEN レンジで ほうれん草ともやしのナムル",
+          "url": "https://delishkitchen.tv/recipes/401423373281789110",
+          "checked": 200
+        }
+      ],
+      "status": "候補",
+      "round": 3
+    },
+    {
+      "id": "kinpira",
+      "name": "きんぴらごぼう（冷凍可）",
+      "reheat": "レンジ1分",
+      "weekend_minutes": 20,
+      "servings": "4回分",
+      "why": "食物繊維の副菜。細く切って汁気を飛ばせば冷凍でも食感が落ちにくい",
+      "recipes": [
+        {
+          "role": "基本",
+          "site": "白ごはん.com きんぴらごぼう",
+          "url": "https://www.sirogohan.com/recipe/kinpira/",
+          "checked": 200
+        },
+        {
+          "role": "冷凍用",
+          "site": "ニチレイ ほほえみごはん きんぴらの冷凍保存",
+          "url": "https://www.nichireifoods.co.jp/media/16892/",
+          "checked": 403
+        }
+      ],
+      "status": "候補",
+      "round": 3
+    },
+    {
+      "id": "mille-nabe",
+      "name": "白菜と豚こまのミルフィーユ鍋セット（重ねて冷凍）",
+      "reheat": "白だしと水で15分",
+      "weekend_minutes": 15,
+      "servings": "2回分",
+      "why": "鍋の具セットの上位版。白菜1/4と豚こまで2回分。寒くなってから",
+      "recipes": [
+        {
+          "role": "基本",
+          "site": "クラシル 白だしで 豚バラ白菜のミルフィーユ鍋",
+          "url": "https://www.kurashiru.com/recipes/20406ce4-6ceb-428a-b1e4-34401a5d15d9",
+          "checked": 200
+        },
+        {
+          "role": "時短",
+          "site": "クラシル フライパンで ミルフィーユ鍋風",
+          "url": "https://www.kurashiru.com/recipes/ae603637-95dc-49e6-87d5-22f53ac15067",
+          "checked": 200
+        }
+      ],
+      "status": "候補",
+      "round": 3
+    },
+    {
+      "id": "mune-shiokoji",
+      "name": "鶏むねの下味冷凍（塩麹）→ せいろ／コソリ",
+      "reheat": "せいろ15分、またはコソリ",
+      "weekend_minutes": 10,
+      "servings": "3回分",
+      "why": "下味冷凍の鶏ももの『むね版』。塩麹でしっとり。高たんぱく・低脂質",
+      "recipes": [
+        {
+          "role": "基本",
+          "site": "Nadia 下味冷凍 鶏むね肉と野菜の塩麹焼き",
+          "url": "https://oceans-nadia.com/user/43558/recipe/388964",
+          "checked": 200
+        },
+        {
+          "role": "変化",
+          "site": "クラシル 塩麹鶏ハム",
+          "url": "https://www.kurashiru.com/recipes/b284902c-996e-4733-b3ab-3169fe1b9791",
+          "checked": 200
+        }
+      ],
+      "status": "候補",
+      "round": 3
     }
   ],
   "evaluated": "2026-09-13 オーナー評価（7 肉巻き野菜は未評価）",
