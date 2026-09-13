@@ -39,7 +39,7 @@
         "惣菜",
         "焼き鳥"
       ],
-      "cheap_days": null,
+      "cheap_days": "毎月29日（肉の特売日。29日が月曜なら前後にずれる）",
       "confirmed": true,
       "categories": [
         "肉"
@@ -50,7 +50,20 @@
         "惣菜・焼き鳥（買って帰ることも）"
       ],
       "flyer_source": null,
-      "flyer_note": "デジタルチラシなし（寿々木は Instagram あり）"
+      "flyer_note": "デジタルチラシなし。公式サイトに特売日の記載あり",
+      "sns": {
+        "site": "https://meat-suzuki.com/"
+      },
+      "regular_items": [
+        "黒毛和牛（田村牛・馬場牛）",
+        "国産豚（特選ポーク・金華豚）",
+        "国産鶏（あべどり）",
+        "自家製惣菜",
+        "焼き鳥（通りに面したカウンター）"
+      ],
+      "notes": [
+        "テレビ紹介歴あり。夕方は行列になりやすい"
+      ]
     },
     {
       "id": "uokatsu",
@@ -74,7 +87,27 @@
         "焼き魚用の切り身"
       ],
       "flyer_source": null,
-      "flyer_note": "デジタルチラシなし（寿々木は Instagram あり）"
+      "flyer_note": "デジタルチラシなし。Instagram/X は未ログインでは一覧が読めない。個別投稿は /p/<id>/embed/captioned/ で本文が読める（2026-09-13 検証）",
+      "sns": {
+        "instagram": "https://www.instagram.com/sakanayauokatsu/",
+        "x": "https://x.com/uokatsusakanaya",
+        "site": "https://sakanaya-uokatsu.com/"
+      },
+      "regular_items": [
+        "刺身盛り合わせ",
+        "握り寿司・五目寿司・いくらとカニのちらし",
+        "焼き魚（鰻蒲焼・鮎塩焼など季節もの）",
+        "煮魚（煮アナゴ・煮付け）",
+        "惣菜（イカと里芋煮・ひじき煮・金時芋の塩甘煮など。椎茸旨煮はきのこなので除外）",
+        "切れ端の刺身（数量限定・買えたら運）",
+        "ふぐ",
+        "予約販売あり"
+      ],
+      "notes": [
+        "夫婦経営のテイクアウト専門店",
+        "季節もの・数量限定品あり",
+        "2026-09-22 シルバーウィーク特別企画（公式サイト告知）"
+      ]
     },
     {
       "id": "lopia-mewe",
@@ -187,5 +220,6 @@
       ]
     }
   ],
-  "flyer_howto": "トクバイの店舗ページ → /leaflets/<id> の HTML 内 view_state JSON に high_resolution_image_url（image.tokubai.co.jp/images/bargain_office_leaflets/o=true/<n>.jpg）と alt（『2026年9月12日〜13日までのチラシ』）がある。w=1800 等のサイズ指定で取得し、4分割して Claude が読む。2026-09-13 検証: ヨーカドー 9/12〜13 号を取得・判読できた"
+  "flyer_howto": "トクバイの店舗ページ → /leaflets/<id> の HTML 内 view_state JSON に high_resolution_image_url（image.tokubai.co.jp/images/bargain_office_leaflets/o=true/<n>.jpg）と alt（『2026年9月12日〜13日までのチラシ』）がある。w=1800 等のサイズ指定で取得し、4分割して Claude が読む。2026-09-13 検証: ヨーカドー 9/12〜13 号を取得・判読できた",
+  "sns_howto": "Instagram/X は curl では JS の殻だけで投稿が読めない。Claude in Chrome（ログイン済みブラウザ）が接続されていれば閲覧可（2026-09-13 は拡張未接続で未検証）。定時ジョブから SNS を自動で読むのは前提にしない。個別投稿の埋め込み URL は未ログインでも本文が取れる"
 }
