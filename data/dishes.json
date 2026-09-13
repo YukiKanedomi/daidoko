@@ -261,6 +261,22 @@
       "frequency": "いつも",
       "last_made": null,
       "count": null
+    },
+    {
+      "id": "chikin-aburasoba",
+      "name": "チキンラーメン 油そば風（＋かき玉スープ）",
+      "kind": "main",
+      "minutes": 5,
+      "tags": [
+        "緊急食の格上げ",
+        "常備品で完結"
+      ],
+      "frequency": "何もしたくない日",
+      "last_made": null,
+      "count": null,
+      "how": "茹でて湯を切り、卵黄・ごま油・小ねぎ。残り湯に卵白でかき玉スープ。ラー油・にんにくは夫が卓上で",
+      "recipe_url": "https://www.kurashiru.com/recipe_cards/fbc65f1c-7742-4cbc-b890-46c6a3c4c5b1",
+      "recipe_site": "クラシル チキンラーメン油そばとかきたまスープ"
     }
   ]
 }
