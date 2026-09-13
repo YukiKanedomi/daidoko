@@ -157,6 +157,7 @@
     const p = picks();
     return `
       ${head(D.plan.week, 'こんだて表', 'steamer')}
+      ${healthStrip()}
       <div class="list">${D.plan.days.map((d) => {
         const m = shown(d);
         const past = d.date < TODAY;
@@ -165,6 +166,16 @@
         return `<a class="dayrow ${d.date === TODAY ? 'today' : ''}" href="#tonight/${d.date}"><div class="cal"><div class="w">${d.dow}</div><div class="n">${Number(d.date.slice(8))}</div></div><img src="${photo(m.photo)}" alt=""><div class="b">${t}<h4>${esc(m.name)}</h4><div class="set">${esc(set || (d.weekend ? '仕込みと買い出しの日' : ''))}</div></div><span class="chev">›</span></a>`;
       }).join('')}</div>
       <div class="foot">${esc(D.plan.note)}<br>作らなかった日はそのまま。何も操作しなくて大丈夫です。</div>`;
+  }
+
+  // 健康の軽い可視化: 日ごとの点だけ。目標値や点数は出さない
+  function healthStrip() {
+    const rows = [['veg', '野菜'], ['fish', '魚'], ['soup', '汁物 手作り'], ['fried', '揚げ物']];
+    const days = D.plan.days;
+    return `<div class="hs">${rows.map(([k, label]) => {
+      const n = days.filter((d) => (shown(d).h || {})[k]).length;
+      return `<div class="hs-row"><span class="hs-k">${label}</span><span class="hs-dots">${days.map((d) => `<i class="${(shown(d).h || {})[k] ? (k === 'fried' ? 'x' : 'on') : ''}" title="${d.dow}"></i>`).join('')}</span><span class="hs-n">${n}${k === 'veg' || k === 'soup' ? '日' : '回'}</span></div>`;
+    }).join('')}</div>`;
   }
 
   // ---- 買い物 ------------------------------------------------------------

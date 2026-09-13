@@ -24,14 +24,26 @@
           "ポン酢かごま油＋塩で"
         ],
         "recipe_url": "https://delishkitchen.tv/recipes/383986795412455776",
-        "recipe_site": "DELISH KITCHEN 豚肉と彩り野菜のせいろ蒸し"
+        "recipe_site": "DELISH KITCHEN 豚肉と彩り野菜のせいろ蒸し",
+        "h": {
+          "veg": true,
+          "fish": false,
+          "fried": false,
+          "soup": false
+        }
       },
       "alts": [
         {
           "id": "gyoza",
           "name": "冷凍餃子 焼くだけ",
           "minutes": 10,
-          "photo": "gyoza.jpg"
+          "photo": "gyoza.jpg",
+          "h": {
+            "veg": false,
+            "fish": false,
+            "fried": false,
+            "soup": false
+          }
         },
         {
           "id": "udon-egg",
@@ -39,7 +51,13 @@
           "minutes": 5,
           "photo": "udon.jpg",
           "recipe_url": "https://www.kurashiru.com/recipes/1f38b83c-bc13-4c43-b4db-2996d3bf9c58",
-          "recipe_site": "クラシル めんつゆで ふんわりかき玉うどん"
+          "recipe_site": "クラシル めんつゆで ふんわりかき玉うどん",
+          "h": {
+            "veg": false,
+            "fish": false,
+            "fried": false,
+            "soup": false
+          }
         }
       ]
     },
@@ -63,7 +81,13 @@
           "ポン酢かごま油＋塩で"
         ],
         "recipe_url": "https://delishkitchen.tv/recipes/383986795412455776",
-        "recipe_site": "DELISH KITCHEN 豚肉と彩り野菜のせいろ蒸し"
+        "recipe_site": "DELISH KITCHEN 豚肉と彩り野菜のせいろ蒸し",
+        "h": {
+          "veg": true,
+          "fish": false,
+          "fried": false,
+          "soup": false
+        }
       },
       "alts": [
         {
@@ -72,13 +96,25 @@
           "minutes": 5,
           "photo": "udon.jpg",
           "recipe_url": "https://www.kurashiru.com/recipes/1f38b83c-bc13-4c43-b4db-2996d3bf9c58",
-          "recipe_site": "クラシル めんつゆで ふんわりかき玉うどん"
+          "recipe_site": "クラシル めんつゆで ふんわりかき玉うどん",
+          "h": {
+            "veg": false,
+            "fish": false,
+            "fried": false,
+            "soup": false
+          }
         },
         {
           "id": "mapo",
           "name": "麻婆豆腐（素＋豚こま）",
           "minutes": 10,
-          "photo": "mapo.jpg"
+          "photo": "mapo.jpg",
+          "h": {
+            "veg": true,
+            "fish": false,
+            "fried": false,
+            "soup": false
+          }
         }
       ]
     },
@@ -100,7 +136,13 @@
           "豚こまを炒める",
           "素と豆腐を入れて3分",
           "ご飯は冷凍ストックをレンジ"
-        ]
+        ],
+        "h": {
+          "veg": true,
+          "fish": false,
+          "fried": false,
+          "soup": false
+        }
       },
       "alts": [
         {
@@ -109,13 +151,25 @@
           "minutes": 15,
           "photo": "seiro2.jpg",
           "recipe_url": "https://delishkitchen.tv/recipes/383986795412455776",
-          "recipe_site": "DELISH KITCHEN 豚肉と彩り野菜のせいろ蒸し"
+          "recipe_site": "DELISH KITCHEN 豚肉と彩り野菜のせいろ蒸し",
+          "h": {
+            "veg": true,
+            "fish": false,
+            "fried": false,
+            "soup": false
+          }
         },
         {
           "id": "pasta",
           "name": "パスタ（市販ソース）",
           "minutes": 15,
-          "photo": "pasta.jpg"
+          "photo": "pasta.jpg",
+          "h": {
+            "veg": false,
+            "fish": false,
+            "fried": false,
+            "soup": false
+          }
         }
       ]
     },
@@ -138,20 +192,38 @@
           "豆腐は切るだけ"
         ],
         "recipe_url": "https://www.kurashiru.com/recipes/1f38b83c-bc13-4c43-b4db-2996d3bf9c58",
-        "recipe_site": "クラシル めんつゆで ふんわりかき玉うどん"
+        "recipe_site": "クラシル めんつゆで ふんわりかき玉うどん",
+        "h": {
+          "veg": true,
+          "fish": false,
+          "fried": false,
+          "soup": false
+        }
       },
       "alts": [
         {
           "id": "karaage",
           "name": "コソリで冷凍唐揚げ",
           "minutes": 15,
-          "photo": "karaage.jpg"
+          "photo": "karaage.jpg",
+          "h": {
+            "veg": false,
+            "fish": false,
+            "fried": true,
+            "soup": false
+          }
         },
         {
           "id": "nabe",
           "name": "鍋（素＋冷凍の具）",
           "minutes": 20,
-          "photo": "nabe.jpg"
+          "photo": "nabe.jpg",
+          "h": {
+            "veg": false,
+            "fish": false,
+            "fried": false,
+            "soup": false
+          }
         }
       ]
     },
@@ -175,20 +247,38 @@
           "マンドゥはたれ、野菜は塩で"
         ],
         "recipe_url": "https://delishkitchen.tv/recipes/383986795412455776",
-        "recipe_site": "DELISH KITCHEN 豚肉と彩り野菜のせいろ蒸し"
+        "recipe_site": "DELISH KITCHEN 豚肉と彩り野菜のせいろ蒸し",
+        "h": {
+          "veg": true,
+          "fish": false,
+          "fried": false,
+          "soup": false
+        }
       },
       "alts": [
         {
           "id": "mapo",
           "name": "麻婆豆腐（素＋豚こま）",
           "minutes": 10,
-          "photo": "mapo.jpg"
+          "photo": "mapo.jpg",
+          "h": {
+            "veg": true,
+            "fish": false,
+            "fried": false,
+            "soup": false
+          }
         },
         {
           "id": "gyoza",
           "name": "冷凍餃子 焼くだけ",
           "minutes": 10,
-          "photo": "gyoza.jpg"
+          "photo": "gyoza.jpg",
+          "h": {
+            "veg": false,
+            "fish": false,
+            "fried": false,
+            "soup": false
+          }
         }
       ]
     },
@@ -209,20 +299,38 @@
           "パスタを茹でる",
           "ソースをかける",
           "野菜は袋から出すだけ"
-        ]
+        ],
+        "h": {
+          "veg": true,
+          "fish": false,
+          "fried": false,
+          "soup": false
+        }
       },
       "alts": [
         {
           "id": "nabe",
           "name": "鍋（素＋冷凍の具）",
           "minutes": 20,
-          "photo": "nabe.jpg"
+          "photo": "nabe.jpg",
+          "h": {
+            "veg": false,
+            "fish": false,
+            "fried": false,
+            "soup": false
+          }
         },
         {
           "id": "gyoza",
           "name": "冷凍餃子 焼くだけ",
           "minutes": 10,
-          "photo": "gyoza.jpg"
+          "photo": "gyoza.jpg",
+          "h": {
+            "veg": false,
+            "fish": false,
+            "fried": false,
+            "soup": false
+          }
         }
       ]
     },
@@ -245,20 +353,38 @@
           "魚勝の Instagram で今日の品を見る",
           "刺身盛り 1,580円〜 または本鮪切り落とし",
           "ご飯は炊く"
-        ]
+        ],
+        "h": {
+          "veg": true,
+          "fish": true,
+          "fried": false,
+          "soup": true
+        }
       },
       "alts": [
         {
           "id": "cream-pasta",
           "name": "手作りクリームパスタ",
           "minutes": 30,
-          "photo": "pasta.jpg"
+          "photo": "pasta.jpg",
+          "h": {
+            "veg": false,
+            "fish": false,
+            "fried": false,
+            "soup": false
+          }
         },
         {
           "id": "nabe",
           "name": "鍋（素＋冷凍の具）",
           "minutes": 20,
-          "photo": "nabe.jpg"
+          "photo": "nabe.jpg",
+          "h": {
+            "veg": false,
+            "fish": false,
+            "fried": false,
+            "soup": false
+          }
         }
       ]
     },
@@ -282,7 +408,13 @@
           "魚はコソリかグリルで"
         ],
         "recipe_url": "https://www.sirogohan.com/recipe/tonjiru/",
-        "recipe_site": "白ごはん.com 基本の豚汁"
+        "recipe_site": "白ごはん.com 基本の豚汁",
+        "h": {
+          "veg": true,
+          "fish": true,
+          "fried": false,
+          "soup": true
+        }
       },
       "alts": [
         {
@@ -291,13 +423,25 @@
           "minutes": 15,
           "photo": "seiro.jpg",
           "recipe_url": "https://delishkitchen.tv/recipes/383986795412455776",
-          "recipe_site": "DELISH KITCHEN 豚肉と彩り野菜のせいろ蒸し"
+          "recipe_site": "DELISH KITCHEN 豚肉と彩り野菜のせいろ蒸し",
+          "h": {
+            "veg": true,
+            "fish": false,
+            "fried": false,
+            "soup": false
+          }
         },
         {
           "id": "gyoza",
           "name": "冷凍餃子 焼くだけ",
           "minutes": 10,
-          "photo": "gyoza.jpg"
+          "photo": "gyoza.jpg",
+          "h": {
+            "veg": false,
+            "fish": false,
+            "fried": false,
+            "soup": false
+          }
         }
       ]
     }
@@ -548,6 +692,6 @@
     "note": "棚にあるかは未確認",
     "url": "https://www.ajinomoto.co.jp/products/detail/?ProductName=cookdo_8"
   },
-  "health": "今週: 野菜は毎食1つ（カット野菜・ブロッコリー）、魚は土日で2回、揚げ物なし、豚汁の具を仕込んで汁物を手作りに",
+  "health": "今週: 野菜は毎食1つ（サラダ・ブロッコリー）、魚は土日で2回、揚げ物なし、豚汁の具を仕込んで汁物を手作りに",
   "soboro_don_url": "https://www.sirogohan.com/recipe/soborodon/"
 }
