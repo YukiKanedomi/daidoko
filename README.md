@@ -5,4 +5,5 @@
 - `design/` 画面案（採用方向は `d-home.html` `d-shop.html`）。描画確認: `powershell -File design/shot.ps1 d-home`
 - `research/` 人気アプリの実画面の調査（App Store 公開データ）
 - `data/` 台帳（家族の好み・定番・店・生成結果）
-- `site/` 公開物（GitHub Pages）
+- `site/` 公開物（GitHub Pages）。ローカル確認は `site/` と `data/` を同じフォルダに集めて簡易サーバで開く（`?today=2026-09-15` で日付を偽装できる）
+- `.github/workflows/deploy.yml` が `site/` と `data/*.json` を dist に集めて Pages へ配信
