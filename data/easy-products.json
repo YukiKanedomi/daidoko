@@ -251,42 +251,54 @@
       "name": "Cook Do 回鍋肉用",
       "why": "常備の豚こまとキャベツで10分。せいろ・麻婆に続く『素で一品』の3つ目",
       "store": "ヨーカドー",
-      "status": "候補"
+      "status": "候補",
+      "url": "https://www.ajinomoto.co.jp/products/detail/?ProductName=cookdo_8",
+      "url_checked": "2026-09-13（ニチレイは curl 403＝ボット対策、検索結果の公式 URL）"
     },
     {
       "id": "nichirei-chahan",
       "name": "ニチレイ 本格炒め炒飯",
       "why": "袋ラーメンの隣に置く緊急食。卵スープと野菜を足せば一食",
       "store": "ヨーカドー・ドンキ",
-      "status": "候補"
+      "status": "候補",
+      "url": "https://www.nichireifoods.co.jp/product/detail/sho_id183/",
+      "url_checked": "2026-09-13（ニチレイは curl 403＝ボット対策、検索結果の公式 URL）"
     },
     {
       "id": "nissui-yakionigiri",
       "name": "ニッスイ 大きな大きな焼きおにぎり",
       "why": "冷凍ご飯が切れた日の主食。せいろの横に",
       "store": "ヨーカドー・ドンキ",
-      "status": "候補"
+      "status": "候補",
+      "url": "https://www.nissui.co.jp/product/00189.html",
+      "url_checked": "2026-09-13（ニチレイは curl 403＝ボット対策、検索結果の公式 URL）"
     },
     {
       "id": "kewpie-tarako",
       "name": "キユーピー あえるパスタソース たらこ",
       "why": "パスタの味を1つ増やす。トマト系を避けられる",
       "store": "ヨーカドー",
-      "status": "候補"
+      "status": "候補",
+      "url": "https://www.kewpie.co.jp/products/product/aeru/aeru/4901577020650/",
+      "url_checked": "2026-09-13（ニチレイは curl 403＝ボット対策、検索結果の公式 URL）"
     },
     {
       "id": "ajinomoto-shumai",
       "name": "味の素冷凍食品 ザ★シュウマイ",
       "why": "せいろの主役をマンドゥ・餃子から広げる",
       "store": "ヨーカドー",
-      "status": "候補"
+      "status": "候補",
+      "url": "https://www.ffa.ajinomoto.com/products/detail/id/240",
+      "url_checked": "2026-09-13（ニチレイは curl 403＝ボット対策、検索結果の公式 URL）"
     },
     {
       "id": "nichirei-hourensou",
       "name": "ニチレイ そのまま使える ほうれん草",
       "why": "『毎食野菜1つ』を冷凍で。味噌汁・おひたし・うどんに",
       "store": "ヨーカドー",
-      "status": "候補"
+      "status": "候補",
+      "url": "https://www.nichireifoods.co.jp/product/detail/sho_id40965/",
+      "url_checked": "2026-09-13（ニチレイは curl 403＝ボット対策、検索結果の公式 URL）"
     },
     {
       "id": "kaldi-pasta-sauce",
@@ -320,5 +332,6 @@
       "status": "候補",
       "note": "具体的な商品は店頭で見て決める"
     }
-  ]
+  ],
+  "link_policy": "商品はメーカー公式の商品ページにリンクする（写真はそのページで見る。ブランド商品の画像を生成・転載しない）。レシピは白ごはん.com／クラシル／DELISH KITCHEN／Nadia 等の信頼できるサイトへリンク。URL は生存確認してから入れる"
 }

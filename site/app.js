@@ -74,7 +74,7 @@
         <h2>${esc(main.name)}</h2>
         <div class="set">${set}</div>
         <div class="row"><button class="btn ${done ? 'done' : ''}" data-pick="${esc(main.id)}" data-date="${day.date}">${done ? 'これにした' : 'これにする'}</button><button class="btn ghost" data-toggle="steps">作り方</button></div>
-        <ol class="steps" id="steps" hidden>${steps}</ol>
+        <ol class="steps" id="steps" hidden>${steps}${main.recipe_url ? `<li class="link"><a href="${esc(main.recipe_url)}" target="_blank" rel="noopener">ちゃんとしたレシピ: ${esc(main.recipe_site || 'レシピサイト')} ›</a></li>` : ''}</ol>
       </div></div>
       <div class="sec"><h3>ほかの案</h3></div>
       <div class="alts">${alts.map((a) => `<button class="alt" data-swap="${esc(a.id)}" data-date="${day.date}"><img src="${photo(a.photo)}" alt=""><div class="b"><div class="t">${a.minutes ? a.minutes + '分' : '買って帰る'}</div><h4>${esc(a.name)}</h4></div></button>`).join('')}</div>
@@ -113,9 +113,10 @@
         <div class="chips"><span class="chip acc">${main.minutes}分</span><span class="chip">冷凍 ${esc(main.servings)}</span><span class="chip">${esc(main.reheat)}</span></div>
         <h2>${esc(main.name)}</h2>
         <div class="set">${esc(main.why)}</div>
+        ${main.recipe_url ? `<div class="set" style="margin-top:4px"><a class="lnk" href="${esc(main.recipe_url)}" target="_blank" rel="noopener">レシピ: ${esc(main.recipe_site || 'レシピサイト')} ›</a></div>` : ''}
         <div class="row"><button class="btn ${p['prep:' + main.id] ? 'done' : ''}" data-prep="${esc(main.id)}">${p['prep:' + main.id] ? 'やる' : 'やる'}</button><button class="btn ghost" data-prep-no="${esc(main.id)}">今回はなし</button></div>
       </div></div>
-      <div class="alts">${alts.map((a) => `<button class="alt" data-prep="${esc(a.id)}"><img src="${photo(a.photo)}" alt=""><div class="b"><div class="t">${a.minutes}分 · ${esc(a.servings)}${p['prep:' + a.id] ? ' · やる' : ''}</div><h4>${esc(a.name)}</h4></div></button>`).join('')}</div>
+      <div class="alts">${alts.map((a) => `<div class="alt"><button class="altbtn" data-prep="${esc(a.id)}"><img src="${photo(a.photo)}" alt=""><div class="b"><div class="t">${a.minutes}分 · ${esc(a.servings)}${p['prep:' + a.id] ? ' · やる' : ''}</div><h4>${esc(a.name)}</h4></div></button>${a.recipe_url ? `<a class="lnk small" href="${esc(a.recipe_url)}" target="_blank" rel="noopener">レシピ ›</a>` : ''}</div>`).join('')}</div>
       <div class="sec"><h3>買い出し</h3><a href="#shop">リストを開く</a></div>
       <div class="stores">${D.plan.shopping.stores.map((s) => {
         const items = s.groups.flatMap((g) => g.items);
@@ -141,7 +142,7 @@
     const on = !!picks()['new:' + n.id];
     return `<div class="sec"><h3>今週の新顔</h3><span class="sub" style="font-size:12px;color:var(--mute)">1つだけ</span></div>
       <div class="card"><div class="k">${esc(n.name)}<span style="font-weight:500;color:var(--sub);font-size:12px;margin-left:6px">${esc(n.store)}</span></div>
-      <div class="v">${esc(n.how)}</div><div class="v" style="margin-top:6px;color:var(--ink)">${esc(n.why)}</div>${n.note ? `<div class="v">${esc(n.note)}</div>` : ''}
+      <div class="v">${esc(n.how)}</div><div class="v" style="margin-top:6px;color:var(--ink)">${esc(n.why)}</div>${n.note ? `<div class="v">${esc(n.note)}</div>` : ''}${n.url ? `<div class="v" style="margin-top:6px"><a class="lnk" href="${esc(n.url)}" target="_blank" rel="noopener">商品ページ（写真・原材料） ›</a></div>` : ''}
       <div class="row"><button class="btn ${on ? 'done' : ''}" data-new="${esc(n.id)}">${on ? '買い物に入れた' : '試してみる'}</button></div></div>`;
   }
   const shortStore = (n) => n.replace('イトーヨーカドー アリオ橋本', 'ヨーカドー').replace('ミートショップ', '').replace('さかなや', '').replace('（家の前）', '');

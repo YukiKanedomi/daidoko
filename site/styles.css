@@ -130,3 +130,9 @@ h1{margin:2px 0 0;font-size:26px;font-weight:700;letter-spacing:-.01em}
 .tab a{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px;font-weight:600;color:var(--mute);width:96px}
 .tab a.on{color:var(--ink)}
 .tab svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+.lnk{color:var(--acc);font-weight:600;font-size:13px}
+.lnk.small{display:block;padding:0 11px 9px;font-size:12px}
+.altbtn{display:block;width:100%;text-align:left}
+.steps li.link{padding-top:8px}
+.steps li.link a{color:var(--acc);font-weight:600;font-size:13px}

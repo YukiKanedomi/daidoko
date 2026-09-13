@@ -22,7 +22,9 @@
           "じゃがいもは先に入れて5分",
           "豚こま・餃子・ブロッコリー・卵を足して10分",
           "ポン酢かごま油＋塩で"
-        ]
+        ],
+        "recipe_url": "https://delishkitchen.tv/recipes/383986795412455776",
+        "recipe_site": "DELISH KITCHEN 豚肉と彩り野菜のせいろ蒸し"
       },
       "alts": [
         {
@@ -35,7 +37,9 @@
           "id": "udon-egg",
           "name": "冷凍うどん かき玉",
           "minutes": 5,
-          "photo": "udon.jpg"
+          "photo": "udon.jpg",
+          "recipe_url": "https://www.kurashiru.com/recipes/1f38b83c-bc13-4c43-b4db-2996d3bf9c58",
+          "recipe_site": "クラシル めんつゆで ふんわりかき玉うどん"
         }
       ]
     },
@@ -57,14 +61,18 @@
           "じゃがいもは先に入れて5分",
           "豚こま・餃子・ブロッコリー・卵を足して10分",
           "ポン酢かごま油＋塩で"
-        ]
+        ],
+        "recipe_url": "https://delishkitchen.tv/recipes/383986795412455776",
+        "recipe_site": "DELISH KITCHEN 豚肉と彩り野菜のせいろ蒸し"
       },
       "alts": [
         {
           "id": "udon-egg",
           "name": "冷凍うどん かき玉",
           "minutes": 5,
-          "photo": "udon.jpg"
+          "photo": "udon.jpg",
+          "recipe_url": "https://www.kurashiru.com/recipes/1f38b83c-bc13-4c43-b4db-2996d3bf9c58",
+          "recipe_site": "クラシル めんつゆで ふんわりかき玉うどん"
         },
         {
           "id": "mapo",
@@ -99,7 +107,9 @@
           "id": "seiro-b",
           "name": "せいろ ウインナー・さつまいも・人参・えだこ・マンドゥ",
           "minutes": 15,
-          "photo": "seiro2.jpg"
+          "photo": "seiro2.jpg",
+          "recipe_url": "https://delishkitchen.tv/recipes/383986795412455776",
+          "recipe_site": "DELISH KITCHEN 豚肉と彩り野菜のせいろ蒸し"
         },
         {
           "id": "pasta",
@@ -126,7 +136,9 @@
           "うどんをレンジ3分",
           "つゆを温めて溶き卵を回し入れる",
           "豆腐は切るだけ"
-        ]
+        ],
+        "recipe_url": "https://www.kurashiru.com/recipes/1f38b83c-bc13-4c43-b4db-2996d3bf9c58",
+        "recipe_site": "クラシル めんつゆで ふんわりかき玉うどん"
       },
       "alts": [
         {
@@ -161,7 +173,9 @@
           "さつまいも・人参は先に入れて6分",
           "ウインナー・マンドゥ・えだこを足して8分",
           "マンドゥはたれ、野菜は塩で"
-        ]
+        ],
+        "recipe_url": "https://delishkitchen.tv/recipes/383986795412455776",
+        "recipe_site": "DELISH KITCHEN 豚肉と彩り野菜のせいろ蒸し"
       },
       "alts": [
         {
@@ -266,14 +280,18 @@
           "豚汁の具を多めに炒めて、4回分は冷凍へ",
           "今日の分だけ味噌を溶く",
           "魚はコソリかグリルで"
-        ]
+        ],
+        "recipe_url": "https://www.sirogohan.com/recipe/tonjiru/",
+        "recipe_site": "白ごはん.com 基本の豚汁"
       },
       "alts": [
         {
           "id": "seiro-a",
           "name": "せいろ 豚こま・じゃがいも・ブロッコリー・卵・餃子",
           "minutes": 15,
-          "photo": "seiro.jpg"
+          "photo": "seiro.jpg",
+          "recipe_url": "https://delishkitchen.tv/recipes/383986795412455776",
+          "recipe_site": "DELISH KITCHEN 豚肉と彩り野菜のせいろ蒸し"
         },
         {
           "id": "gyoza",
@@ -294,7 +312,9 @@
         "servings": "3回分",
         "reheat": "平日はレンジ",
         "photo": "soboro.jpg",
-        "why": "来週の火・木に二色丼。白菜と鍋の具にも"
+        "why": "来週の火・木に二色丼。白菜と鍋の具にも",
+        "recipe_url": "https://www.sirogohan.com/recipe/torisoboro/",
+        "recipe_site": "白ごはん.com 鶏そぼろ"
       },
       {
         "id": "tonjiru-gu",
@@ -303,7 +323,9 @@
         "servings": "4回分",
         "reheat": "水と味噌で10分",
         "photo": "tonjiru.jpg",
-        "why": "味噌汁を主菜級に。日曜の夕食で初回を食べる"
+        "why": "味噌汁を主菜級に。日曜の夕食で初回を食べる",
+        "recipe_url": "https://www.sirogohan.com/recipe/tonjiru/",
+        "recipe_site": "白ごはん.com 基本の豚汁"
       },
       {
         "id": "shitaji-buta",
@@ -312,7 +334,9 @@
         "servings": "3回分",
         "reheat": "フライパン5分／せいろ",
         "photo": "pork.jpg",
-        "why": "寿々木の豚こまを小分けするついでに、生姜・味噌・塩だれ"
+        "why": "寿々木の豚こまを小分けするついでに、生姜・味噌・塩だれ",
+        "recipe_url": "https://www.kurashiru.com/recipes/caca5b5e-309a-4611-b7b5-a122037857c9",
+        "recipe_site": "クラシル 下味冷凍 豚の生姜焼き"
       }
     ]
   },
@@ -521,7 +545,9 @@
     "store": "ヨーカドー",
     "how": "豚こま＋キャベツを炒めて素をからめる。10分",
     "why": "せいろ・麻婆に続く『素で一品』の3つ目。常備の豚こまとキャベツで作れます",
-    "note": "棚にあるかは未確認"
+    "note": "棚にあるかは未確認",
+    "url": "https://www.ajinomoto.co.jp/products/detail/?ProductName=cookdo_8"
   },
-  "health": "今週: 野菜は毎食1つ（カット野菜・ブロッコリー）、魚は土日で2回、揚げ物なし、豚汁の具を仕込んで汁物を手作りに"
+  "health": "今週: 野菜は毎食1つ（カット野菜・ブロッコリー）、魚は土日で2回、揚げ物なし、豚汁の具を仕込んで汁物を手作りに",
+  "soboro_don_url": "https://www.sirogohan.com/recipe/soborodon/"
 }
