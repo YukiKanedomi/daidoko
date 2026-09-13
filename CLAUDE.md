@@ -20,7 +20,7 @@
 - 献立の生成は週2〜3回、`headless-job` スキルの作法で（PowerShell ランチャー・ps1 は ASCII・プロンプトは別 txt）。
 - 料理写真は `imagegen` スキル（Codex）で統一トーン（俯瞰・白い皿・淡い木のテーブル・自然光・1:1）に生成し `site/photos/` に置く。写真の無い献立を画面に出さない。
 
-## デザイン（2026-09-12 決定・`design/d-*.html` が基準。home/shop/week/book/recipe の5画面）
+## デザイン（2026-09-12 決定・`design/d-*.html` が基準。home/shop/week/book/recipe に加え weekend（土日に開く『今週末』＝仕込み＋店ごとの買い出し＋来週の平日）の6画面）
 
 - 世の中の一級実例（Mela・Crouton・Mealime・AnyList・クラシル・me:new 等、`research/` に17本の実画面）の文法で組む。**メタファー演出はしない**（冷蔵庫・品書き・チラシの3案はオーナー判断で不採用）。
 - 白地・黒文字・アクセント1色（`#e8532e`）・Inter + Noto Sans JP・角丸20/16/12px・絵文字禁止（アイコンは線画SVG）。

@@ -1,0 +1,94 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>だいどこ — 今週末</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--sur:#f4f4f2;--line:#e6e6e2;--ink:#151515;--sub:#6f6f6b;--mute:#a3a39e;--acc:#e8532e;--acc-soft:#fdeee9}
+*{box-sizing:border-box}html,body{margin:0}
+body{width:390px;height:844px;background:var(--bg);color:var(--ink);font-family:Inter,"Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;font-feature-settings:"tnum";line-height:1.5;position:relative;overflow:hidden;-webkit-font-smoothing:antialiased}
+.top{padding:44px 20px 0}
+.date{font-size:13px;color:var(--sub);font-weight:500}
+h1{margin:2px 0 0;font-size:26px;font-weight:700;letter-spacing:-.01em}
+.lead{margin:4px 20px 0;font-size:13px;color:var(--sub)}
+.sec{display:flex;justify-content:space-between;align-items:baseline;margin:14px 20px 6px}
+.sec h3{margin:0;font-size:15px;font-weight:700}.sec a{font-size:13px;color:var(--sub)}
+.hero{margin:0 20px;border-radius:20px;overflow:hidden;background:var(--sur)}
+.hero img{display:block;width:100%;height:112px;object-fit:cover}
+.hero .body{padding:12px 16px 14px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--sub)}
+.chip.acc{background:var(--acc-soft);border-color:transparent;color:var(--acc)}
+.hero h2{margin:8px 0 2px;font-size:19px;font-weight:700;line-height:1.3;letter-spacing:-.01em}
+.hero .set{font-size:13px;color:var(--sub)}
+.hero .set b{color:var(--ink);font-weight:500}
+.row{display:flex;gap:8px;margin-top:10px}
+.btn{flex:1;text-align:center;font-size:14px;font-weight:600;padding:10px 0;border-radius:12px;background:var(--ink);color:#fff}
+.btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line);flex:0 0 112px}
+.alts{display:flex;gap:10px;padding:0 20px;margin-top:10px}
+.alt{flex:1;border-radius:16px;overflow:hidden;background:var(--sur)}
+.alt img{display:block;width:100%;height:54px;object-fit:cover}
+.alt .b{padding:7px 11px 9px}
+.alt .t{font-size:11px;font-weight:600;color:var(--acc)}
+.alt h4{margin:2px 0 0;font-size:13px;font-weight:600;line-height:1.35}
+.stores{margin:0 20px;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.st{display:flex;align-items:center;gap:12px;padding:9px 14px;border-bottom:1px solid var(--line)}
+.st:last-child{border-bottom:0}
+.st .ico{flex:0 0 34px;height:34px;border-radius:10px;background:var(--sur);display:flex;align-items:center;justify-content:center}
+.st .ico svg{width:20px;height:20px;stroke:var(--ink);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.st .k{font-size:14px;font-weight:600}.st .k span{font-weight:500;color:var(--sub);font-size:12px;margin-left:6px}
+.st .v{font-size:12px;color:var(--sub);margin-top:1px;line-height:1.45}
+.st .v b{display:block}
+.st .v b{color:var(--acc);font-weight:600}
+.st .chev{margin-left:auto;color:var(--mute);font-size:20px}
+.week{display:flex;gap:6px;padding:0 20px}
+.wd{flex:1;background:var(--sur);border-radius:12px;padding:8px 6px 9px;text-align:center}
+.wd .d{font-size:11px;color:var(--mute);font-weight:600}
+.wd .n{font-size:12px;font-weight:600;line-height:1.3;margin-top:3px}
+.wd .m{font-size:10px;color:var(--sub);margin-top:1px}
+.note{margin:12px 20px 0;display:flex;align-items:center;gap:10px;background:var(--sur);border-radius:999px;padding:11px 16px;font-size:13px;color:var(--mute)}
+.tab{position:absolute;left:0;right:0;bottom:0;height:82px;padding-bottom:18px;border-top:1px solid var(--line);background:#fff;display:flex;justify-content:space-around;align-items:center}
+.tab div{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px;font-weight:600;color:var(--mute);width:64px}
+.tab div.on{color:var(--ink)}
+.tab svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sample{position:absolute;right:20px;top:34px;font-size:10px;color:var(--mute)}
+</style></head><body>
+<span class="sample">サンプル表示</span>
+<div class="top"><div class="date">9月13日 日曜日</div><h1>今週末</h1></div>
+<div class="lead">来週の平日5日ぶんを、仕込みと買い出しで用意します。</div>
+
+<div class="sec"><h3>仕込み</h3><a>候補をぜんぶ見る</a></div>
+<div class="hero"><img src="photo-soboro.png" alt=""><div class="body">
+ <div class="chips"><span class="chip acc">20分</span><span class="chip">冷凍 3回分</span><span class="chip">平日はレンジ</span></div>
+ <h2>鶏そぼろ</h2>
+ <div class="set">火・木の丼に。卵と組んで <b>二色丼</b>、白菜と一緒に <b>鍋の具</b> にも</div>
+ <div class="row"><div class="btn">やる</div><div class="btn ghost">今回はなし</div></div>
+</div></div>
+<div class="alts">
+ <div class="alt"><img src="photo-tonjiru.png" alt=""><div class="b"><div class="t">30分 · 4回分</div><h4>豚汁の具（炒めて冷凍）</h4></div></div>
+ <div class="alt"><img src="photo-pork.png" alt=""><div class="b"><div class="t">15分 · 3回分</div><h4>下味冷凍の豚こま 3味</h4></div></div>
+</div>
+
+<div class="sec"><h3>買い出し</h3><a>リストを開く</a></div>
+<div class="stores">
+ <div class="st"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg></div><div><div class="k">ヨーカドー<span>9点</span></div><div class="v">鶏ひき肉・大根・人参・冷凍ブロッコリー・卵<b>チラシ 9/13: 卵 10個 特価</b></div></div><span class="chev">›</span></div>
+ <div class="st"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 8h16l-1 12H5z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg></div><div><div class="k">寿々木<span>2点</span></div><div class="v">豚こま 600g（冷凍小分け用）・焼き鳥<b>29日は肉の特売日</b></div></div><span class="chev">›</span></div>
+ <div class="st"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 12c4-6 14-6 18 0-4 6-14 6-18 0z"/><circle cx="15" cy="12" r="1"/></svg></div><div><div class="k">魚勝<span>今夜用</span></div><div class="v">本鮪切り落とし 650円 · 刺身盛り 1,580円〜<b>Instagram 9/12 の投稿より</b></div></div><span class="chev">›</span></div>
+ <div class="st"><div class="ico"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div><div><div class="k">ドンキ<span>切れたら</span></div><div class="v">冷凍シュウマイ・袋ラーメン（緊急食の残り 1）</div></div><span class="chev">›</span></div>
+</div>
+
+<div class="sec"><h3>来週の平日</h3><a>こんだて表</a></div>
+<div class="week">
+ <div class="wd"><div class="d">月</div><div class="n">せいろ</div><div class="m">15分</div></div>
+ <div class="wd"><div class="d">火</div><div class="n">二色丼</div><div class="m">5分</div></div>
+ <div class="wd"><div class="d">水</div><div class="n">コソリ</div><div class="m">15分</div></div>
+ <div class="wd"><div class="d">木</div><div class="n">豚汁定食</div><div class="m">10分</div></div>
+ <div class="wd"><div class="d">金</div><div class="n">パスタ</div><div class="m">15分</div></div>
+</div>
+<div class="note"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a3a39e" stroke-width="1.8" stroke-linecap="round"><path d="M4 5h16v11H9l-5 4z"/></svg>「来週は水曜が外食」など、ひとこと残す</div>
+
+<nav class="tab">
+ <div class="on"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9H4z"/></svg>今夜</div>
+ <div><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>こんだて表</div>
+ <div><svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg>買い物</div>
+ <div><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>台帳</div>
+</nav>
+</body></html>
