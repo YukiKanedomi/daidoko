@@ -44,6 +44,8 @@
     catch (e) { window.prompt('コピーしてチャットに貼ってください', t); }
   }
 
+  // 主菜に合わせてヘッダーの住人を替える（せいろ=4人組、卵の日=卵、それ以外=マンドゥ2人）
+  const charaFor = (m) => ((m.tags || []).includes('せいろ') ? 'friends' : /卵|かき玉/.test(m.name) ? 'egg' : 'peek');
   const head = (sub, title, chara) => `<div class="top"><div><div class="date">${esc(sub)}</div><h1>${esc(title)}</h1></div>${chara ? `<img class="chara" src="chara/${chara}.png" alt="">` : ''}</div>`;
   function dayOf(date) { return D.plan.days.find((d) => d.date === date); }
   // 候補カードは名前と写真だけなので、同じ料理が主案になっている日から副菜・汁物・作り方を引き当てる
@@ -69,7 +71,7 @@
     const steps = (main.steps || []).map((s, i) => `<li><b>${i + 1}</b><span>${esc(s)}</span></li>`).join('');
     const shopN = countShopping();
     return `
-      ${head(fmtDate(date), '今夜のこんだて', 'peek')}
+      ${head(fmtDate(date), '今夜のこんだて', charaFor(main))}
       ${weekStrip(date)}
       <div class="hero"><img src="${photo(main.photo)}" alt=""><div class="body">
         <div class="chips">${chips}</div>
@@ -81,7 +83,7 @@
       <div class="sec"><h3>ほかの案</h3></div>
       <div class="alts">${alts.map((a) => `<button class="alt" data-swap="${esc(a.id)}" data-date="${day.date}"><img src="${photo(a.photo)}" alt=""><div class="b"><div class="t">${a.minutes ? a.minutes + '分' : '買って帰る'}</div><h4>${esc(a.name)}</h4></div></button>`).join('')}</div>
       <a class="card shopsum" href="#shop"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg><div><div class="k">買い出し ${shopN.left}点</div><div class="v">${esc(D.plan.shopping.for)}</div></div><span class="chev">›</span></a>
-      ${D.plan.health ? `<div class="foot">${esc(D.plan.health)}</div>` : ''}
+      ${D.plan.health ? `<div class="foot health"><img src="chara/broccoli.png" alt=""><span>${esc(D.plan.health)}</span></div>` : ''}
       ${noteBox(day.date)}`;
   }
 
@@ -136,7 +138,7 @@
       ${newcomerCard()}
       <div class="sec"><h3>来週の平日</h3><a href="#week">こんだて表</a></div>
       <div class="wdays">${nextDays.map((d) => `<a class="wd" href="#tonight/${d.date}"><div class="d">${d.dow}</div><div class="n">${esc(shortName(shown(d).name))}</div><div class="m">${shown(d).minutes}分</div></a>`).join('')}</div>
-      ${D.plan.health ? `<div class="foot">${esc(D.plan.health)}</div>` : ''}
+      ${D.plan.health ? `<div class="foot health"><img src="chara/broccoli.png" alt=""><span>${esc(D.plan.health)}</span></div>` : ''}
       ${noteBox(day.date)}`;
   }
   function newcomerCard() {
