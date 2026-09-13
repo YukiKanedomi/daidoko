@@ -247,8 +247,9 @@
           "checked": 200
         }
       ],
-      "status": "候補",
-      "round": 3
+      "status": "あり",
+      "round": 3,
+      "owner_note": "全体的に試してみてよさそう（2026-09-13）"
     },
     {
       "id": "shiobuta",
@@ -265,8 +266,9 @@
           "checked": 200
         }
       ],
-      "status": "候補",
-      "round": 3
+      "status": "あり",
+      "round": 3,
+      "owner_note": "全体的に試してみてよさそう（2026-09-13）"
     },
     {
       "id": "tori-chashu",
@@ -289,8 +291,9 @@
           "checked": 200
         }
       ],
-      "status": "候補",
-      "round": 3
+      "status": "あり",
+      "round": 3,
+      "owner_note": "全体的に試してみてよさそう（2026-09-13）"
     },
     {
       "id": "sake-shitaji",
@@ -313,8 +316,9 @@
           "checked": 200
         }
       ],
-      "status": "候補",
-      "round": 3
+      "status": "あり",
+      "round": 3,
+      "owner_note": "全体的に試してみてよさそう（2026-09-13）"
     },
     {
       "id": "ninjin-shirishiri",
@@ -337,8 +341,9 @@
           "checked": 200
         }
       ],
-      "status": "候補",
-      "round": 3
+      "status": "あり",
+      "round": 3,
+      "owner_note": "全体的に試してみてよさそう（2026-09-13）"
     },
     {
       "id": "hourensou-namul",
@@ -361,8 +366,9 @@
           "checked": 200
         }
       ],
-      "status": "候補",
-      "round": 3
+      "status": "あり",
+      "round": 3,
+      "owner_note": "全体的に試してみてよさそう（2026-09-13）"
     },
     {
       "id": "kinpira",
@@ -385,8 +391,9 @@
           "checked": 403
         }
       ],
-      "status": "候補",
-      "round": 3
+      "status": "あり",
+      "round": 3,
+      "owner_note": "全体的に試してみてよさそう（2026-09-13）"
     },
     {
       "id": "mille-nabe",
@@ -409,8 +416,9 @@
           "checked": 200
         }
       ],
-      "status": "候補",
-      "round": 3
+      "status": "あり",
+      "round": 3,
+      "owner_note": "全体的に試してみてよさそう（2026-09-13）"
     },
     {
       "id": "mune-shiokoji",
@@ -433,8 +441,91 @@
           "checked": 200
         }
       ],
+      "status": "あり",
+      "round": 3,
+      "owner_note": "全体的に試してみてよさそう（2026-09-13）"
+    },
+    {
+      "id": "boniq-salad-chicken",
+      "name": "ボニークでサラダチキン（むね肉、冷凍可）",
+      "reheat": "切るだけ。サラダ・うどん・丼に",
+      "weekend_minutes": 10,
+      "servings": "2枚＝4回分",
+      "why": "袋に入れて放置。市販サラダチキンより安くて塩分も調整できる。高たんぱく・低脂質",
+      "recipes": [
+        {
+          "role": "基本",
+          "site": "BONIQ 公式 サラダチキン レモン風味（62℃）",
+          "url": "https://boniq.jp/recipe/?post_type=recipe&p=25449",
+          "checked": 200
+        },
+        {
+          "role": "変化",
+          "site": "BONIQ 公式 ハーブ香るサラダチキン",
+          "url": "https://boniq.jp/recipe/?post_type=recipe&p=722",
+          "checked": 200
+        }
+      ],
       "status": "候補",
-      "round": 3
+      "round": 4,
+      "equipment": "ボニーク"
+    },
+    {
+      "id": "boniq-roast-pork",
+      "name": "ボニークでローストポーク（豚肩ロース塊、冷凍可）",
+      "reheat": "薄く切るだけ。週末の主菜にも",
+      "weekend_minutes": 15,
+      "servings": "500g＝3回分",
+      "why": "寿々木の塊肉が生きる。切って並べるだけで主菜になる",
+      "recipes": [
+        {
+          "role": "基本",
+          "site": "BONIQ 公式 ローストポーク 3種ソース添え（63℃）",
+          "url": "https://boniq.jp/recipe/?post_type=recipe&p=24",
+          "checked": 200
+        }
+      ],
+      "status": "候補",
+      "round": 4,
+      "equipment": "ボニーク"
+    },
+    {
+      "id": "boniq-onsen-tamago",
+      "name": "ボニークで温泉卵（冷蔵3日）",
+      "reheat": "そのまま。うどん・そぼろ丼・サラダに",
+      "weekend_minutes": 5,
+      "servings": "6個",
+      "why": "味玉と並ぶ卵の作り置き。65〜68℃で30分放置するだけ",
+      "recipes": [
+        {
+          "role": "基本",
+          "site": "BONIQ 公式 簡単すぎる温泉卵",
+          "url": "https://boniq.jp/recipe/?post_type=recipe&p=400",
+          "checked": 200
+        }
+      ],
+      "status": "候補",
+      "round": 4,
+      "equipment": "ボニーク"
+    },
+    {
+      "id": "boniq-mushi-dori",
+      "name": "ボニークで蒸し鶏（むね肉）→ バンバンジー・サラダ",
+      "reheat": "裂いてたれをかける",
+      "weekend_minutes": 10,
+      "servings": "3回分",
+      "why": "サラダチキンの和中華版。ごまだれ・ポン酢（妻の好み）で味替え",
+      "recipes": [
+        {
+          "role": "基本",
+          "site": "BONIQ 公式 史上最強に柔らかい蒸し鶏",
+          "url": "https://boniq.jp/recipe/?post_type=recipe&p=4212",
+          "checked": 200
+        }
+      ],
+      "status": "候補",
+      "round": 4,
+      "equipment": "ボニーク"
     }
   ],
   "evaluated": "2026-09-13 オーナー評価（7 肉巻き野菜は未評価）",
