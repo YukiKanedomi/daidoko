@@ -1,0 +1,184 @@
+{
+  "updated": "2026-09-13",
+  "note": "その日に5分前後で1品できる野菜の副菜。作り置きではない。『毎食野菜1つ』をサラダ以外でも回すための材料。status は参考。きのこ・トマト・わかめは使わない",
+  "dishes": [
+    {
+      "id": "yamitsuki-cabbage",
+      "name": "やみつきキャベツ（ちぎってごま油と塩）",
+      "minutes": 5,
+      "veg": "キャベツ",
+      "tool": "なし",
+      "tip": "生のキャベツはビタミンCが残りやすい。ごま油は少量で香りを出す。にんにくは夫の皿だけ後がけでも",
+      "recipes": [
+        {
+          "role": "基本",
+          "site": "白ごはん.com 簡単！やみつきキャベツ",
+          "url": "https://www.sirogohan.com/recipe/kyabeyami/",
+          "checked": 200
+        },
+        {
+          "role": "変化",
+          "site": "DELISH KITCHEN やみつきキャベツサラダ",
+          "url": "https://delishkitchen.tv/recipes/132253632677544203",
+          "checked": 200
+        }
+      ],
+      "status": "候補"
+    },
+    {
+      "id": "mushi-cabbage-ponzu",
+      "name": "レンジ蒸しキャベツのおかかポン酢",
+      "minutes": 7,
+      "veg": "キャベツ",
+      "tool": "レンジ",
+      "tip": "加熱でかさが減って量が食べられる。ポン酢は妻の好み",
+      "recipes": [
+        {
+          "role": "基本",
+          "site": "クラシル 蒸しキャベツのおかかポン酢がけ",
+          "url": "https://www.kurashiru.com/recipe_cards/710a4838-26e5-46af-9e6f-6e7dadf88640",
+          "checked": 200
+        },
+        {
+          "role": "変化",
+          "site": "クラシル キャベツのごまポン酢和え",
+          "url": "https://www.kurashiru.com/recipes/36c09d3a-eb0e-4fc0-ab06-e7a15b3da182",
+          "checked": 200
+        }
+      ],
+      "status": "候補"
+    },
+    {
+      "id": "broccoli-goma",
+      "name": "冷凍ブロッコリーのごま和え",
+      "minutes": 5,
+      "veg": "冷凍ブロッコリー",
+      "tool": "レンジ",
+      "tip": "冷凍のままレンジで戻し、出た水を捨てると水っぽくならない。すりごまで風味と食物繊維",
+      "recipes": [
+        {
+          "role": "基本",
+          "site": "クラシル ブロッコリーの胡麻和え",
+          "url": "https://www.kurashiru.com/recipe_cards/47a185b6-d55f-4262-84f3-417b1c4ee781",
+          "checked": 200
+        },
+        {
+          "role": "変化",
+          "site": "クラシル ブロッコリーのおかか和え",
+          "url": "https://www.kurashiru.com/recipes/67f7af0b-3902-4894-aada-01d9f21ea7a3",
+          "checked": 200
+        }
+      ],
+      "status": "候補"
+    },
+    {
+      "id": "kyuri-shiomomi",
+      "name": "きゅうりの塩もみ（ごま・ポン酢で）",
+      "minutes": 5,
+      "veg": "きゅうり",
+      "tool": "なし",
+      "tip": "塩もみで水分が抜けて味が入りやすい。ポン酢や旨辛たれをかけるだけ",
+      "recipes": [
+        {
+          "role": "基本",
+          "site": "白ごはん.com きゅうりの塩もみのやり方",
+          "url": "https://www.sirogohan.com/recipe/siomomi/",
+          "checked": 200
+        }
+      ],
+      "status": "候補"
+    },
+    {
+      "id": "moyashi-namul",
+      "name": "もやしナムル（レンジ5分）",
+      "minutes": 5,
+      "veg": "もやし",
+      "tool": "レンジ",
+      "tip": "もやしは安くて食物繊維がとれる。ごま油と塩で味が決まる",
+      "recipes": [
+        {
+          "role": "基本",
+          "site": "クラシル レンジで5分 もやしのナムル",
+          "url": "https://www.kurashiru.com/recipes/200b2beb-4767-4981-93ae-3dfd9a579a59",
+          "checked": 200
+        },
+        {
+          "role": "変化",
+          "site": "白ごはん.com もやしのナムル",
+          "url": "https://www.sirogohan.com/recipe/namuru5/",
+          "checked": 200
+        }
+      ],
+      "status": "候補"
+    },
+    {
+      "id": "daikon-salad",
+      "name": "大根サラダ（千切り＋ドレッシング）",
+      "minutes": 7,
+      "veg": "大根",
+      "tool": "スライサー",
+      "tip": "豚汁で余る大根の使い道。大根の消化酵素は生で食べると生きる。旨辛たれ・ポン酢が合う",
+      "recipes": [
+        {
+          "role": "基本",
+          "site": "白ごはん.com 大根サラダ",
+          "url": "https://www.sirogohan.com/recipe/daikonsarada/",
+          "checked": 200
+        },
+        {
+          "role": "変化",
+          "site": "クラシル 大根ときゅうりのツナマヨサラダ",
+          "url": "https://www.kurashiru.com/recipes/e328bc4f-a7c5-4dd8-8454-6022187c2dbf",
+          "checked": 200
+        }
+      ],
+      "status": "候補"
+    },
+    {
+      "id": "hakusai-asazuke",
+      "name": "白菜の即席浅漬け（塩もみ＋ゆずポン酢）",
+      "minutes": 10,
+      "veg": "白菜",
+      "tool": "なし",
+      "tip": "鍋で余る白菜の使い道。ゆずポン酢は妻の好み。塩は控えめでも酸味で満足感",
+      "recipes": [
+        {
+          "role": "基本",
+          "site": "クラシル ゆずポン酢で 即席白菜の浅漬け",
+          "url": "https://www.kurashiru.com/recipes/b939ae95-6f97-4548-a4b4-e399076feb2f",
+          "checked": 200
+        },
+        {
+          "role": "変化",
+          "site": "白ごはん.com 簡単！白菜の浅漬け",
+          "url": "https://www.sirogohan.com/recipe/tukemono-hakusai/",
+          "checked": 200
+        }
+      ],
+      "status": "候補"
+    },
+    {
+      "id": "mugen-piman",
+      "name": "無限ピーマン（レンジ＋ツナ）",
+      "minutes": 5,
+      "veg": "ピーマン",
+      "tool": "レンジ",
+      "tip": "ピーマンはビタミンCが加熱に強め。ツナでたんぱく質も足せる",
+      "recipes": [
+        {
+          "role": "基本",
+          "site": "クラシル ツナ缶で簡単 やみつき無限ピーマン",
+          "url": "https://www.kurashiru.com/recipes/45b05937-f49e-40d7-8425-b37b7a91e009",
+          "checked": 200
+        },
+        {
+          "role": "変化",
+          "site": "クラシル めんつゆで無限おかかピーマン",
+          "url": "https://www.kurashiru.com/recipes/2b7f4da8-c097-45e2-870a-8931817b09b4",
+          "checked": 200
+        }
+      ],
+      "status": "候補"
+    }
+  ]
+}

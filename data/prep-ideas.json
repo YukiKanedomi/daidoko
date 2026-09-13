@@ -249,7 +249,7 @@
       ],
       "status": "あり",
       "round": 3,
-      "owner_note": "全体的に試してみてよさそう（2026-09-13）"
+      "owner_note": "全体的に試してみてよさそう（2026-09-13） ※半熟の食感が妻に合うかは未確認"
     },
     {
       "id": "shiobuta",
@@ -504,9 +504,10 @@
           "checked": 200
         }
       ],
-      "status": "候補",
+      "status": "なし",
       "round": 4,
-      "equipment": "ボニーク"
+      "equipment": "ボニーク",
+      "owner_note": "妻が温泉卵が苦手（2026-09-13）"
     },
     {
       "id": "boniq-mushi-dori",
